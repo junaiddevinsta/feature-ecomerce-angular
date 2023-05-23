@@ -1,0 +1,78 @@
+{
+  "signupUsersList": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "fname": "john",
+      "email": "devinsta@gmail.com",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 3
+    },
+    {
+      "fname": "junaid",
+      "email": "junaid123@gmail.com",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 4
+    },
+    {
+      "fname": "amad",
+      "email": "amad@gmail.com",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 5
+    }
+  ],
+  "login": [
+    {
+      "email": "junaid@gmail.com",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "email": "junaiddsfd@gmail.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "email": "junaid@gmail.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "email": "devinsta@gmail.com",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "email": "devinsta@gmail.com",
+      "password": "123",
+      "id": 5
+    },
+    {
+      "email": "devinsta@gmail.com",
+      "password": "123",
+      "id": 6
+    },
+    {
+      "email": "junaid123@gmail.com",
+      "password": "123",
+      "id": 7
+    },
+    {
+      "email": "junaid123@gmail.com",
+      "password": "123",
+      "id": 8
+    },
+    {
+      "email": "junaid123@gmail.com",
+      "password": "123",
+      "id": 9
+    }
+  ]
+}
