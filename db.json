@@ -26,6 +26,20 @@
       "password": "123",
       "confirmPassword": "123",
       "id": 5
+    },
+    {
+      "fname": "asdsa",
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 6
+    },
+    {
+      "fname": "junjd",
+      "email": "junaaid456@gmail.com",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 7
     }
   ],
   "login": [
@@ -73,6 +87,157 @@
       "email": "junaid123@gmail.com",
       "password": "123",
       "id": 9
+    },
+    {
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "id": 10
+    },
+    {
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "id": 11
+    },
+    {
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "id": 12
+    },
+    {
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "id": 13
+    },
+    {
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "id": 14
+    },
+    {
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "id": 15
+    },
+    {
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "id": 16
+    },
+    {
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "id": 17
+    },
+    {
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "id": 18
+    },
+    {
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "id": 19
+    },
+    {
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "id": 20
+    },
+    {
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "id": 21
+    },
+    {
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "id": 22
+    },
+    {
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "id": 23
+    },
+    {
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "id": 24
+    },
+    {
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "id": 25
+    },
+    {
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "id": 26
+    },
+    {
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "id": 27
+    },
+    {
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "id": 28
+    },
+    {
+      "email": "junaid456@gmail.com",
+      "password": "123",
+      "id": 29
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "product_name": "Guyer Chair",
+      "price": 45,
+      "reviews": 150,
+      "image": "assets/images/products/product1.jpg"
+    },
+    {
+      "id": 2,
+      "product_name": "Guyer Chair",
+      "price": 45,
+      "reviews": 150,
+      "image": "assets/images/products/product2.jpg"
+    },
+    {
+      "id": 3,
+      "product_name": "Guyer Chair",
+      "price": 45,
+      "reviews": 150,
+      "image": "assets/images/products/product3.jpg"
+    },
+    {
+      "id": 4,
+      "product_name": "Guyer Chair",
+      "price": 45,
+      "reviews": 150,
+      "image": "assets/images/products/product4.jpg"
+    },
+    {
+      "id": 5,
+      "product_name": "Guyer Chair",
+      "price": 45,
+      "reviews": 150,
+      "image": "assets/images/products/product5.jpg"
+    },
+    {
+      "id": 6,
+      "product_name": "Guyer Chair",
+      "price": 45,
+      "reviews": 150,
+      "image": "assets/images/products/product6.jpg"
+    },
+    {
+      "id": 7,
+      "product_name": "Guyer Chair",
+      "price": 45,
+      "reviews": 150,
+      "image": "assets/images/products/product7.jpg"
     }
   ]
 }

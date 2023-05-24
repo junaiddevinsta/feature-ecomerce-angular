@@ -48,6 +48,7 @@ export class LoginComponent implements OnInit {
                 this.authService.setAuthToken(authToken);
 
                 console.log('Login successful');
+                this.route.navigate([''])
               },
               (loginError: any) => {
 

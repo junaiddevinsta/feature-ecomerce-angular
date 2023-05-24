@@ -11,13 +11,16 @@ import { RenderWebsiteComponent } from './render-website.component';
 import { HeaderComponent } from './shared-website/layout/header/header.component';
 import { SharedWebsiteModule } from './shared-website/shared-website.module';
 import { HomeModule } from './home/home.module';
+import { ShopComponent } from './shop/shop.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    RenderWebsiteComponent
+    RenderWebsiteComponent,
+    ShopComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { HomeModule } from './home/home.module';
     ReactiveFormsModule,
     HttpClientModule,
     SharedWebsiteModule,
-    HomeModule
+    HomeModule,
+
   ],
 
   providers: [],
