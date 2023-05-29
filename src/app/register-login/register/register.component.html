@@ -7,14 +7,14 @@
     <p class="text-gray-600 mb-6 text-sm">
       Register here if you don't have account
     </p>
-    <form [formGroup]="resToForm" (ngSubmit)="getRegister()">
+    <form [formGroup]="resToForm" (ngSubmit)="registerUser()">
       <div class="space-y-4">
         <div>
           <label class="text-gray-600 mb-2 block">
             Full Name <span class="text-primary">*</span>
           </label>
           <input type="text" class="input-box" placeholder="John Doe" formControlName="fname">
-          <div style="color: red;" *ngIf="inputControls.fname.touched && inputControls.fname.invalid">Field Not valid
+          <div style="color: red;" *ngIf="inputControls.fname.touched && inputControls.fname.invalid">Enter Your Name
           </div>
 
         </div>
@@ -23,16 +23,16 @@
             Email Address <span class="text-primary">*</span>
           </label>
           <input type="email" class="input-box" placeholder="example@mail.com" formControlName="email">
-          <div style="color: red;" *ngIf="inputControls.email.touched && inputControls.email.invalid">Field Not valid
+          <div style="color: red;" *ngIf="inputControls.email.touched && inputControls.email.invalid">Please Enter Correct Email Address
           </div>
 
         </div>
         <div>
           <label class="text-gray-600 mb-2 block">Password <span class="text-primary">*</span></label>
           <input type="password" class="input-box" placeholder="type password" formControlName="password"
-            (change)="onConfirmPassword()">
-          <div style="color: red;" *ngIf="inputControls.password.touched && inputControls.password.invalid">Field Not
-            valid</div>
+            (change)="matchPassword()">
+          <div style="color: red;" *ngIf="inputControls.password.touched && inputControls.password.invalid">Enter your Password
+    </div>
 
         </div>
         <div>
@@ -40,7 +40,7 @@
             <span class="text-primary">*</span>
           </label>
           <input type="password" class="input-box" placeholder="confirm your password" formControlName="confirmPassword"
-            (change)="onConfirmPassword()">
+            (change)="matchPassword()">
           <!-- <div style="color: red;" *ngIf="inputControls.confirmPassword.touched && inputControls.confirmPassword.invalid">Field Not valid</div> -->
           <div style="color: red;"><span *ngIf="confirmPassword.hasError('mismatch')">Password do not match</span></div>
 

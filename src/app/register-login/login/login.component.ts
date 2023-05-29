@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl,FormControl,FormGroup,Validators,} from '@angular/forms';
 import { Router } from '@angular/router';
-import { ApiService } from 'src/app/services/api.service';
 import { AuthService } from 'src/app/services/auth.service';
+import { ToastrNotificationService } from 'src/app/services/toastr-notification.service';
 
 @Component({
   selector: 'app-login',
@@ -11,10 +11,10 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
   loginForm = new FormGroup({
-    email: new FormControl('', [Validators.required,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$'),]),
+    email: new FormControl('', [Validators.required,Validators.email,]),
     password: new FormControl('', [Validators.required]),
   });
-  constructor(private apiService:ApiService, private authService:AuthService, private route:Router) { }
+  constructor(private authService:AuthService, private route:Router, private toastr:ToastrNotificationService) { }
 
   ngOnInit(): void {
   }
@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
       const password = this.password.value;
 
 
-      this.authService.checkExistingUser(email, password).subscribe(
+      this.authService.checkExistingUser(email).subscribe(
         (response: any) => {
                   const apiToken = this.generateApiToken();
 
@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
 
                 const authToken = loginResponse.token;
                 this.authService.setAuthToken(authToken);
-
+this.toastr.successToastLogin('LoggedIn')
                 console.log('Login successful');
                 this.route.navigate([''])
               },
@@ -56,13 +56,13 @@ export class LoginComponent implements OnInit {
               }
             );
           } else {
-
-            alert('Username or password incorrect')
+this.toastr.errorToastLogin('Incorrect Username or Password')
+            // alert('Username or password incorrect')
             console.log('User name or password incorrect');
           }
         },
         (error: any) => {
-
+          this.toastr.errorToast('Error')
           console.log('API error');
         }
       );

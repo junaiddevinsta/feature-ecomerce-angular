@@ -1,0 +1,42 @@
+<!-- header -->
+<!-- <div class="fixed top-0 w-full z-50"> -->
+  <header class="py-4 shadow-sm bg-pink-100 lg:bg-white ">
+    <div class="container flex items-center justify-between">
+      <!-- logo -->
+      <a routerLink="/"  class="block w-32">
+        <img src="assets/images/logo.svg" alt="logo" class="w-full" />
+      </a>
+      <!-- logo end -->
+
+      <!-- searchbar -->
+      <div class="w-full xl:max-w-xl lg:max-w-lg lg:flex relative hidden">
+
+        <span class="absolute left-4 top-3 text-lg text-gray-400">
+          <i class="fas fa-search"></i>
+        </span>
+        <form class="flex" [formGroup]="searchForm">
+        <input
+          type="text" #sea formControlName="search"
+          class="pl-12 w-full border border-r-0 border-primary py-3 px-3 rounded-l-md focus:ring-primary focus:border-primary"
+          placeholder="search"
+        />
+        <button
+          type="submit" (click)="searchResult(sea.value)"
+          class="bg-primary border border-primary text-white px-8 font-medium rounded-r-md focus:ring-primary focus:border-primary"
+        >
+          Search
+        </button>
+      </form>
+      </div>
+      <!-- searchbar end -->
+
+      <!-- navicons -->
+      <div class="space-x-4 flex items-center">
+
+      </div>
+      <!-- navicons end -->
+    </div>
+  </header>
+  <!-- header end -->
+
+

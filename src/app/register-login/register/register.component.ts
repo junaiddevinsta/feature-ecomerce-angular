@@ -2,8 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl,FormControl,FormGroup,Validators,} from '@angular/forms';
 import { Router } from '@angular/router';
-import { Observable, map } from 'rxjs';
 import { ApiService } from 'src/app/services/api.service';
+import { AuthService } from 'src/app/services/auth.service';
+import { ToastrNotificationService } from 'src/app/services/toastr-notification.service';
 
 @Component({
   selector: 'app-register',
@@ -18,10 +19,10 @@ export class RegisterComponent implements OnInit {
     password: new FormControl('', [Validators.required]),
     confirmPassword: new FormControl('', [Validators.required]),
   });
-  constructor(private apiService: ApiService, private http: HttpClient, private route:Router) {}
+  constructor(private apiService: ApiService, private http: HttpClient, private route:Router, private authService:AuthService, private toastr:ToastrNotificationService) {}
 
   ngOnInit(): void {
-    this.onSubmit();
+    // this.onSubmit();
   }
   get inputControls() {
     return this.resToForm.controls;
@@ -29,40 +30,49 @@ export class RegisterComponent implements OnInit {
   getData() {
     console.log('data=>', this.resToForm.value);
   }
-  getRegister() {
+  registerUser() {
     console.log('register form data =>', this.resToForm.value);
     const data = {
       fname: this.resToForm.value.fname,
       email: this.resToForm.value.email,
       password: this.resToForm.value.password,
-      confirmPassword: this.resToForm.value.confirmPassword,
     };
     console.log('Data =>', data);
 
-    const emailValue = this.resToForm.value.email ?? '';
-    if (emailValue !== '') {
-      if (this.isEmailAlreadyRegistered(emailValue)) {
-        console.log('Email exists');
-        alert('Email already exists');
-      } else {
-        this.apiService.postRequest('signupUsersList', data).subscribe(
-          (res: any) => {
-            console.log('Register successful');
-            alert('SIGNUP SUCCESSFUL');
-            this.route.navigate(['/login'])
-          },
-          (err: any) => {
-            console.log('Something went wrong');
-            // alert("Something went wrong");
+    if(this.resToForm.valid){
+      const email = this.email.value;
+      this.authService.checkExistingUser(email).subscribe(
+        (response: any) => {
+
+
+          const userExists = response.some((user: any) => user.email === email );
+          if (!userExists) {
+            this.apiService.postRequest('register', data).subscribe((res:any)=>{
+              console.log('Register successful');
+              this.toastr.successToastRegister('Registered', res.message),
+
+                      // alert('SIGNUP SUCCESSFUL');
+                      this.route.navigate([''])
+                      console.log("sucess")
+            })
+
+          } else if(userExists) {
+
+            this.toastr.ToastEmailAlreadyExists('Error')
+            console.log('Email Already Registered');
+          } else{
+            alert('Register Failed')
+            console.log('Register Failed');
           }
-        );
-      }
-    } else {
-      console.log('Invalid email value');
-      // Handle the case when the email value is invalid or empty
+        },
+        (error: any) => {
+this.toastr.errorToast('Error')
+          console.log('API error');
+        }
+      );
     }
   }
-  onConfirmPassword() {
+  matchPassword() {
     if (this.confirmPassword.value == this.password.value) {
       this.confirmPassword.setErrors(null);
       // this.route.navigate(['/login'])
@@ -77,15 +87,17 @@ export class RegisterComponent implements OnInit {
   get confirmPassword(): AbstractControl {
     return this.resToForm.controls['confirmPassword'];
   }
-  onSubmit() {
-    this.apiService
-      .getrequest('signupUsersList')
-      .subscribe((registerData: any) => {
-        this.users = registerData;
-        console.log('users=>', this.users);
-      });
+
+
+  get email(): AbstractControl {
+    return this.resToForm.controls['email'];
   }
-  isEmailAlreadyRegistered(email: string): boolean {
-    return this.users.some((user: { email: string }) => user.email === email);
+  checkUserExists(){
+
+
   }
 }
+function elseif(userExists: any) {
+  throw new Error('Function not implemented.');
+}
+

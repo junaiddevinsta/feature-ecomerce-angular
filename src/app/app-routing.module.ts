@@ -4,6 +4,7 @@ import { RegisterComponent } from './register-login/register/register.component'
 import { LoginComponent } from './register-login/login/login.component';
 import { RenderWebsiteComponent } from './render-website.component';
 import { ShopComponent } from './shop/shop.component';
+import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   {
@@ -25,10 +26,22 @@ const routes: Routes = [
       {
         path:'shop',
         component:ShopComponent
+      },
+      {
+        path:'view-product/:id',
+        loadChildren:()=>import('./view-product/view-product.module').then((m)=>m.ViewProductModule)
       }
+
     ]
   },
-
+  {
+    path:'search',
+    component:SearchComponent
+  },
+  {
+    path:'search/:search',
+    component:SearchComponent
+  }
 
 ];
 

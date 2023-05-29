@@ -1,5 +1,5 @@
 {
-  "signupUsersList": [
+  "register": [
     {
       "id": 1
     },
@@ -40,153 +40,239 @@
       "password": "123",
       "confirmPassword": "123",
       "id": 7
-    }
-  ],
-  "login": [
-    {
-      "email": "junaid@gmail.com",
-      "password": "123",
-      "id": 1
     },
     {
-      "email": "junaiddsfd@gmail.com",
-      "password": "123",
-      "id": 2
-    },
-    {
-      "email": "junaid@gmail.com",
-      "password": "123",
-      "id": 3
-    },
-    {
-      "email": "devinsta@gmail.com",
-      "password": "1234",
-      "id": 4
-    },
-    {
-      "email": "devinsta@gmail.com",
-      "password": "123",
-      "id": 5
-    },
-    {
-      "email": "devinsta@gmail.com",
-      "password": "123",
-      "id": 6
-    },
-    {
-      "email": "junaid123@gmail.com",
-      "password": "123",
-      "id": 7
-    },
-    {
-      "email": "junaid123@gmail.com",
-      "password": "123",
+      "fname": "safoor",
+      "email": "safoor@devinsta.com",
+      "password": "safoor123",
+      "confirmPassword": "safoor123",
       "id": 8
     },
     {
-      "email": "junaid123@gmail.com",
+      "fname": "ssdsa",
+      "email": "jun123@gmail.com",
       "password": "123",
+      "confirmPassword": "123",
       "id": 9
     },
     {
-      "email": "junaid456@gmail.com",
+      "fname": "asdd",
+      "email": "lkjkjk@gmail.com",
       "password": "123",
+      "confirmPassword": "123",
       "id": 10
     },
     {
-      "email": "junaid456@gmail.com",
+      "fname": "junaid",
+      "email": "junaiddevinsta@gmail.com",
       "password": "123",
+      "confirmPassword": "123",
       "id": 11
     },
     {
-      "email": "junaid456@gmail.com",
-      "password": "123",
       "id": 12
     },
     {
-      "email": "junaid456@gmail.com",
-      "password": "123",
+      "email": "junaiddevinsta@gmail.com",
       "id": 13
     },
     {
-      "email": "junaid456@gmail.com",
-      "password": "123",
+      "email": "junaid000@gmail.com",
       "id": 14
     },
     {
-      "email": "junaid456@gmail.com",
-      "password": "123",
+      "email": "junaid999@gmail.com",
       "id": 15
     },
     {
-      "email": "junaid456@gmail.com",
+      "email": "example@gmail.com",
       "password": "123",
       "id": 16
     },
     {
-      "email": "junaid456@gmail.com",
+      "email": "example@gmail.com",
       "password": "123",
       "id": 17
     },
     {
-      "email": "junaid456@gmail.com",
+      "fname": "junaid",
+      "email": "jonny@gmail.com",
       "password": "123",
       "id": 18
     },
     {
-      "email": "junaid456@gmail.com",
+      "email": "jonny@gmail.com",
       "password": "123",
       "id": 19
     },
     {
-      "email": "junaid456@gmail.com",
+      "fname": "junaid",
+      "email": "junaid1122@gmail.com",
       "password": "123",
       "id": 20
     },
     {
-      "email": "junaid456@gmail.com",
+      "email": "junaid1122@gmail.com",
       "password": "123",
       "id": 21
     },
     {
-      "email": "junaid456@gmail.com",
+      "fname": "akhtar",
+      "email": "akhtar123@gmail.com",
       "password": "123",
       "id": 22
     },
     {
-      "email": "junaid456@gmail.com",
+      "email": "akhtar123@gmail.com",
       "password": "123",
       "id": 23
     },
     {
-      "email": "junaid456@gmail.com",
+      "email": "akhtar123@gmail.com",
       "password": "123",
       "id": 24
     },
     {
-      "email": "junaid456@gmail.com",
+      "email": "junaiddevinsta@gmail.com",
       "password": "123",
       "id": 25
     },
     {
-      "email": "junaid456@gmail.com",
+      "fname": "juhhd",
+      "email": "ali@gmail.com",
       "password": "123",
       "id": 26
     },
     {
-      "email": "junaid456@gmail.com",
+      "fname": "ASA",
+      "email": "hhjh@gmail.com",
       "password": "123",
       "id": 27
     },
     {
-      "email": "junaid456@gmail.com",
+      "fname": "hjjhs",
+      "email": "jjhsd@gmail.com",
       "password": "123",
       "id": 28
     },
     {
-      "email": "junaid456@gmail.com",
+      "fname": "ww",
+      "email": "ghhgsa@gmail.com",
       "password": "123",
       "id": 29
+    },
+    {
+      "fname": "qwds",
+      "email": "jhqs@gmail.com",
+      "password": "123",
+      "id": 30
+    },
+    {
+      "fname": "adas",
+      "email": "jhasg@gmail.com",
+      "password": "123",
+      "id": 31
+    },
+    {
+      "fname": "sdds",
+      "email": "adfad@gmail.com",
+      "password": "123",
+      "id": 32
+    },
+    {
+      "fname": "sdds",
+      "email": "adfadasa@gmail.com",
+      "password": "123",
+      "id": 33
+    },
+    {
+      "fname": "sdds",
+      "email": "adfadasasdas@gmail.com",
+      "password": "123",
+      "id": 34
+    },
+    {
+      "fname": "saasa",
+      "email": "aff@gmail.com",
+      "password": "123",
+      "id": 35
+    },
+    {
+      "fname": "saasad",
+      "email": "aff122@gmail.com",
+      "password": "123",
+      "id": 36
+    },
+    {
+      "fname": "asdas",
+      "email": "adasas@gmail.com",
+      "password": "123",
+      "id": 37
+    },
+    {
+      "fname": "aada",
+      "email": "adad@gmail.com",
+      "password": "123",
+      "id": 38
+    },
+    {
+      "fname": "ssa",
+      "email": "khsah@gmail.com",
+      "password": "123",
+      "id": 39
+    },
+    {
+      "fname": "sasas",
+      "email": "kljgybhb@gmail.com",
+      "password": "123",
+      "id": 40
+    },
+    {
+      "fname": "kjdsjj",
+      "email": "iuygeh@gmail.com",
+      "password": "123",
+      "id": 41
+    },
+    {
+      "fname": "jjh",
+      "email": "jhshgsg@gmail.com",
+      "password": "123",
+      "id": 42
+    },
+    {
+      "fname": "jjha",
+      "email": "jhshgsgad@gmail.com",
+      "password": "123",
+      "id": 43
+    },
+    {
+      "fname": "asddasaf",
+      "email": "hjhdhsa@gmail.com",
+      "password": "123",
+      "id": 44
+    },
+    {
+      "fname": "asdsa",
+      "email": "jajkshjab@gmail.com",
+      "password": "123",
+      "id": 45
+    },
+    {
+      "fname": "sadsa",
+      "email": "jjhjj@gmail.com",
+      "password": "123",
+      "id": 46
+    },
+    {
+      "fname": "kjasdhj",
+      "email": "jhjahjuyyy@gmail.com",
+      "password": "123",
+      "id": 47
+    },
+    {
+      "email": "jhjahjuyyy@gmail.com",
+      "password": "123",
+      "id": 48
     }
   ],
   "products": [
@@ -194,50 +280,122 @@
       "id": 1,
       "product_name": "Guyer Chair",
       "price": 45,
+      "old_price": 150,
       "reviews": 150,
-      "image": "assets/images/products/product1.jpg"
+      "image": "assets/images/products/product1.jpg",
+      "brand":"Apex",
+      "SKU":"BE45VGRT",
+      "category":"Sofa",
+      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
+
     },
     {
       "id": 2,
       "product_name": "Guyer Chair",
       "price": 45,
+      "old_price": 150,
       "reviews": 150,
-      "image": "assets/images/products/product2.jpg"
+      "image": "assets/images/products/product2.jpg",
+      "brand":"Apex",
+      "SKU":"BE45VGRT",
+      "category":"Sofa",
+      "Availability":"In stock",
+      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
+
     },
     {
       "id": 3,
       "product_name": "Guyer Chair",
       "price": 45,
+      "old_price": 150,
       "reviews": 150,
-      "image": "assets/images/products/product3.jpg"
+      "image": "assets/images/products/product3.jpg",
+      "brand":"Apex",
+      "SKU":"BE45VGRT",
+      "category":"Sofa",
+      "Availability":"In stock",
+      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
+
     },
     {
       "id": 4,
       "product_name": "Guyer Chair",
       "price": 45,
+      "old_price": 150,
       "reviews": 150,
-      "image": "assets/images/products/product4.jpg"
+      "image": "assets/images/products/product4.jpg",
+      "brand":"Apex",
+      "SKU":"BE45VGRT",
+      "category":"Sofa",
+      "Availability":"In stock",
+
+      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
     },
     {
       "id": 5,
       "product_name": "Guyer Chair",
       "price": 45,
+      "old_price": 150,
       "reviews": 150,
-      "image": "assets/images/products/product5.jpg"
+      "image": "assets/images/products/product5.jpg",
+      "brand":"Apex",
+      "category":"Sofa",
+      "Availability":"In stock",
+      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
     },
     {
       "id": 6,
       "product_name": "Guyer Chair",
       "price": 45,
+      "old_price": 150,
       "reviews": 150,
-      "image": "assets/images/products/product6.jpg"
+      "image": "assets/images/products/product6.jpg",
+      "brand":"Apex",
+      "category":"Sofa",
+      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
     },
     {
       "id": 7,
       "product_name": "Guyer Chair",
       "price": 45,
+      "old_price": 150,
       "reviews": 150,
-      "image": "assets/images/products/product7.jpg"
+      "image": "assets/images/products/product7.jpg",
+      "brand":"Apex",
+      "category":"Sofa",
+      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
+
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "category_name": "Bedroom",
+      "category_image": "assets/images/category/category-1.jpg"
+    },
+    {
+      "id": 2,
+      "category_name": "sofa",
+      "category_image": "assets/images/category/category-2.jpg"
+    },
+    {
+      "id": 3,
+      "category_name": "office",
+      "category_image": "assets/images/category/category-3.jpg"
+    },
+    {
+      "id": 4,
+      "category_name": "outdoor",
+      "category_image": "assets/images/category/category-4.jpg"
+    },
+    {
+      "id": 5,
+      "category_name": "Mattress",
+      "category_image": "assets/images/category/category-5.jpg"
     }
   ]
 }
