@@ -1,16 +1,18 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, catchError, filter, map, of, switchMap, take, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { productsQuery } from '../state/products/products.query';
 import { productsStore } from '../state/products/products.store';
 import { products } from '../state/products/products.model';
+import { cart, product } from '../data-type';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
+  cartData = new EventEmitter<product[] | []>();
   loading=false;
   products:any=[];
   productsApi:any
@@ -33,6 +35,7 @@ export class ProductsService {
   //     map((res) => res),
   //   );
   // }
+
   getrequest(): Observable<products[]> {
       return this.http.get<any>(`${this.baseUrl}/products`).pipe(
         map((res) => res)
@@ -62,6 +65,7 @@ export class ProductsService {
         }
       );
     }
+    
 //     getProductsData(){
 // // this.getProductsData();
 // this.query.getIsLoading().subscribe(res => this.loading = res);

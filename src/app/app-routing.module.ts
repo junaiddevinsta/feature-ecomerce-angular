@@ -5,6 +5,7 @@ import { LoginComponent } from './register-login/login/login.component';
 import { RenderWebsiteComponent } from './render-website.component';
 import { ShopComponent } from './shop/shop.component';
 import { SearchComponent } from './search/search.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,10 @@ const routes: Routes = [
       {
         path:'view-product/:id',
         loadChildren:()=>import('./view-product/view-product.module').then((m)=>m.ViewProductModule)
+      },
+      {
+        path:'cart',
+        component:CartPageComponent
       }
 
     ]

@@ -8,9 +8,8 @@ import { environment } from 'src/environments/environment';
 })
 
 export class AuthService {
-
+  apiToken:any
   private readonly baseUrl = environment.baseUrl;
-  private httpOptions = {};
   private authToken: string = '';
   constructor(private http:HttpClient) { }
   login(email: string, password: string): Observable<any> {
@@ -48,6 +47,17 @@ export class AuthService {
     return new HttpHeaders().set('Authorization', `Bearer ${this.authToken}`);
   }
   isLogged() {
-    return !!localStorage.getItem('token');
+    this.apiToken = this.generateApiToken();
+    return localStorage.getItem('apiToken');
+  }
+  generateApiToken(): string {
+
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const tokenLength = 32;
+    let token = '';
+    for (let i = 0; i < tokenLength; i++) {
+      token += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return token;
   }
 }

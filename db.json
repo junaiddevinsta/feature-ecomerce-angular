@@ -273,6 +273,11 @@
       "email": "jhjahjuyyy@gmail.com",
       "password": "123",
       "id": 48
+    },
+    {
+      "email": "devinsta@gmail.com",
+      "password": "123",
+      "id": 49
     }
   ],
   "products": [
@@ -283,11 +288,10 @@
       "old_price": 150,
       "reviews": 150,
       "image": "assets/images/products/product1.jpg",
-      "brand":"Apex",
-      "SKU":"BE45VGRT",
-      "category":"Sofa",
-      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
-
+      "brand": "Apex",
+      "SKU": "BE45VGRT",
+      "category": "Sofa",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
     },
     {
       "id": 2,
@@ -296,12 +300,11 @@
       "old_price": 150,
       "reviews": 150,
       "image": "assets/images/products/product2.jpg",
-      "brand":"Apex",
-      "SKU":"BE45VGRT",
-      "category":"Sofa",
-      "Availability":"In stock",
-      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
-
+      "brand": "Apex",
+      "SKU": "BE45VGRT",
+      "category": "Sofa",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
     },
     {
       "id": 3,
@@ -310,13 +313,12 @@
       "old_price": 150,
       "reviews": 150,
       "image": "assets/images/products/product3.jpg",
-      "brand":"Apex",
-      "SKU":"BE45VGRT",
-      "category":"Sofa",
-      "Availability":"In stock",
-      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "long_description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
-
+      "brand": "Apex",
+      "SKU": "BE45VGRT",
+      "category": "Sofa",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
     },
     {
       "id": 4,
@@ -325,13 +327,12 @@
       "old_price": 150,
       "reviews": 150,
       "image": "assets/images/products/product4.jpg",
-      "brand":"Apex",
-      "SKU":"BE45VGRT",
-      "category":"Sofa",
-      "Availability":"In stock",
-
-      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "long_description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
+      "brand": "Apex",
+      "SKU": "BE45VGRT",
+      "category": "Sofa",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
     },
     {
       "id": 5,
@@ -340,11 +341,11 @@
       "old_price": 150,
       "reviews": 150,
       "image": "assets/images/products/product5.jpg",
-      "brand":"Apex",
-      "category":"Sofa",
-      "Availability":"In stock",
-      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "long_description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
+      "brand": "Apex",
+      "category": "Sofa",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
     },
     {
       "id": 6,
@@ -353,10 +354,10 @@
       "old_price": 150,
       "reviews": 150,
       "image": "assets/images/products/product6.jpg",
-      "brand":"Apex",
-      "category":"Sofa",
-      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "long_description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
+      "brand": "Apex",
+      "category": "Sofa",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
     },
     {
       "id": 7,
@@ -365,10 +366,9 @@
       "old_price": 150,
       "reviews": 150,
       "image": "assets/images/products/product7.jpg",
-      "brand":"Apex",
-      "category":"Sofa",
-      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
-
+      "brand": "Apex",
+      "category": "Sofa",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
     }
   ],
   "categories": [
@@ -396,6 +396,169 @@
       "id": 5,
       "category_name": "Mattress",
       "category_image": "assets/images/category/category-5.jpg"
+    }
+  ],
+  "cart": [
+    {
+      "product_name": "Guyer Chair",
+      "price": 45,
+      "old_price": 150,
+      "reviews": 150,
+      "image": "assets/images/products/product2.jpg",
+      "brand": "Apex",
+      "SKU": "BE45VGRT",
+      "category": "Sofa",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "quantity": 1,
+      "productId": 2,
+      "userId": 6,
+      "id": 1
+    },
+    {
+      "product_name": "Guyer Chair",
+      "price": 45,
+      "old_price": 150,
+      "reviews": 150,
+      "image": "assets/images/products/product3.jpg",
+      "brand": "Apex",
+      "SKU": "BE45VGRT",
+      "category": "Sofa",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "quantity": 1,
+      "productId": 3,
+      "userId": 6,
+      "id": 2
+    },
+    {
+      "product_name": "Guyer Chair",
+      "price": 45,
+      "old_price": 150,
+      "reviews": 150,
+      "image": "assets/images/products/product2.jpg",
+      "brand": "Apex",
+      "SKU": "BE45VGRT",
+      "category": "Sofa",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "quantity": 1,
+      "productId": 2,
+      "userId": 3,
+      "id": 3
+    },
+    {
+      "product_name": "Guyer Chair",
+      "price": 45,
+      "old_price": 150,
+      "reviews": 150,
+      "image": "assets/images/products/product3.jpg",
+      "brand": "Apex",
+      "SKU": "BE45VGRT",
+      "category": "Sofa",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "quantity": 1,
+      "productId": 3,
+      "userId": 6,
+      "id": 4
+    },
+    {
+      "product_name": "Guyer Chair",
+      "price": 45,
+      "old_price": 150,
+      "reviews": 150,
+      "image": "assets/images/products/product3.jpg",
+      "brand": "Apex",
+      "SKU": "BE45VGRT",
+      "category": "Sofa",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "quantity": 1,
+      "productId": 3,
+      "userId": 6,
+      "id": 5
+    },
+    {
+      "product_name": "Guyer Chair",
+      "price": 45,
+      "old_price": 150,
+      "reviews": 150,
+      "image": "assets/images/products/product3.jpg",
+      "brand": "Apex",
+      "SKU": "BE45VGRT",
+      "category": "Sofa",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "quantity": 1,
+      "productId": 3,
+      "userId": 6,
+      "id": 6
+    },
+    {
+      "product_name": "Guyer Chair",
+      "price": 45,
+      "old_price": 150,
+      "reviews": 150,
+      "image": "assets/images/products/product3.jpg",
+      "brand": "Apex",
+      "SKU": "BE45VGRT",
+      "category": "Sofa",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "quantity": 1,
+      "productId": 3,
+      "userId": 6,
+      "id": 7
+    },
+    {
+      "product_name": "Guyer Chair",
+      "price": 45,
+      "old_price": 150,
+      "reviews": 150,
+      "image": "assets/images/products/product7.jpg",
+      "brand": "Apex",
+      "category": "Sofa",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "quantity": 1,
+      "productId": 7,
+      "userId": 6,
+      "id": 8
+    }
+  ],
+  "wishlist": [
+    {
+      "product_name": "Guyer Chair",
+      "price": 45,
+      "old_price": 150,
+      "reviews": 150,
+      "image": "assets/images/products/product1.jpg",
+      "brand": "Apex",
+      "SKU": "BE45VGRT",
+      "category": "Sofa",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "productId": 1,
+      "userId": 6,
+      "id": 2
+    },
+    {
+      "product_name": "Guyer Chair",
+      "price": 45,
+      "old_price": 150,
+      "reviews": 150,
+      "image": "assets/images/products/product6.jpg",
+      "brand": "Apex",
+      "category": "Sofa",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "productId": 6,
+      "userId": 3,
+      "id": 3
     }
   ]
 }
