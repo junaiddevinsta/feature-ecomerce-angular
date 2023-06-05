@@ -65,18 +65,7 @@ export class ProductService {
   addToCart(cartData: cart) {
     return this.http.post(`${this.baseUrl}/cart`, cartData);
   }
-  addToWishlist(wishlistData: wishlist) {
-    return this.http.post(`${this.baseUrl}/wishlist`, wishlistData);
-  }
-  removeItemFromWishlist(productId: number) {
-    let cartData = localStorage.getItem('localCart');
-    if (cartData) {
-      let items: product[] = JSON.parse(cartData);
-      items = items.filter((item: product) => productId !== item.id);
-      localStorage.setItem('localCart', JSON.stringify(items));
-      this.cartData.emit(items);
-    }
-  }
+
   getCartList(userId: any) {
     return this.http
       .get<product[]>(`${this.baseUrl}/cart?userId=` + userId, {
@@ -92,6 +81,23 @@ export class ProductService {
   }
   removeToCart(cartId:any){
     return this.http.delete(`${this.baseUrl}/cart/` + cartId);
+  }
+  currentCart() {
+    let user = localStorage.getItem('userid');
+    let userData = user && JSON.parse(user);
+    return this.http.get<cart[]>('http://localhost:3000/cart?userId=' + userData);
+  }
+  addToWishlist(wishlistData: wishlist) {
+    return this.http.post(`${this.baseUrl}/wishlist`, wishlistData);
+  }
+  removeItemFromWishlist(productId: number) {
+    let cartData = localStorage.getItem('localCart');
+    if (cartData) {
+      let items: product[] = JSON.parse(cartData);
+      items = items.filter((item: product) => productId !== item.id);
+      localStorage.setItem('localCart', JSON.stringify(items));
+      this.cartData.emit(items);
+    }
   }
   getWishlistList(userId: any) {
     return this.http
@@ -110,9 +116,10 @@ export class ProductService {
   removeToWishlist(wishlistId:any){
     return this.http.delete(`${this.baseUrl}/wishlist/` + wishlistId);
   }
-  currentCart() {
+  currentWishlist() {
     let user = localStorage.getItem('userid');
     let userData = user && JSON.parse(user);
-    return this.http.get<cart[]>('http://localhost:3000/cart?userId=' + userData);
+    return this.http.get<wishlist[]>('http://localhost:3000/wishlist?userId=' + userData);
   }
+
 }

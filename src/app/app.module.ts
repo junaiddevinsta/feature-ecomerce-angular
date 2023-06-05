@@ -14,8 +14,8 @@ import { productsQuery } from './state/products/products.query';
 import { ToastrModule } from 'ngx-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { SearchComponent } from './search/search.component';
-import { AddToWishlistComponent } from './add-to-wishlist/add-to-wishlist.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
+import { WishlistPageComponent } from './wishlist-page/wishlist-page.component';
 
 
 
@@ -29,8 +29,8 @@ import { CartPageComponent } from './cart-page/cart-page.component';
     RenderWebsiteComponent,
     ShopComponent,
     SearchComponent,
-    AddToWishlistComponent,
     CartPageComponent,
+    WishlistPageComponent,
 
 
   ],

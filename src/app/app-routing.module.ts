@@ -6,6 +6,7 @@ import { RenderWebsiteComponent } from './render-website.component';
 import { ShopComponent } from './shop/shop.component';
 import { SearchComponent } from './search/search.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
+import { WishlistPageComponent } from './wishlist-page/wishlist-page.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,10 @@ const routes: Routes = [
       {
         path:'cart',
         component:CartPageComponent
+      },
+      {
+        path:'wishlist',
+        component:WishlistPageComponent
       }
 
     ]
