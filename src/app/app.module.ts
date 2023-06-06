@@ -16,6 +16,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { SearchComponent } from './search/search.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { WishlistPageComponent } from './wishlist-page/wishlist-page.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { UserAccountModule } from './user-account/user-account.module';
 
 
 
@@ -31,6 +33,7 @@ import { WishlistPageComponent } from './wishlist-page/wishlist-page.component';
     SearchComponent,
     CartPageComponent,
     WishlistPageComponent,
+    CheckoutComponent,
 
 
   ],
@@ -43,6 +46,7 @@ import { WishlistPageComponent } from './wishlist-page/wishlist-page.component';
     HttpClientModule,
     SharedWebsiteModule,
     HomeModule,
+    UserAccountModule,
 
 
     ToastrModule.forRoot({

@@ -44,6 +44,7 @@ if(localStorage.getItem('userid')){
         let userId= user && JSON.parse(user);
   this.product.getCartList(userId);
   this.product.getWishlistList(userId);
+  // this.product.removeToCart(userId);
 }
   }
 

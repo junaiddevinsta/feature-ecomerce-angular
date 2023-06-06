@@ -1,0 +1,152 @@
+ <!-- breadcrum -->
+ <div class="py-4 container flex gap-3 items-center">
+  <a href="index.html" class="text-primary text-base">
+      <i class="fas fa-home"></i>
+  </a>
+  <span class="text-sm text-gray-400"><i class="fas fa-chevron-right"></i></span>
+  <p class="text-gray-600 font-medium uppercase">checkout</p>
+</div>
+<!-- breadcrum end -->
+
+<!-- checkout wrapper -->
+<form #orderData="ngForm" [formGroup]="resToForm" (ngSubmit)="orderNow(orderData.value)">
+<div class="container lg:grid grid-cols-12 gap-6 items-start pb-16 pt-4">
+  <!-- checkout form -->
+  <div class="lg:col-span-8 border border-gray-200 px-4 py-4 rounded">
+
+          <h3 class="text-lg font-medium capitalize mb-4">
+              checkout
+          </h3>
+
+          <div class="space-y-4">
+              <!-- <div class="grid sm:grid-cols-2 gap-4">
+                  <div>
+                      <label class="text-gray-600 mb-2 block">
+                          First Name <span class="text-primary">*</span>
+                      </label>
+                      <input type="text" class="input-box">
+                  </div>
+                  <div>
+                      <label class="text-gray-600 mb-2 block">
+                          Last Name <span class="text-primary">*</span>
+                      </label>
+                      <input type="text" class="input-box">
+                  </div>
+              </div> -->
+              <!-- <div>
+                  <label class="text-gray-600 mb-2 block">
+                      Company Name
+                  </label>
+                  <input type="text" class="input-box">
+              </div>
+              <div>
+                  <label class="text-gray-600 mb-2 block">
+                      County/Region <span class="text-primary">*</span>
+                  </label>
+                  <input type="text" class="input-box">
+              </div> -->
+              <div>
+                  <label class="text-gray-600 mb-2 block">
+                      Address <span class="text-primary">*</span>
+                  </label>
+
+                  <input type="text" class="input-box" formControlName="address" ngModel>
+                  <div style="color: red;" *ngIf="inputControls.address.touched && inputControls.address.invalid">Please Enter Address
+                  </div>
+              </div>
+              <!-- <div>
+                  <label class="text-gray-600 mb-2 block">
+                      Town/City <span class="text-primary">*</span>
+                  </label>
+                  <input type="text" class="input-box">
+              </div> -->
+              <!-- <div>
+                  <label class="text-gray-600 mb-2 block">
+                      Zip Code <span class="text-primary">*</span>
+                  </label>
+                  <input type="text" class="input-box">
+              </div> -->
+              <div>
+                  <label class="text-gray-600 mb-2 block">
+                      Phone Number <span class="text-primary">*</span>
+                  </label>
+
+                  <input type="text" class="input-box" formControlName="phone" ngModel>
+                  <div style="color: red;" *ngIf="inputControls.phone.touched && inputControls.phone.invalid">Please Enter Correct Phone Number
+                  </div>
+              </div>
+              <div>
+                  <label class="text-gray-600 mb-2 block">
+                      Email Address <span class="text-primary">*</span>
+                  </label>
+
+                  <input type="text" class="input-box" formControlName="email" ngModel>
+                  <div style="color: red;" *ngIf="inputControls.email.touched && inputControls.email.invalid">Please Enter Correct Email Address
+                  </div>
+              </div>
+          </div>
+           <!-- checkout -->
+
+
+  </div>
+  <!-- checkout form end -->
+
+  <!-- order summary -->
+  <div class="lg:col-span-4 border border-gray-200 px-4 py-4 rounded mt-6 lg:mt-0">
+      <h4 class="text-gray-800 text-lg mb-4 font-medium uppercase">ORDER SUMMARY</h4>
+      <div class="space-y-2" >
+          <div class="flex justify-between" v-for="n in 3" :key="n" *ngFor="let checkout of singleUserCheckoutData">
+              <div>
+                  <h5 class="text-gray-800 font-medium">{{checkout?.product_name}}</h5>
+                  <p class="text-sm text-gray-600">{{checkout?.brand}}</p>
+              </div>
+              <p class="text-gray-600">x{{checkout?.quantity}}</p>
+              <p class="text-gray-800 font-medium">${{checkout?.price*checkout?.quantity}}</p>
+          </div>
+      </div>
+      <div class="flex justify-between border-b border-gray-200 mt-1">
+          <h4 class="text-gray-800 font-medium my-3 uppercase">Subtotal</h4>
+          <h4 class="text-gray-800 font-medium my-3 uppercase">${{priceSummary.price}}</h4>
+      </div>
+      <div class="flex justify-between">
+        <p>Discount</p>
+        <p>${{priceSummary.discount}}</p>
+    </div>
+    <div class="flex justify-between">
+      <p>Tax</p>
+      <p>${{priceSummary.tax}}</p>
+  </div>
+  <div class="flex justify-between">
+    <p>delivery</p>
+    <p>${{priceSummary.delivery}}</p>
+</div>
+      <div class="flex justify-between border-b border-gray-200">
+          <h4 class="text-gray-800 font-medium my-3 uppercase">Payment</h4>
+          <h4 class="text-gray-800 font-medium my-3 uppercase">Cash on delivery</h4>
+      </div>
+      <div class="flex justify-between">
+          <h4 class="text-gray-800 font-semibold my-3 uppercase">Total</h4>
+          <h4 class="text-gray-800 font-semibold my-3 uppercase">${{priceSummary.total}}</h4>
+      </div>
+
+      <!-- agreeement  -->
+      <div class="flex items-center mb-4 mt-2">
+          <input type="checkbox" id="agreement"
+              class="text-primary focus:ring-0 rounded-sm cursor-pointer w-3 h-3">
+          <label for="agreement" class="text-gray-600 ml-3 cursor-pointer text-sm">
+              Agree to our
+              <a routerLink="#" class="text-primary">terms & conditions</a>
+          </label>
+      </div>
+      <button type="submit
+      " class="cursor-pointer bg-primary border border-primary text-white px-4 py-3 font-medium rounded-md uppercase hover:bg-transparent
+   hover:text-primary transition text-sm w-full block text-center">
+          Place order
+      </button>
+
+      <!-- checkout end -->
+  </div>
+  <!-- order summary end -->
+</div>
+<!-- checkout wrapper end -->
+</form>

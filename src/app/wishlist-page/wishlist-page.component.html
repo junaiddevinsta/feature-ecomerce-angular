@@ -8,14 +8,14 @@
 </div>
 <!-- breadcrum end -->
 <!-- account wrapper -->
-<div class="container lg:grid grid-cols-12 items-start gap-6 pt-4 pb-16">
+<div class="container lg:grid grid-cols-12 items-start gap-6 pt-4 pb-16" *ngIf="singleUserWishlistData.length">
 
 
   <!-- account content -->
-  <div class="col-span-9 mt-6 lg:mt-0 space-y-4" >
+  <div class="col-span-9 mt-6 lg:mt-0 space-y-4" *ngFor="let wishlist of singleUserWishlistData">
       <!-- single wishlist -->
       <div
-          class="flex items-center md:justify-between gap-4 md:gap-6 p-4 border border-gray-200 rounded flex-wrap md:flex-nowrap" *ngFor="let wishlist of singleUserWishlistData">
+          class="flex items-center md:justify-between gap-4 md:gap-6 p-4 border border-gray-200 rounded flex-wrap md:flex-nowrap" >
           <!-- cart image -->
           <div class="w-28 flex-shrink-0">
               <img src="{{wishlist?.image}}"  class="w-full">
@@ -37,7 +37,7 @@
               class="ml-auto md:ml-0 block px-6 py-2 text-center text-sm text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition uppercase font-roboto font-medium">
               Add to cart
           </a> -->
-          <a href="#"
+          <a (click)="removeToWishlist(wishlist.id)"
               class="ml-auto md:ml-0 block px-6 py-2 text-center text-sm text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition uppercase font-roboto font-medium">
               Delete To Wishlist
           </a>
@@ -49,5 +49,11 @@
 
   </div>
   <!-- account content end -->
+</div>
+<div *ngIf="!singleUserWishlistData.length">
+  <h1 class="text-center">
+    No Record found
+  </h1>
+
 </div>
 <!-- account wrapper end -->

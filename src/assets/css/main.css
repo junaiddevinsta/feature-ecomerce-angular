@@ -12,7 +12,7 @@ Document
 /**
 Use a better box model (opinionated).
 */
-
+/* line number 3616 hover button effect */
 *,
 *::before,
 *::after {
@@ -3613,9 +3613,9 @@ h1, h2, h3, h4, h5, h6{
   background-color: rgba(253, 61, 87, var(--tw-bg-opacity));
 }
 
-.hover\:bg-transparent:hover{
+/* .hover\:bg-transparent:hover{
   background-color: transparent;
-}
+} */
 
 .hover\:bg-current:hover{
   background-color: currentColor;

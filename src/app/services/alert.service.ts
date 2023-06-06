@@ -19,4 +19,8 @@ export class AlertService {
   removeWishlistAlert(){
     Swal.fire('Successfully Done!', 'Remove to Wishlist', 'success');
   }
+  orderPlaced(){
+    Swal.fire('Successfully Done!', 'Order Placed Successfully', 'success');
+  }
+
 }

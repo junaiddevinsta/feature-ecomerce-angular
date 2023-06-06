@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { cart, product, wishlist } from '../data-type';
+import { cart, order, product, wishlist } from '../data-type';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 
@@ -85,7 +85,8 @@ export class ProductService {
   currentCart() {
     let user = localStorage.getItem('userid');
     let userData = user && JSON.parse(user);
-    return this.http.get<cart[]>('http://localhost:3000/cart?userId=' + userData);
+    // 'http://localhost:3000/cart?userId='
+    return this.http.get<cart[]>(`${this.baseUrl}/cart?userId=` + userData);
   }
   addToWishlist(wishlistData: wishlist) {
     return this.http.post(`${this.baseUrl}/wishlist`, wishlistData);
@@ -121,5 +122,6 @@ export class ProductService {
     let userData = user && JSON.parse(user);
     return this.http.get<wishlist[]>('http://localhost:3000/wishlist?userId=' + userData);
   }
+
 
 }
