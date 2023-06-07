@@ -88,6 +88,11 @@ export class ProductService {
     // 'http://localhost:3000/cart?userId='
     return this.http.get<cart[]>(`${this.baseUrl}/cart?userId=` + userData);
   }
+  deleteCartItems(cartId: number) {
+    return this.http.delete(`${this.baseUrl}/cart/` + cartId,{observe:'response'}).subscribe((result) => {
+      this.cartData.emit([]);
+    })
+  }
   addToWishlist(wishlistData: wishlist) {
     return this.http.post(`${this.baseUrl}/wishlist`, wishlistData);
   }

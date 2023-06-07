@@ -22,5 +22,15 @@ export class AlertService {
   orderPlaced(){
     Swal.fire('Successfully Done!', 'Order Placed Successfully', 'success');
   }
+  cancelOrder(){
+    Swal.fire('Successfully Done!', 'Cancel Order Successful', 'success');
+  }
+cartEmpty(){
+  Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: 'Your cart is Empty!',
 
+  })
+}
 }

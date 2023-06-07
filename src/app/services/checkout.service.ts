@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { order } from '../data-type';
+import { order, product } from '../data-type';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -8,8 +8,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CheckoutService {
   private readonly baseUrl = environment.baseUrl;
+  cartData = new EventEmitter<product[] | []>();
   constructor(private http: HttpClient) { }
   orderNow(data: order) {
     return this.http.post(`${this.baseUrl}/orders`, data);
   }
+
 }

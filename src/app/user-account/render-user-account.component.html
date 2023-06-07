@@ -1,6 +1,6 @@
 <!-- breadcrum -->
 <div class="py-4 container flex gap-3 items-center">
-  <a href="index.html" class="text-primary text-base">
+  <a routerLink="/" class="text-primary text-base">
       <i class="fas fa-home"></i>
   </a>
   <span class="text-sm text-gray-400"><i class="fas fa-chevron-right"></i></span>
@@ -14,6 +14,24 @@
       <app-sidebar></app-sidebar>
   </div>
 
+<div class="col-span-9 grid md:grid-cols-3 gap-4 mt-6 lg:mt-0">
+  <div class="xl:col-span-9 lg:col-span-8">
+    <app-orders></app-orders>
+  </div>
+
 
 </div>
-<router-outlet></router-outlet>
+</div>
+<!-- <router-outlet></router-outlet> -->
+<!-- account wrapper -->
+<!-- <app-orders></app-orders> -->
+<!-- <div class="container lg:grid grid-cols-12 items-start gap-6 pt-4 pb-16">
+  <div class="col-span-3">
+      <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-span-9 grid md:grid-cols-9 gap-4 mt-6 lg:mt-0">
+<app-orders></app-orders>
+  </div>
+
+</div> -->
+<!-- <router-outlet></router-outlet> -->

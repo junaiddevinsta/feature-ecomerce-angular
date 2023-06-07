@@ -46,6 +46,16 @@ export class ToastrNotificationService {
 
 
   }
+  successToastOrderPlaced(title?:string, msg?: string){
+    // console.log("toastr")
+    this.toastr.success(msg ? msg :"Successfully Order Placed",title ? title : "Order Placed",
+    {
+      timeOut:1000,
+      progressBar:true
+    }
+
+    )
+  }
   ToastEmailAlreadyExists(title?:string, msg?: string){
     this.toastr.error(msg ? msg :"Email Already Exists",title ? title : "Error",
     {

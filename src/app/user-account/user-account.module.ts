@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { UserAccountRoutingModule } from './user-account-routing.module';
 import { RenderUserAccountComponent } from './render-user-account.component';
 import { SharedUserAccountModule } from './shared-user-account/shared-user-account.module';
+import { OrderHistoryModule } from './order-history/order-history.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SharedUserAccountModule } from './shared-user-account/shared-user-accou
   imports: [
     CommonModule,
     UserAccountRoutingModule,
-    SharedUserAccountModule
+    SharedUserAccountModule,
+    OrderHistoryModule
   ]
 })
 export class UserAccountModule { }

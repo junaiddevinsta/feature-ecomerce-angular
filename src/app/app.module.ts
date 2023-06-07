@@ -18,6 +18,7 @@ import { CartPageComponent } from './cart-page/cart-page.component';
 import { WishlistPageComponent } from './wishlist-page/wishlist-page.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { UserAccountModule } from './user-account/user-account.module';
+import { OrderCompleteComponent } from './order-complete/order-complete.component';
 
 
 
@@ -34,6 +35,7 @@ import { UserAccountModule } from './user-account/user-account.module';
     CartPageComponent,
     WishlistPageComponent,
     CheckoutComponent,
+    OrderCompleteComponent,
 
 
   ],

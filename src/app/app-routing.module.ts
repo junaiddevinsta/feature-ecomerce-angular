@@ -8,6 +8,7 @@ import { SearchComponent } from './search/search.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { WishlistPageComponent } from './wishlist-page/wishlist-page.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { OrderCompleteComponent } from './order-complete/order-complete.component';
 
 const routes: Routes = [
   {
@@ -49,6 +50,10 @@ const routes: Routes = [
       {
         path:'user-account',
         loadChildren:()=>import('./user-account/user-account.module').then((m)=>m.UserAccountModule)
+      },
+      {
+        path:'order-complete',
+        component:OrderCompleteComponent
       }
 
     ]

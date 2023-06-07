@@ -31,7 +31,6 @@ export class ShopComponent implements OnInit {
       // this.getCategory(id)// (+) converts string 'id' to a number
 
 
-      // In a real app: dispatch action to load the details here.
     });
     this.getProductsData()
     // this.productService.getProductsData();
@@ -65,7 +64,7 @@ this.router.navigate(['/view-product',id])
 //       console.log('user not login')
 //     }
 //   }
-  
+
 //   getQueryData(){
 // this.query.getIsLoading().subscribe(res => this.loading = res);
 // this.query.getIsLoading().subscribe(res => this.products = res);

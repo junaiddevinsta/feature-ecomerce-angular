@@ -398,23 +398,7 @@
       "category_image": "assets/images/category/category-5.jpg"
     }
   ],
-  "cart": [
-    {
-      "product_name": "Guyer Chair",
-      "price": 45,
-      "old_price": 150,
-      "reviews": 150,
-      "image": "assets/images/products/product6.jpg",
-      "brand": "Apex",
-      "category": "Sofa",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "quantity": 6,
-      "productId": 6,
-      "userId": 6,
-      "id": 4
-    }
-  ],
+  "cart": [],
   "wishlist": [
     {
       "product_name": "Guyer Chair",
@@ -429,6 +413,20 @@
       "productId": 6,
       "userId": 3,
       "id": 3
+    },
+    {
+      "product_name": "Guyer Chair",
+      "price": 45,
+      "old_price": 150,
+      "reviews": 150,
+      "image": "assets/images/products/product6.jpg",
+      "brand": "Apex",
+      "category": "Sofa",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "productId": 6,
+      "userId": 6,
+      "id": 4
     }
   ],
   "orders": [
@@ -436,33 +434,9 @@
       "address": "919 Stimple Ct",
       "phone": "9074572631",
       "email": "mumtaz@devinsta.com",
-      "totalPrice": 415,
+      "totalPrice": 145,
       "userId": 6,
       "id": 1
-    },
-    {
-      "address": "919 Stimple Ct",
-      "phone": "9074572631",
-      "email": "mumtaz@devinsta.com",
-      "totalPrice": 415,
-      "userId": 6,
-      "id": 2
-    },
-    {
-      "address": "919 Stimple Ct",
-      "phone": "9074572631",
-      "email": "mumtaz@devinsta.com",
-      "totalPrice": 415,
-      "userId": 6,
-      "id": 3
-    },
-    {
-      "address": "919 Stimple Ct",
-      "phone": "9074572631",
-      "email": "mumtaz@devinsta.com",
-      "totalPrice": 415,
-      "userId": 6,
-      "id": 4
     }
   ]
 }

@@ -59,7 +59,8 @@ export interface product{
     tax:number,
     delivery:number,
     total:number
-    quantity:number
+    quantity:number,
+
   }
   export interface order {
     email:string,

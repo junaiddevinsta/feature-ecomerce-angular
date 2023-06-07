@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { cart, priceSummary } from '../data-type';
+import { Router } from '@angular/router';
+import { AlertService } from '../services/alert.service';
 
 @Component({
   selector: 'app-cart-page',
@@ -19,7 +21,7 @@ export class CartPageComponent implements OnInit {
     quantity: 0
   }
   singleUserCartData: any;
-  constructor(private product: ProductService) { }
+  constructor(private product: ProductService, private route:Router, private alert:AlertService) { }
 
   ngOnInit(): void {
     this.loadDetails();
@@ -37,6 +39,9 @@ export class CartPageComponent implements OnInit {
   }
   loadDetails() {
     this.product.currentCart().subscribe((res) => {
+      // if(res){
+      //   this.route.navigate(['/checkout'])
+      // }
       this.cartData = res;
       let price = 0
       res.forEach((item) => {
@@ -56,5 +61,13 @@ export class CartPageComponent implements OnInit {
       this.singleUserCartData = res;
       console.log("single user cart data=>", this.singleUserCartData);
     })
+  }
+  checkCheckoutData(){
+    if(this.cartData?.length){
+      this.route.navigate(['/checkout'])
+    }
+    else{
+      this.alert.cartEmpty()
+    }
   }
 }
