@@ -7,18 +7,16 @@
       "id": 2
     },
     {
-      "fname": "john",
-      "email": "devinsta@gmail.com",
-      "password": "123",
-      "confirmPassword": "123",
-      "id": 3
+      "id": 3,
+      "name": "junaid",
+      "email": "junaid@gmail.com",
+      "phone": "03045434565",
+      "image": ""
     },
     {
-      "fname": "junaid",
-      "email": "junaid123@gmail.com",
-      "password": "123",
-      "confirmPassword": "123",
-      "id": 4
+      "id": 4,
+      "shippingAddress": "lkssjhjhaj",
+      "ShippingphoneNo": "03076565434"
     },
     {
       "fname": "amad",
@@ -28,11 +26,11 @@
       "id": 5
     },
     {
-      "fname": "asdsa",
-      "email": "junaid456@gmail.com",
-      "password": "123",
-      "confirmPassword": "123",
-      "id": 6
+      "id": 6,
+      "name": "junaid",
+      "email": "junaid1122@gmail.com",
+      "phone": "03087676543",
+      "image": ""
     },
     {
       "fname": "junjd",
@@ -411,8 +409,8 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
       "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
       "productId": 6,
-      "userId": 3,
-      "id": 3
+      "userId": 6,
+      "id": 4
     },
     {
       "product_name": "Guyer Chair",
@@ -425,8 +423,8 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
       "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
       "productId": 6,
-      "userId": 6,
-      "id": 4
+      "userId": 3,
+      "id": 5
     }
   ],
   "orders": [
@@ -438,5 +436,8 @@
       "userId": 6,
       "id": 1
     }
+  ],
+  "profileData":[
+
   ]
 }

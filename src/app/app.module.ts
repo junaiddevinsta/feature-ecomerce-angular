@@ -19,6 +19,7 @@ import { WishlistPageComponent } from './wishlist-page/wishlist-page.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { UserAccountModule } from './user-account/user-account.module';
 import { OrderCompleteComponent } from './order-complete/order-complete.component';
+import { IconMissingDirective } from './directives/icon-missing.directive';
 
 
 
@@ -36,6 +37,7 @@ import { OrderCompleteComponent } from './order-complete/order-complete.componen
     WishlistPageComponent,
     CheckoutComponent,
     OrderCompleteComponent,
+    IconMissingDirective,
 
 
   ],

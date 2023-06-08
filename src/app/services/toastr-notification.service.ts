@@ -102,5 +102,15 @@ export class ToastrNotificationService {
 
 
   }
+  UpdateProfileToast(title?:string, msg?: string){
+    // console.log("toastr")
+    this.toastr.success(msg ? msg :"Profile Update Successfully",title ? title : "Profile Update",
+    {
+      timeOut:1000,
+      progressBar:true
+    }
+
+    )
+  }
 
 }

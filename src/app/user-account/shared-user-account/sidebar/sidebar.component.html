@@ -25,8 +25,8 @@
                   <i class="far fa-address-card"></i>
               </span>
           </a>
-          <a routerLink="#" class="hover:text-primary transition capitalize block text-primary">Profile information</a>
-          <a routerLink="#" class="hover:text-primary transition capitalize block">Manage address</a>
+          <a routerLink="/user-account/manage-account/profile-info" [ngClass]="btnValue === 'profile-info' ? 'text-primary' : ''"  (click)="showComponent('profileInfo')" class="hover:text-primary transition capitalize block" (click)="selectBtn('profile-info')">Profile information</a>
+          <a routerLink="/user-account/manage-account/manage-address" [ngClass]="btnValue === 'manageAddress' ? 'text-primary' : ''" (click)="showComponent('manageAddress')" class="hover:text-primary transition capitalize block" (click)="selectBtn('manageAddress')">Manage address</a>
           <a routerLink="#" class="hover:text-primary transition capitalize block">change password</a>
       </div>
       <!-- single link end -->
@@ -39,8 +39,8 @@
                   <i class="fas fa-gift"></i>
               </span>
           </a>
-          <a routerLink="/user-account/order-history/orders" class="hover:text-primary transition block capitalize">my orders</a>
-          <a routerLink="#" class="hover:text-primary transition block capitalize">my cancellations</a>
+          <a routerLink="/user-account/manage-account/orders" [ngClass]="btnValue === 'orders' ? 'text-primary' : ''"  (click)="showComponent('orders')" class="hover:text-primary transition capitalize block" (click)="selectBtn('orders')">Orders</a>
+          <!-- <a routerLink="#" class="hover:text-primary transition block capitalize">my cancellations</a> -->
 
       </div>
       <!-- single link end -->

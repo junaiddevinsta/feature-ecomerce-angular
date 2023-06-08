@@ -40,11 +40,19 @@
             </div>
 <!-- cart quantity end -->
       <div class="md:w-32 w-full">
-      <p class="text-gray-500">In Progress</p>
+        <p  class="text-gray-500">In Processing</p>
+        <!-- <p *ngIf="statusChangedButton" class="text-gray-500"> In Processing</p>
+      <p *ngIf="!statusChangedButton" class="text-gray-500">{{orderStatusMsg}}</p> -->
     </div>
+    <!-- cancelOrder(order?.id) -->
       <div class="text-gray-600 hover:text-primary cursor-pointer">
-        <a (click)="cancelOrder(order?.id)"  class="cursor-pointer ml-auto md:ml-0 block px-6 py-2 text-center text-sm text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition uppercase font-roboto font-medium">Cancel Order</a>
-          <!-- <i class="fas fa-trash"></i> -->
+        <a  (click)="cancelOrder(order?.id)"  class="cursor-pointer ml-auto md:ml-0 block px-6 py-2 text-center text-sm text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition uppercase font-roboto font-medium">Cancel Order</a>
+        <!-- <a *ngIf="statusButton"
+        class=" cursor-pointer ml-auto md:ml-0 block px-6 py-2 text-center text-sm text-white bg-primary border border-primary rounded
+        uppercase font-roboto font-medium cursor-not-allowed bg-opacity-80">
+        Cancel Order
+    </a> -->
+        <!-- <i class="fas fa-trash"></i> -->
       </div>
   </div>
   <!-- single cart end -->

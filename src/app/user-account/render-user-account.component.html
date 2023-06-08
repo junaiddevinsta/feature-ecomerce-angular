@@ -16,7 +16,9 @@
 
 <div class="col-span-9 grid md:grid-cols-3 gap-4 mt-6 lg:mt-0">
   <div class="xl:col-span-9 lg:col-span-8">
-    <app-orders></app-orders>
+    <app-profile-info class="contents" *ngIf="isActiveComponent('profileInfo')" ></app-profile-info>
+    <app-orders *ngIf="isActiveComponent('orders')"></app-orders>
+    <app-manage-address *ngIf="isActiveComponent('manageAddress')"></app-manage-address>
   </div>
 
 

@@ -44,4 +44,7 @@ private readonly baseUrl = environment.baseUrl;
       })
     );
   }
+  putRequest(url:any,data:any){
+    return this.http.put(`${this.baseUrl}/${url}`,data);
+  }
 }
