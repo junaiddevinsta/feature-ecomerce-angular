@@ -2,6 +2,8 @@ export interface product{
     sku:string,
     brand:string
     name:string,
+    old_price:number,
+    reviews:string
     price:number,
     category:string,
     color:string,

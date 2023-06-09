@@ -97,7 +97,7 @@
       <div class="space-y-2" >
           <div class="flex justify-between" v-for="n in 3" :key="n" *ngFor="let checkout of singleUserCheckoutData">
               <div>
-                  <h5 class="text-gray-800 font-medium">{{checkout?.product_name}}</h5>
+                  <h5 class="text-gray-800 font-medium">{{checkout?.name}}</h5>
                   <p class="text-sm text-gray-600">{{checkout?.brand}}</p>
               </div>
               <p class="text-gray-600">x{{checkout?.quantity}}</p>

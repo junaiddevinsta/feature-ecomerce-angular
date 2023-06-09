@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   constructor(private authService:AuthService, private product:ProductService ,private route:Router, private toastr:ToastrNotificationService) { }
 
   ngOnInit(): void {
-    
+
   }
   get email(): AbstractControl {
     return this.loginForm.controls['email'];
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.valid) {
       const email = this.email.value;
       const password = this.password.value;
-      
+
 
       this.authService.checkExistingUser(email).subscribe(
         (response: any) => {
@@ -43,7 +43,7 @@ console.log('response',response);
 
         localStorage.setItem('apiToken', apiToken);
         localStorage.getItem('apiToken')
-       
+
         localStorage.setItem('userid', response[0].id);
 
           const userExists = response.some((user: any) => user.email === email && user.password===password);
@@ -64,7 +64,7 @@ this.toastr.successToastLogin('LoggedIn')
               //   console.log('Login error');
               // }
             // );
-          // } 
+          // }
           else {
 this.toastr.errorToastLogin('Incorrect Username or Password')
             // alert('Username or password incorrect')
@@ -104,10 +104,10 @@ this.toastr.errorToastLogin('Incorrect Username or Password')
       console.log('local cart',localStorage.getItem('localCart'))
     if(data){
       let cartDataList:product[]= JSON.parse(data);
-      
+
       cartDataList.forEach((product:product, index)=>{
         let cartData:cart={
-          ...product,
+        ...product,
           productId:product.id,
           userId
         }
@@ -143,7 +143,7 @@ this.toastr.errorToastLogin('Incorrect Username or Password')
         console.log('local wishlist',localStorage.getItem('wishlist'))
       if(data){
         let wislistlistList:product[]= JSON.parse(data);
-        
+
         wislistlistList.forEach((product:product, index)=>{
           let wishlistData:wishlist={
             ...product,
@@ -169,8 +169,8 @@ this.toastr.errorToastLogin('Incorrect Username or Password')
       // this.product.getCartList(userId);
       // console.log('cartUserId',userId)
       // console.log('cartUser',user)
-  
-  
+
+
       }
 
 }

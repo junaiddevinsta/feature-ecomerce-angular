@@ -15,14 +15,16 @@
     },
     {
       "id": 4,
-      "shippingAddress": "lkssjhjhaj",
-      "ShippingphoneNo": "03076565434"
+      "fname": "",
+      "email": "junaid@gmail.com",
+      "phone": "0302346543",
+      "image": ""
     },
     {
-      "fname": "amad",
-      "email": "amad@gmail.com",
-      "password": "123",
-      "confirmPassword": "123",
+      "fname": "",
+      "email": "devinsta@gmail.com",
+      "phone": "03087676543",
+      "image": "",
       "id": 5
     },
     {
@@ -40,11 +42,10 @@
       "id": 7
     },
     {
+      "id": 8,
       "fname": "safoor",
-      "email": "safoor@devinsta.com",
-      "password": "safoor123",
-      "confirmPassword": "safoor123",
-      "id": 8
+      "email": "safoor123@devinsta.com",
+      "phone": "03065456543"
     },
     {
       "fname": "ssdsa",
@@ -63,8 +64,7 @@
     {
       "fname": "junaid",
       "email": "junaiddevinsta@gmail.com",
-      "password": "123",
-      "confirmPassword": "123",
+      "phone": "03054343432",
       "id": 11
     },
     {
@@ -281,7 +281,7 @@
   "products": [
     {
       "id": 1,
-      "product_name": "Guyer Chair",
+      "name": "boy Chair",
       "price": 45,
       "old_price": 150,
       "reviews": 150,
@@ -293,10 +293,10 @@
     },
     {
       "id": 2,
-      "product_name": "Guyer Chair",
-      "price": 45,
-      "old_price": 150,
-      "reviews": 150,
+      "name": "devinsta Chair",
+      "price": 455,
+      "old_price": 7,
+      "reviews": 1,
       "image": "assets/images/products/product2.jpg",
       "brand": "Apex",
       "SKU": "BE45VGRT",
@@ -306,10 +306,10 @@
     },
     {
       "id": 3,
-      "product_name": "Guyer Chair",
+      "name": "Guyer Chair",
       "price": 45,
-      "old_price": 150,
-      "reviews": 150,
+      "old_price": 9,
+      "reviews": 170,
       "image": "assets/images/products/product3.jpg",
       "brand": "Apex",
       "SKU": "BE45VGRT",
@@ -320,10 +320,10 @@
     },
     {
       "id": 4,
-      "product_name": "Guyer Chair",
+      "name": "Guyer Chair",
       "price": 45,
-      "old_price": 150,
-      "reviews": 150,
+      "old_price": 8,
+      "reviews": 110,
       "image": "assets/images/products/product4.jpg",
       "brand": "Apex",
       "SKU": "BE45VGRT",
@@ -334,10 +334,10 @@
     },
     {
       "id": 5,
-      "product_name": "Guyer Chair",
+      "name": "Guyer Chair",
       "price": 45,
       "old_price": 150,
-      "reviews": 150,
+      "reviews": 130,
       "image": "assets/images/products/product5.jpg",
       "brand": "Apex",
       "category": "Sofa",
@@ -347,10 +347,10 @@
     },
     {
       "id": 6,
-      "product_name": "Guyer Chair",
-      "price": 45,
-      "old_price": 150,
-      "reviews": 150,
+      "name": "Guyer Chair",
+      "price": 450,
+      "old_price": 120,
+      "reviews": 100,
       "image": "assets/images/products/product6.jpg",
       "brand": "Apex",
       "category": "Sofa",
@@ -359,10 +359,10 @@
     },
     {
       "id": 7,
-      "product_name": "Guyer Chair",
+      "name": "Guyer Chair",
       "price": 45,
       "old_price": 150,
-      "reviews": 150,
+      "reviews": 15,
       "image": "assets/images/products/product7.jpg",
       "brand": "Apex",
       "category": "Sofa",
@@ -399,7 +399,7 @@
   "cart": [],
   "wishlist": [
     {
-      "product_name": "Guyer Chair",
+      "name": "Guyer Chair",
       "price": 45,
       "old_price": 150,
       "reviews": 150,
@@ -413,7 +413,7 @@
       "id": 4
     },
     {
-      "product_name": "Guyer Chair",
+      "name": "Guyer Chair",
       "price": 45,
       "old_price": 150,
       "reviews": 150,
@@ -437,7 +437,5 @@
       "id": 1
     }
   ],
-  "profileData":[
-
-  ]
+  "profileData": []
 }

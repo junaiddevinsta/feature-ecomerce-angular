@@ -63,7 +63,7 @@ const routes: Routes = [
     component:SearchComponent
   },
   {
-    path:'search/:search',
+    path:'search/:query',
     component:SearchComponent
   }
 

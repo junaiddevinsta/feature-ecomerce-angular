@@ -223,8 +223,8 @@
                   <img [src]="products?.image" class="w-full">
                   <div
                       class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
-                      <a routerLink="#" (click)="gotoSingleProduct(products?.id)"
-                          class="text-white text-lg w-9 h-9 rounded-full bg-primary hover:bg-gray-800 transition flex items-center justify-center">
+                      <a  (click)="gotoSingleProduct(products?.id)"
+                          class="cursor-poiner text-white text-lg w-9 h-9 rounded-full bg-primary hover:bg-gray-800 transition flex items-center justify-center">
                           <i class="fas fa-search"></i>
                       </a>
                       <!-- <a routerLink="#" (click)="getWishlistProductData(products.id)"
@@ -238,7 +238,7 @@
               <div class="pt-4 pb-3 px-4">
                   <a routerLink="#">
                       <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
-                          {{products?.product_name}}
+                          {{products?.name}}
                       </h4>
                   </a>
                   <div class="flex items-baseline mb-1 space-x-2">

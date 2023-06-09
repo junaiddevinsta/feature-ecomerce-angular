@@ -36,7 +36,7 @@ getShippingData(){
         this.closeModal()
         // this.toast.UpdateProfileToast();
         this.getShippingData();
-        console.log("shipping Data update successful",res)
+        console.log("shipping Data update successful",res);
       }
     })
   }

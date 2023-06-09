@@ -14,19 +14,24 @@
         <span class="absolute left-4 top-3 text-lg text-gray-400">
           <i class="fas fa-search"></i>
         </span>
-        <form class="flex" [formGroup]="searchForm">
-        <input
-          type="text" #sea formControlName="search"
+        <!-- <form class="flex" > -->
+        <input #searchInput
+          type="text" (keyup)="searchProduct($event)"
           class="pl-12 w-full border border-r-0 border-primary py-3 px-3 rounded-l-md focus:ring-primary focus:border-primary"
           placeholder="search"
         />
-        <button
-          type="submit" (click)="searchResult(sea.value)"
+        <button (click)="submitSearch(searchInput.value)"
+
           class="bg-primary border border-primary text-white px-8 font-medium rounded-r-md focus:ring-primary focus:border-primary"
         >
           Search
         </button>
-      </form>
+        <!-- <ul class="suggested-result">
+          <li *ngFor="let item of searchResult">
+            <a>{{item}}</a>
+          </li>
+        </ul> -->
+      <!-- </form> -->
       </div>
       <!-- searchbar end -->
 
@@ -38,5 +43,64 @@
     </div>
   </header>
   <!-- header end -->
+
+
+  <!-- product wrapper -->
+  <div class="grid lg:grid-cols-2 xl:grid-cols-3 sm:grid-cols-2 gap-6" *ngIf="searchResult">
+    <!-- single product -->
+    <div class="group rounded bg-white shadow overflow-hidden" *ngFor="let product of searchResult">
+        <!-- product image -->
+        <div class="relative">
+            <img [src]="product?.image" class="w-full">
+            <div
+                class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                <a (click)="gotoSingleProduct(product?.id)"
+                    class="text-white text-lg w-9 h-9 rounded-full bg-primary hover:bg-gray-800 transition flex items-center justify-center">
+                    <i class="fas fa-search"></i>
+                </a>
+                <!-- <a routerLink="#" (click)="getWishlistProductData(products.id)"
+                    class="text-white text-lg w-9 h-9 rounded-full bg-primary hover:bg-gray-800 transition flex items-center justify-center">
+                    <i class="far fa-heart"></i>
+                </a> -->
+            </div>
+        </div>
+        <!-- product image end -->
+        <!-- product content -->
+        <div class="pt-4 pb-3 px-4">
+            <a routerLink="#">
+                <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
+                    {{product?.name}}
+                </h4>
+            </a>
+            <div class="flex items-baseline mb-1 space-x-2">
+                <p class="text-xl text-primary font-roboto font-semibold">${{product?.price}}</p>
+                <p class="text-sm text-gray-400 font-roboto line-through">{{product?.old_price}}</p>
+            </div>
+            <div class="flex items-center">
+                <div class="flex gap-1 text-sm text-yellow-400">
+                    <span><i class="fas fa-star"></i></span>
+                    <span><i class="fas fa-star"></i></span>
+                    <span><i class="fas fa-star"></i></span>
+                    <span><i class="fas fa-star"></i></span>
+                    <span><i class="fas fa-star"></i></span>
+                </div>
+                <div class="text-xs text-gray-500 ml-3">{{product?.reviews}}</div>
+            </div>
+        </div>
+        <!-- product content end -->
+        <!-- product button -->
+        <!-- <a routerLink="#"
+            class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">
+            Add to Cart
+        </a> -->
+        <!-- product button end -->
+    </div>
+    <!-- single product end -->
+
+</div>
+<div *ngIf="!searchResult">
+  <h2 class="text-center">No record Found</h2>
+</div>
+<!-- product wrapper end -->
 
 

@@ -128,5 +128,10 @@ export class ProductService {
     return this.http.get<wishlist[]>('http://localhost:3000/wishlist?userId=' + userData);
   }
 
-
+  searchProduct(query: string) {
+    return this.http.get<product[]>(
+      `${this.baseUrl}/products?q=${query}`
+    );
+    // http://localhost:3000/products?q=
+  }
 }

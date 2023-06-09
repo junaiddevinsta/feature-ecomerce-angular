@@ -16,24 +16,51 @@ export class ProfileInfoComponent implements OnInit {
   profileData:any
   resToForm = new FormGroup({
     id:new FormControl(localStorage.getItem('userid')),
-    name: new FormControl('', [Validators.required]),
+    fname: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
     phone: new FormControl('', [Validators.required, Validators.pattern('^((\\+92-?)|0)?[0-9]{10}$')]),
     image: new FormControl('',[Validators.required]),
   })
   constructor(private apiService:ApiService, private toast:ToastrNotificationService) { }
 getUserProfile(){
+
   this.apiService.getrequest('register/'+ localStorage.getItem('userid')).subscribe((result)=>{
     if(result){
       this.profileData=result;
       console.log("user Profile=>",this.profileData)
+      this.resToForm.patchValue({
+fname:this.profileData.fname,
+email:this.profileData.email,
+phone:this.profileData.phone,
+image:this.profileData.image
+
+      })
+
+    }
+  })
+}
+userData(){
+  this.apiService.getrequest('register/'+ localStorage.getItem('userid')).subscribe((result)=>{
+    if(result){
+      this.profileData=result;
+      console.log("User Data=>", this.profileData)
+      this.userData();
+      this.getUserProfile();
+
     }
   })
 }
 
 getProfileUpdateData(){
   console.log('Profile data =>', this.resToForm.value);
-  this.apiService.putRequest('register/'+ localStorage.getItem('userid'),this.resToForm.value).subscribe(async(res:any)=>{
+  const patchData = {
+    fname: this.resToForm.controls['fname'].value,
+    email: this.resToForm.controls['email'].value,
+    phone:this.resToForm.controls['phone'].value,
+    image:this.resToForm.controls['image'].value
+    };
+
+  this.apiService.patchRequest('register/'+ localStorage.getItem('userid'),patchData).subscribe(async(res:any)=>{
     if(res){
       this.closeModal()
       this.toast.UpdateProfileToast();

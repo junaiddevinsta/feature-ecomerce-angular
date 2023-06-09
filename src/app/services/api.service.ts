@@ -47,4 +47,10 @@ private readonly baseUrl = environment.baseUrl;
   putRequest(url:any,data:any){
     return this.http.put(`${this.baseUrl}/${url}`,data);
   }
+  patchRequest(url:any,data:any){
+    const headers = {
+      'Content-Type': 'application/json',
+    };
+    return this.http.patch(`${this.baseUrl}/${url}`, headers, data);
+  }
 }
