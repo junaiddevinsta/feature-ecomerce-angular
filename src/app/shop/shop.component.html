@@ -14,9 +14,9 @@
               <div class="space-y-2">
                   <!-- single category -->
                   <div class="flex items-center" *ngFor="let category of categories">
-                      <input type="checkbox" id="Bedroom"
+                      <input type="checkbox" value={{category?.category}} (change)="onChange($event)"
                           class="text-primary focus:ring-0 rounded-sm cursor-pointer">
-                      <label for="Bedroom" class="text-gray-600 ml-3 cursor-pointer">{{category?.category_name}}</label>
+                      <label for="Bedroom" class="text-gray-600 ml-3 cursor-pointer">{{category?.category}}</label>
                       <!-- <div class="ml-auto text-gray-600 text-sm">(15)</div> -->
                   </div>
                   <!-- single category end -->

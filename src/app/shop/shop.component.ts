@@ -25,6 +25,10 @@ export class ShopComponent implements OnInit {
   categoryName: string = '';
   categor:any;
   filtered:any[]= [];
+  productArray:any=[];
+  tempArray:any=[];
+  newArray:any=[];
+  arrays:any[]=[];
   constructor(private apiService:ApiService, private route:ActivatedRoute ,private router:Router, private query:productsQuery, private productsStore:productsStore,private productService:ProductsService) { }
 
   ngOnInit(): void {
@@ -32,7 +36,8 @@ export class ShopComponent implements OnInit {
       const id = +params['id'];
      console.log('id=>', id);
 
-     this.getWishlistProductData(id)
+     this.getWishlistProductData(id);
+     this.getProduct();
 
 
     //  this.getProductData(id)
@@ -45,9 +50,9 @@ export class ShopComponent implements OnInit {
     // this.productService.getProductsData();
     this.getCategories();
   }
-  filteredData(value:string){
+  // filteredData(value:string){
 
-  }
+  // }
 
   getProductsData(){
 
@@ -55,21 +60,40 @@ export class ShopComponent implements OnInit {
     {
 
       this.productsApi=res;
+      this.arrays=this.productsApi;
 
-      // console.log('Products Data res',this.productsApi)
+      console.log('Products Data res',this.productsApi)
       console.log("category name=>",)
 
     })
 
   }
+onChange(event:any){
+  console.log("array=>",this.arrays)
+  if(event.target.checked){
+    let index = this.arrays.indexOf((e:any) => e.category.toString() === event.target.value);
+    if (index !== -1) {
+      this.tempArray = this.arrays.slice(0, index);
+  }
+    console.log("event target value=>",event.target.value);
 
+    console.log("value checked", this.tempArray)
+  }
+  else{
+
+  }
+
+}
   getCategories(){
     this.apiService.getrequest('categories').subscribe((categoriesRes:any)=>{
 this.categories=categoriesRes;
 console.log("categories Response=>",this.categories)
     })
   }
-
+getProduct(){
+  this.productArray=this.productsApi;
+  console.log("product data=>",this.productArray)
+}
 
   sort(event: any) {
     switch (event.target.value) {
@@ -119,12 +143,12 @@ console.log("categories Response=>",this.categories)
     return this.productsApi;
 
   }
-  filterCategory(val: string){
-    console.log('val =>', val);
-    this.categoryName = val;
-    // this.all_players();
-    this.getProductsData()
-  }
+  // filterCategory(val: string){
+  //   console.log('val =>', val);
+  //   this.categoryName = val;
+  //   // this.all_players();
+  //   this.getProductsData()
+  // }
   gotoSingleProduct(id:any){
 this.router.navigate(['/view-product',id])
   }

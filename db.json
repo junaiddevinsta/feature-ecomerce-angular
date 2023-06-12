@@ -372,28 +372,28 @@
   "categories": [
     {
       "id": 1,
-      "category_name": "Bedroom",
+      "category": "Bedroom",
       "category_image": "assets/images/category/category-1.jpg"
 
     },
     {
       "id": 2,
-      "category_name": "sofa",
+      "category": "sofa",
       "category_image": "assets/images/category/category-2.jpg"
     },
     {
       "id": 3,
-      "category_name": "office",
+      "category": "office",
       "category_image": "assets/images/category/category-3.jpg"
     },
     {
       "id": 4,
-      "category_name": "outdoor",
+      "category": "outdoor",
       "category_image": "assets/images/category/category-4.jpg"
     },
     {
       "id": 5,
-      "category_name": "Mattress",
+      "category": "Mattress",
       "category_image": "assets/images/category/category-5.jpg"
     }
   ],
