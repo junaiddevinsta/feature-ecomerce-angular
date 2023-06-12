@@ -289,6 +289,7 @@
       "brand": "Apex",
       "SKU": "BE45VGRT",
       "category": "Office",
+      "catId":1,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
     },
     {
@@ -301,6 +302,7 @@
       "brand": "Apex",
       "SKU": "BE45VGRT",
       "category": "Office",
+      "catId":3,
       "Availability": "In stock",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
     },
@@ -314,6 +316,7 @@
       "brand": "Apex",
       "SKU": "BE45VGRT",
       "category": "Outdoor",
+      "catId":4,
       "Availability": "In stock",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
       "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
@@ -328,6 +331,7 @@
       "brand": "Apex",
       "SKU": "BE45VGRT",
       "category": "Sofa",
+      "catId":5,
       "Availability": "In stock",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
       "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
@@ -366,6 +370,7 @@
       "image": "assets/images/products/product7.jpg",
       "brand": "Apex",
       "category": "Sofa",
+      "catId":2,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
     }
   ],
@@ -379,22 +384,26 @@
     {
       "id": 2,
       "category": "sofa",
-      "category_image": "assets/images/category/category-2.jpg"
+      "category_image": "assets/images/category/category-2.jpg",
+      "price":45
     },
     {
       "id": 3,
       "category": "office",
-      "category_image": "assets/images/category/category-3.jpg"
+      "category_image": "assets/images/category/category-3.jpg",
+      "price":450
     },
     {
       "id": 4,
       "category": "outdoor",
-      "category_image": "assets/images/category/category-4.jpg"
+      "category_image": "assets/images/category/category-4.jpg",
+      "price":405
     },
     {
       "id": 5,
       "category": "Mattress",
-      "category_image": "assets/images/category/category-5.jpg"
+      "category_image": "assets/images/category/category-5.jpg",
+      "price":445
     }
   ],
   "cart": [],

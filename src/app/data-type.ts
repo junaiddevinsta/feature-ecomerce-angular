@@ -16,7 +16,8 @@ export interface product{
   export interface category{
     id:number,
     category_image:string,
-    category:string
+    category:any,
+    catId:number
   }
 
   export interface cart{

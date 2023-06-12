@@ -71,10 +71,7 @@ export class ShopComponent implements OnInit {
 onChange(event:any){
   console.log("array=>",this.arrays)
   if(event.target.checked){
-    let index = this.arrays.indexOf((e:any) => e.category.toString() === event.target.value);
-    if (index !== -1) {
-      this.tempArray = this.arrays.slice(0, index);
-  }
+    this.tempArray=this.arrays.filter((e:any)=>e.catId==event.target.value)
     console.log("event target value=>",event.target.value);
 
     console.log("value checked", this.tempArray)
