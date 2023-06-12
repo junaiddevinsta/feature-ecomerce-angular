@@ -8,6 +8,7 @@ import { filter, switchMap, take } from 'rxjs';
 import { of } from 'rxjs';
 
 import { ProductsService } from '../services/products.service';
+import { category } from '../data-type';
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
@@ -16,16 +17,24 @@ import { ProductsService } from '../services/products.service';
 export class ShopComponent implements OnInit {
   loading=false;
   products:any=[];
-  productsApi:any
+  // productsApi:any
   productData:any;
+  productsApi: any[] = [];
   sub:any;
+  categories:category[]|undefined;
+  categoryName: string = '';
+  categor:any;
+  filtered:any[]= [];
   constructor(private apiService:ApiService, private route:ActivatedRoute ,private router:Router, private query:productsQuery, private productsStore:productsStore,private productService:ProductsService) { }
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
       const id = +params['id'];
      console.log('id=>', id);
+
      this.getWishlistProductData(id)
+
+
     //  this.getProductData(id)
       // this.getBlogDetails(id);
       // this.getCategory(id)// (+) converts string 'id' to a number
@@ -34,15 +43,87 @@ export class ShopComponent implements OnInit {
     });
     this.getProductsData()
     // this.productService.getProductsData();
+    this.getCategories();
   }
+  filteredData(value:string){
+
+  }
+
   getProductsData(){
+
     this.apiService.getrequest('products').subscribe((res:any)=>
     {
 
       this.productsApi=res;
+
       // console.log('Products Data res',this.productsApi)
+      console.log("category name=>",)
+
     })
 
+  }
+
+  getCategories(){
+    this.apiService.getrequest('categories').subscribe((categoriesRes:any)=>{
+this.categories=categoriesRes;
+console.log("categories Response=>",this.categories)
+    })
+  }
+
+
+  sort(event: any) {
+    switch (event.target.value) {
+      case "Low":
+        {
+          this.productsApi = this.productsApi.sort((low, high) => low.price - high.price);
+          console.log("price low=>",this.productsApi)
+          break;
+        }
+
+      case "High":
+        {
+          this.productsApi = this.productsApi.sort((low, high) => high.price - low.price);
+          console.log("price high=>",this.productsApi)
+          break;
+
+        }
+        case "latest": {
+          // this.getProductsData()
+          this.productsApi = this.productsApi.sort((low, high) => high.id - low.id);
+          break;
+        }
+
+
+      // case "Name":
+      //   {
+      //     this.productsApi = this.productsApi.sort(function (low, high) {
+      //       if (low.name < high.name) {
+      //         return -1;
+      //       }
+      //       else if (low.name > high.name) {
+      //         return 1;
+      //       }
+      //       else {
+      //         return 0;
+      //       }
+      //     })
+      //     break;
+      //   }
+
+      default: {
+        this.productsApi = this.productsApi.sort((low, high) => low.price - high.price);
+        break;
+      }
+
+    }
+    return this.productsApi;
+
+  }
+  filterCategory(val: string){
+    console.log('val =>', val);
+    this.categoryName = val;
+    // this.all_players();
+    this.getProductsData()
   }
   gotoSingleProduct(id:any){
 this.router.navigate(['/view-product',id])

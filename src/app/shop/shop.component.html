@@ -13,36 +13,36 @@
               <h3 class="text-xl text-gray-800 mb-3 uppercase font-medium">Categories</h3>
               <div class="space-y-2">
                   <!-- single category -->
-                  <div class="flex items-center">
+                  <div class="flex items-center" *ngFor="let category of categories">
                       <input type="checkbox" id="Bedroom"
                           class="text-primary focus:ring-0 rounded-sm cursor-pointer">
-                      <label for="Bedroom" class="text-gray-600 ml-3 cursor-pointer">Bedroom</label>
-                      <div class="ml-auto text-gray-600 text-sm">(15)</div>
+                      <label for="Bedroom" class="text-gray-600 ml-3 cursor-pointer">{{category?.category_name}}</label>
+                      <!-- <div class="ml-auto text-gray-600 text-sm">(15)</div> -->
                   </div>
                   <!-- single category end -->
                   <!-- single category -->
-                  <div class="flex items-center">
+                  <!-- <div class="flex items-center">
                       <input type="checkbox" id="Sofa"
                           class="text-primary focus:ring-0 rounded-sm cursor-pointer">
                       <label for="Sofa" class="text-gray-600 ml-3 cursor-pointer">Sofa</label>
                       <div class="ml-auto text-gray-600 text-sm">(05)</div>
-                  </div>
+                  </div> -->
                   <!-- single category end -->
                   <!-- single category -->
-                  <div class="flex items-center">
+                  <!-- <div class="flex items-center">
                       <input type="checkbox" id="Office"
                           class="text-primary focus:ring-0 rounded-sm cursor-pointer">
                       <label for="Office" class="text-gray-600 ml-3 cursor-pointer">Office</label>
                       <div class="ml-auto text-gray-600 text-sm">(09)</div>
-                  </div>
+                  </div> -->
                   <!-- single category end -->
                   <!-- single category -->
-                  <div class="flex items-center">
+                  <!-- <div class="flex items-center">
                       <input type="checkbox" id="Outdoor"
                           class="text-primary focus:ring-0 rounded-sm cursor-pointer">
                       <label for="Outdoor" class="text-gray-600 ml-3 cursor-pointer">Outdoor</label>
                       <div class="ml-auto text-gray-600 text-sm">(19)</div>
-                  </div>
+                  </div> -->
                   <!-- single category end -->
               </div>
           </div>
@@ -101,10 +101,10 @@
           </div> -->
           <!-- price filter end -->
           <!-- size filter -->
-          <div class="pt-4">
+          <!-- <div class="pt-4">
               <h3 class="text-xl text-gray-800 mb-3 uppercase font-medium">size</h3>
               <div class="flex items-center gap-2">
-                  <!-- single size -->
+
                   <div class="size-selector">
                       <input type="radio" name="size" class="hidden" id="size-xs">
                       <label for="size-xs"
@@ -112,8 +112,7 @@
                           XS
                       </label>
                   </div>
-                  <!-- single size end -->
-                  <!-- single size -->
+
                   <div class="size-selector">
                       <input type="radio" name="size" class="hidden" id="size-s">
                       <label for="size-s"
@@ -121,8 +120,7 @@
                           S
                       </label>
                   </div>
-                  <!-- single size end -->
-                  <!-- single size -->
+
                   <div class="size-selector">
                       <input type="radio" name="size" class="hidden" id="size-m" checked>
                       <label for="size-m"
@@ -130,8 +128,7 @@
                           M
                       </label>
                   </div>
-                  <!-- single size end -->
-                  <!-- single size -->
+
                   <div class="size-selector">
                       <input type="radio" name="size" class="hidden" id="size-l">
                       <label for="size-l"
@@ -139,8 +136,7 @@
                           L
                       </label>
                   </div>
-                  <!-- single size end -->
-                  <!-- single size -->
+
                   <div class="size-selector">
                       <input type="radio" name="size" class="hidden" id="size-xl">
                       <label for="size-xl"
@@ -148,40 +144,38 @@
                           XL
                       </label>
                   </div>
-                  <!-- single size end -->
+
               </div>
-          </div>
+          </div> -->
           <!-- size filter end -->
           <!-- color filter -->
-          <div class="pt-4">
+          <!-- <div class="pt-4">
               <h3 class="text-xl text-gray-800 mb-3 uppercase font-medium">color</h3>
               <div class="flex items-center gap-2">
-                  <!-- single color -->
+
                   <div class="color-selector">
                       <input type="radio" name="color" class="hidden" id="color-red" checked>
                       <label for="color-red" style="background-color : #fc3d57"
                           class="text-xs border border-gray-200 rounded-sm h-5 w-5 flex items-center justify-center cursor-pointer shadow-sm">
                       </label>
                   </div>
-                  <!-- single color end -->
-                  <!-- single color -->
+
                   <div class="color-selector">
                       <input type="radio" name="color" class="hidden" id="color-white">
                       <label for="color-white" style="background-color : #fff"
                           class="text-xs border border-gray-200 rounded-sm h-5 w-5 flex items-center justify-center cursor-pointer shadow-sm">
                       </label>
                   </div>
-                  <!-- single color end -->
-                  <!-- single color -->
+
                   <div class="color-selector">
                       <input type="radio" name="color" class="hidden" id="color-black">
                       <label for="color-black" style="background-color : #000"
                           class="text-xs border border-gray-200 rounded-sm h-5 w-5 flex items-center justify-center cursor-pointer shadow-sm">
                       </label>
                   </div>
-                  <!-- single color end -->
+
               </div>
-          </div>
+          </div> -->
           <!-- color filter end -->
       </div>
   </div>
@@ -195,12 +189,12 @@
               class="bg-primary border border-primary text-white px-10 py-3 font-medium rounded uppercase hover:bg-transparent hover:text-primary transition lg:hidden text-sm mr-3 focus:outline-none">
               Filter
           </button>
-          <select
+          <select id="sort-by" (change)="sort($event)"
               class="w-44 text-sm text-gray-600 px-4 py-3 border-gray-300 shadow-sm rounded focus:ring-primary focus:border-primary">
-              <option>Default sorting</option>
-              <option>Price low-high</option>
-              <option>Price high-low</option>
-              <option>Latest product</option>
+              <option value="default">Default Sorting</option>
+              <option value="Low">Price low-high</option>
+              <option value="High">Price high-low</option>
+              <option value="latest">Latest product</option>
           </select>
           <div class="flex gap-2 ml-auto">
               <div

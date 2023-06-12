@@ -288,7 +288,7 @@
       "image": "assets/images/products/product1.jpg",
       "brand": "Apex",
       "SKU": "BE45VGRT",
-      "category": "Sofa",
+      "category": "Office",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
     },
     {
@@ -300,7 +300,7 @@
       "image": "assets/images/products/product2.jpg",
       "brand": "Apex",
       "SKU": "BE45VGRT",
-      "category": "Sofa",
+      "category": "Office",
       "Availability": "In stock",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
     },
@@ -313,7 +313,7 @@
       "image": "assets/images/products/product3.jpg",
       "brand": "Apex",
       "SKU": "BE45VGRT",
-      "category": "Sofa",
+      "category": "Outdoor",
       "Availability": "In stock",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
       "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
@@ -374,6 +374,7 @@
       "id": 1,
       "category_name": "Bedroom",
       "category_image": "assets/images/category/category-1.jpg"
+
     },
     {
       "id": 2,

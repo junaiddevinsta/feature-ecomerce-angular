@@ -13,6 +13,11 @@ export interface product{
     quantity:undefined | number,
     productId:undefined|number
   }
+  export interface category{
+    id:number,
+    category_image:string,
+    category_name:string
+  }
 
   export interface cart{
     sku:string,

@@ -8,6 +8,7 @@ import { Observable, catchError, map, throwError } from 'rxjs';
 })
 export class ApiService {
 private readonly baseUrl = environment.baseUrl;
+url="http://localhost:3000/products"
   constructor(private http: HttpClient) { }
   postRequest(url: string, data: any) {
     return this
@@ -52,5 +53,8 @@ private readonly baseUrl = environment.baseUrl;
       'Content-Type': 'application/json',
     };
     return this.http.patch(`${this.baseUrl}/${url}`, headers, data);
+  }
+  getProducts(): Observable<any> {
+    return this.http.get<any>(this.url);
   }
 }
