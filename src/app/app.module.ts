@@ -21,6 +21,7 @@ import { UserAccountModule } from './user-account/user-account.module';
 import { OrderCompleteComponent } from './order-complete/order-complete.component';
 import { IconMissingDirective } from './directives/icon-missing.directive';
 import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -40,6 +41,7 @@ import { AboutComponent } from './about/about.component';
     OrderCompleteComponent,
     IconMissingDirective,
     AboutComponent,
+    ContactComponent,
 
 
   ],

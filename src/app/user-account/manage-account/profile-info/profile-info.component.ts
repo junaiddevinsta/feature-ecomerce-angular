@@ -54,10 +54,16 @@ userData(){
 getProfileUpdateData(){
   console.log('Profile data =>', this.resToForm.value);
   const patchData = {
-    fname: this.resToForm.controls['fname'].value,
-    email: this.resToForm.controls['email'].value,
-    phone:this.resToForm.controls['phone'].value,
-    image:this.resToForm.controls['image'].value
+
+    // fname: this.resToForm.controls['fname'].value,
+    // email: this.resToForm.controls['email'].value,
+    // phone:this.resToForm.controls['phone'].value,
+    // image:this.resToForm.controls['image'].value
+    fname: this.resToForm.value.fname,
+      email: this.resToForm.value.email,
+      phone: this.resToForm.value.phone,
+      image: this.resToForm.value.image
+
     };
 
   this.apiService.patchRequest('register/'+ localStorage.getItem('userid'),patchData).subscribe(async(res:any)=>{

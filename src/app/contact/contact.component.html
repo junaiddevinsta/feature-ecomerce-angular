@@ -1,0 +1,57 @@
+<div class="container lg:grid grid-cols-12 items-start gap-6 pt-4 pb-16">
+  <!--Contact us-->
+  <div class="col-span-2">
+  </div>
+
+  <div class="col-span-8 shadow rounded px-6 pt-5 pb-7 mt-6 lg:mt-0">
+      <form action="" [formGroup]="resToForm" (ngSubmit)="contactUs()">
+          <h3 class="text-lg font-medium capitalize mb-4">
+              Contact Us
+          </h3>
+          <div class="space-y-4">
+              <div class="grid  gap-4">
+                  <div>
+                      <label class="text-gray-600 mb-2 block">
+                          Full Name
+                      </label>
+                      <input type="text" class="input-box" value="" placeholder="Type Your Name" formControlName="fname">
+                      <div style="color: red;" *ngIf="inputControls.fname.touched && inputControls.fname.invalid">Enter Your Name
+                      </div>
+                  </div>
+
+              </div>
+
+              <div class="gap-4">
+                  <div>
+                      <label class="text-gray-600 mb-2 block">
+                          Email Address
+                      </label>
+                      <input type="text" class="input-box" value="" placeholder="Type Your Email" formControlName="email">
+                      <div style="color: red;" *ngIf="inputControls.email.touched && inputControls.email.invalid">Enter Correct Email Address
+                      </div>
+                  </div>
+
+              </div>
+              <div class="gap-4">
+                  <div>
+                      <label class="text-gray-600 mb-2 block">
+                          Message
+                      </label>
+                      <textarea type="text" class="input-box" placeholder="Type Message Here" formControlName="message"></textarea>
+                      <div style="color: red;" *ngIf="inputControls.message.touched && inputControls.message.invalid">Please Type Your Message
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+          <div class="mt-6">
+              <button type="submit"  class="px-6 py-2 text-center text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition uppercase font-roboto font-medium">
+                  Send
+              </button>
+          </div>
+      </form>
+  </div>
+  <div class="col-span-2">
+  </div>
+  <!--Contact us-->
+</div>

@@ -10,6 +10,7 @@ import { WishlistPageComponent } from './wishlist-page/wishlist-page.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { OrderCompleteComponent } from './order-complete/order-complete.component';
 import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   {
@@ -55,6 +56,14 @@ const routes: Routes = [
       {
         path:'order-complete',
         component:OrderCompleteComponent
+      },
+      {
+        path:'about-us',
+        component:AboutComponent
+      },
+      {
+        path:'contact-us',
+        component:ContactComponent
       }
 
     ]
@@ -66,11 +75,8 @@ const routes: Routes = [
   {
     path:'search/:query',
     component:SearchComponent
-  },
-  {
-    path:'about',
-    component:AboutComponent
   }
+
 
 ];
 
