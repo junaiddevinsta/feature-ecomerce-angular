@@ -20,6 +20,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { UserAccountModule } from './user-account/user-account.module';
 import { OrderCompleteComponent } from './order-complete/order-complete.component';
 import { IconMissingDirective } from './directives/icon-missing.directive';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -38,6 +39,7 @@ import { IconMissingDirective } from './directives/icon-missing.directive';
     CheckoutComponent,
     OrderCompleteComponent,
     IconMissingDirective,
+    AboutComponent,
 
 
   ],

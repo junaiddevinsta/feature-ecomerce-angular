@@ -17,7 +17,7 @@
                       <input type="checkbox" value={{category?.id}} (change)="onChange($event)"
                           class="text-primary focus:ring-0 rounded-sm cursor-pointer">
                       <label for="Bedroom" class="text-gray-600 ml-3 cursor-pointer">{{category?.category}}</label>
-                      <!-- <div class="ml-auto text-gray-600 text-sm">(15)</div> -->
+                      <div class="ml-auto text-gray-600 text-sm">({{category?.quantity}})</div>
                   </div>
                   <!-- single category end -->
                   <!-- single category -->
@@ -211,7 +211,7 @@
       <!-- product wrapper -->
       <div class="grid lg:grid-cols-2 xl:grid-cols-3 sm:grid-cols-2 gap-6">
           <!-- single product -->
-          <div class="group rounded bg-white shadow overflow-hidden" *ngFor="let products of productsApi">
+          <div class="group rounded bg-white shadow overflow-hidden" *ngFor="let products of productArray">
               <!-- product image -->
               <div class="relative">
                   <img [src]="products?.image" class="w-full">

@@ -289,8 +289,22 @@
       "brand": "Apex",
       "SKU": "BE45VGRT",
       "category": "Office",
-      "catId":1,
+      "catId":3,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
+    },
+    {
+      "id": 5,
+      "name": "Guyer Chair",
+      "price": 45,
+      "old_price": 150,
+      "reviews": 130,
+      "image": "assets/images/products/product5.jpg",
+      "brand": "Apex",
+      "category": "Bedroom",
+      "catId":"1",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
     },
     {
       "id": 2,
@@ -302,13 +316,13 @@
       "brand": "Apex",
       "SKU": "BE45VGRT",
       "category": "Office",
-      "catId":3,
+      "catId":6,
       "Availability": "In stock",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
     },
     {
       "id": 3,
-      "name": "Guyer Chair",
+      "name": "Guyer Outdoor Chair",
       "price": 45,
       "old_price": 9,
       "reviews": 170,
@@ -336,74 +350,78 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
       "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
     },
-    {
-      "id": 5,
-      "name": "Guyer Chair",
-      "price": 45,
-      "old_price": 150,
-      "reviews": 130,
-      "image": "assets/images/products/product5.jpg",
-      "brand": "Apex",
-      "category": "Sofa",
-      "Availability": "In stock",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
-    },
+
     {
       "id": 6,
-      "name": "Guyer Chair",
+      "name": "Sofa",
       "price": 450,
       "old_price": 120,
       "reviews": 100,
       "image": "assets/images/products/product6.jpg",
       "brand": "Apex",
       "category": "Sofa",
+      "catId":"2",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
       "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
     },
     {
       "id": 7,
-      "name": "Guyer Chair",
-      "price": 45,
-      "old_price": 150,
-      "reviews": 15,
-      "image": "assets/images/products/product7.jpg",
+      "name": "devinsta Chair",
+      "price": 455,
+      "old_price": 7,
+      "reviews": 1,
+      "image": "assets/images/products/product2.jpg",
       "brand": "Apex",
-      "category": "Sofa",
-      "catId":2,
+      "SKU": "BE45VGRT",
+      "category": "Office",
+      "catId":6,
+      "Availability": "In stock",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
     }
+
   ],
   "categories": [
     {
       "id": 1,
       "category": "Bedroom",
-      "category_image": "assets/images/category/category-1.jpg"
+      "category_image": "assets/images/category/category-1.jpg",
+      "quantity":"1"
 
     },
     {
       "id": 2,
       "category": "sofa",
       "category_image": "assets/images/category/category-2.jpg",
-      "price":45
+      "price":45,
+      "quantity":"1"
     },
     {
       "id": 3,
       "category": "office",
       "category_image": "assets/images/category/category-3.jpg",
-      "price":450
+      "price":450,
+      "quantity":"1"
     },
     {
       "id": 4,
       "category": "outdoor",
       "category_image": "assets/images/category/category-4.jpg",
-      "price":405
+      "price":405,
+      "quantity":"1"
     },
     {
       "id": 5,
       "category": "Mattress",
       "category_image": "assets/images/category/category-5.jpg",
-      "price":445
+      "price":445,
+      "quantity":"1"
+    },
+    {
+      "id": 6,
+      "category": "Chair",
+      "category_image": "assets/images/category/category-5.jpg",
+      "price":445,
+      "quantity":"2"
     }
   ],
   "cart": [],

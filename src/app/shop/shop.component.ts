@@ -25,7 +25,7 @@ export class ShopComponent implements OnInit {
   categoryName: string = '';
   categor:any;
   filtered:any[]= [];
-  productArray:any=[];
+  productArray:any=[] ;
   tempArray:any=[];
   newArray:any=[];
   arrays:any[]=[];
@@ -61,7 +61,7 @@ export class ShopComponent implements OnInit {
 
       this.productsApi=res;
       this.arrays=this.productsApi;
-
+this.productArray=this.productsApi
       console.log('Products Data res',this.productsApi)
       console.log("category name=>",)
 
@@ -69,14 +69,39 @@ export class ShopComponent implements OnInit {
 
   }
 onChange(event:any){
-  console.log("array=>",this.arrays)
+  // console.log("array=>",this.arrays)
   if(event.target.checked){
     this.tempArray=this.arrays.filter((e:any)=>e.catId==event.target.value)
-    console.log("event target value=>",event.target.value);
+    this.productArray=[];
+    this.newArray.push(this.tempArray);
+    for(let i=0;i<this.newArray.length;i++){
+var firstArray=this.newArray[i];
+for(let i=0;i<firstArray.length;i++){
+  var obj=firstArray[i];
+  this.productArray.push(obj)
+  console.log(this.productArray)
+}
+console.log(obj)
+    }
+    // console.log("new array=>",this.newArray)
+    // console.log("event target value=>",event.target.value);
 
-    console.log("value checked", this.tempArray)
+    // console.log("value checked", this.tempArray)
   }
   else{
+    this.tempArray=this.productArray.filter((e:any)=>e.catId != event.target.value);
+    this.newArray=[];
+    this.productArray=[];
+    this.newArray.push(this.tempArray);
+    for(let i=0;i<this.newArray.length;i++){
+      var firstArray=this.newArray[i];
+      for(let i=0;i<firstArray.length;i++){
+        var obj=firstArray[i];
+        this.productArray.push(obj)
+        console.log(this.productArray)
+      }
+      console.log(obj)
+          }
 
   }
 
@@ -96,21 +121,21 @@ getProduct(){
     switch (event.target.value) {
       case "Low":
         {
-          this.productsApi = this.productsApi.sort((low, high) => low.price - high.price);
+          this.productArray = this.arrays.sort((low, high) => low.price - high.price);
           console.log("price low=>",this.productsApi)
           break;
         }
 
       case "High":
         {
-          this.productsApi = this.productsApi.sort((low, high) => high.price - low.price);
+          this.productArray = this.arrays.sort((low, high) => high.price - low.price);
           console.log("price high=>",this.productsApi)
           break;
 
         }
         case "latest": {
-          // this.getProductsData()
-          this.productsApi = this.productsApi.sort((low, high) => high.id - low.id);
+
+          this.productArray = this.arrays.sort((low, high) => high.id - low.id);
           break;
         }
 
@@ -132,20 +157,14 @@ getProduct(){
       //   }
 
       default: {
-        this.productsApi = this.productsApi.sort((low, high) => low.price - high.price);
+        this.productArray = this.arrays.sort((low, high) => low.price - high.price);
         break;
       }
 
     }
-    return this.productsApi;
+    return this.productArray;
 
   }
-  // filterCategory(val: string){
-  //   console.log('val =>', val);
-  //   this.categoryName = val;
-  //   // this.all_players();
-  //   this.getProductsData()
-  // }
   gotoSingleProduct(id:any){
 this.router.navigate(['/view-product',id])
   }
@@ -156,16 +175,7 @@ this.router.navigate(['/view-product',id])
       console.log("res=>",res)
     })
   }
-//   addToWishlist(){
-//     if(localStorage.getItem('apiToken')){
-// console.log('user Login',this.productData);
 
-
-//     }
-//     else{
-//       console.log('user not login')
-//     }
-//   }
 
 //   getQueryData(){
 // this.query.getIsLoading().subscribe(res => this.loading = res);
