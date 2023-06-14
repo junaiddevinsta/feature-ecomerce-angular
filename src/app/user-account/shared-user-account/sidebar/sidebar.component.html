@@ -27,7 +27,7 @@
           </a>
           <a routerLink="/user-account/manage-account/profile-info" [ngClass]="btnValue === 'profile-info' ? 'text-primary' : ''"  (click)="showComponent('profileInfo')" class="hover:text-primary transition capitalize block" (click)="selectBtn('profile-info')">Profile information</a>
           <a routerLink="/user-account/manage-account/manage-address" [ngClass]="btnValue === 'manageAddress' ? 'text-primary' : ''" (click)="showComponent('manageAddress')" class="hover:text-primary transition capitalize block" (click)="selectBtn('manageAddress')">Manage address</a>
-          <a routerLink="#" class="hover:text-primary transition capitalize block">change password</a>
+          <a routerLink="/user-account/manage-account/change-password" [ngClass]="btnValue === 'changePassword' ? 'text-primary' : ''" (click)="showComponent('changePassword')" class="hover:text-primary transition capitalize block" (click)="selectBtn('changePassword')">change password</a>
       </div>
       <!-- single link end -->
       <!-- single link -->

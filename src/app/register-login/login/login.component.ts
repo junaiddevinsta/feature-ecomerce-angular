@@ -73,7 +73,7 @@ this.toastr.errorToastLogin('Incorrect Username or Password')
         },
         (error: any) => {
           this.toastr.errorToast('Error')
-          console.log('API error');
+          console.log('API error',error);
         }
       );
     }

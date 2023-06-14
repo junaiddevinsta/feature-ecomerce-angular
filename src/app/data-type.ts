@@ -79,3 +79,11 @@ export interface product{
     userId:string,
     id:number|undefined
   }
+  export interface coupon{
+    "code":string,
+    "start_date":string,
+    "end_date":string,
+    "userId": number,
+"productId":number,
+"coupon_discount":number
+  }

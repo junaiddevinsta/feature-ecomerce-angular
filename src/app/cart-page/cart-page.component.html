@@ -86,15 +86,17 @@
       </div>
 
       <!-- searchbar -->
-      <!-- <div class="flex mb-5">
-          <input type="text"
+      <form [formGroup]="resToForm" (ngSubmit)="couponCode()">
+      <div class="flex mb-5">
+          <input type="text" formControlName="coupon"
               class="pl-4 w-full border border-r-0 border-primary py-2 px-3 rounded-l-md focus:ring-primary focus:border-primary text-sm"
               placeholder="Coupon">
           <button type="submit"
               class="bg-primary border border-primary text-white px-5 font-medium rounded-r-md hover:bg-transparent hover:text-primary transition text-sm font-roboto">
               Apply
           </button>
-      </div> -->
+      </div>
+    </form>
       <!-- searchbar end -->
 
       <!-- checkout -->

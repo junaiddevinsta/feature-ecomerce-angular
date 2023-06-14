@@ -33,4 +33,7 @@ cartEmpty(){
 
   })
 }
+passwordUpdateSuccessful(){
+  Swal.fire('Successfully Done!', 'Password Update', 'success');
+}
 }

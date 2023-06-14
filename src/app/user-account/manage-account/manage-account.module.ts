@@ -23,7 +23,8 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
   ],
   exports:[
     ProfileInfoComponent,
-    ManageAddressComponent
+    ManageAddressComponent,
+    ChangePasswordComponent
   ]
 })
 export class ManageAccountModule { }

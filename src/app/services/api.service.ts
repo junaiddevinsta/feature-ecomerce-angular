@@ -51,8 +51,8 @@ private readonly baseUrl = environment.baseUrl;
   patchRequest(url:any,data:any){
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',
-      "Access-Control-Allow-Methods": ["GET", "POST", "PATCH"]
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, POST, PATCH',
     });
 
     return this.http.patch(`${this.baseUrl}/${url}`, data,{ headers });
