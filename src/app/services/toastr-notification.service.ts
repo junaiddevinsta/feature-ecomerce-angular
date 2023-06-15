@@ -19,8 +19,7 @@ export class ToastrNotificationService {
 
 
   }
-
-  successToastRegister(title?:string, msg?: string){
+ successToastRegister(title?:string, msg?: string){
     // console.log("toastr")
     this.toastr.success(msg ? msg :"Successfully Registered",title ? title : "Registered",
     {
@@ -67,7 +66,6 @@ export class ToastrNotificationService {
 
 
   }
-
   errorToast(title?:string, msg?: string){
     this.toastr.error(msg ? msg :"Operation Fail",title ? title : "Error",
     {
@@ -90,7 +88,6 @@ export class ToastrNotificationService {
 
 
   }
-
   apiErrorToast(title?:string, msg?: string){
     this.toastr.error(msg ? msg :"Api Error",title ? title : "Error",
     {
@@ -112,5 +109,34 @@ export class ToastrNotificationService {
 
     )
   }
+  CouponApplyToast(title?:string, msg?: string){
+    // console.log("toastr")
+    this.toastr.success(msg ? msg :"Coupon Applies Successfully",title ? title : "Coupon Apply",
+    {
+      timeOut:1000,
+      progressBar:true
+    }
 
+    )
+  }
+  errorCoupon(title?:string, msg?: string){
+    // console.log("toastr")
+    this.toastr.error(msg ? msg :"Coupon Not Valid",title ? title : "Error",
+    {
+      timeOut:1000,
+      progressBar:true
+    }
+
+    )
+  }
+  messageSentToast(title?:string, msg?: string){
+    // console.log("toastr")
+    this.toastr.success(msg ? msg :"Message sent",title ? title : "Success",
+    {
+      timeOut:1000,
+      progressBar:true
+    }
+
+    )
+  }
 }

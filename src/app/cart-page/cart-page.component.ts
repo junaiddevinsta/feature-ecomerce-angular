@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { AlertService } from '../services/alert.service';
 import { ApiService } from '../services/api.service';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ToastrNotificationService } from '../services/toastr-notification.service';
 
 @Component({
   selector: 'app-cart-page',
@@ -13,7 +14,9 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class CartPageComponent implements OnInit {
   cartData: cart[] | undefined;
-  couponData:coupon[]|undefined
+  couponData=0;
+  discountCode:any;
+  cartRemoveData: cart[] | undefined;
   check=true;
   // coupon:any;
   singleProductPrice: any;
@@ -23,19 +26,19 @@ export class CartPageComponent implements OnInit {
     tax: 0,
     delivery: 0,
     total: 0,
-    quantity: 0
+    quantity: 0,
+
   }
+
+
   resToForm = new FormGroup({
     coupon: new FormControl('',),
-
-  });
+});
   singleUserCartData: any;
-  constructor(private product: ProductService, private route:Router, private alert:AlertService, private apiService:ApiService) { }
-
+  constructor(private product: ProductService, private route:Router, private alert:AlertService, private apiService:ApiService, private toast:ToastrNotificationService) { }
   ngOnInit(): void {
     this.loadDetails();
-    this.couponCode();
-
+    // this.couponCode();
   }
 
 
@@ -63,15 +66,20 @@ export class CartPageComponent implements OnInit {
       })
       // this.singleProductPrice=this.singleUserCartData?.quantity * this.singleUserCartData
       this.priceSummary.price = price;
-      // this.priceSummary.discount = price / 10;
+
+      this.priceSummary.discount = this.couponData ? price / this.couponData : 0;
       this.priceSummary.tax = price / 10;
       this.priceSummary.delivery = 100;
-      this.priceSummary.total = price + (price / 10) + 100 - (price / 10);
+      this.priceSummary.total = price + (price / 10) + 100 - this.priceSummary.discount;
       console.log('price summary=>', this.priceSummary)
+      console.log("total price=>")
       console.log('price=>', price)
       this.singleUserCartData = res;
+      console.log("discount value=>",this.priceSummary.discount);
       console.log("single user cart data=>", this.singleUserCartData);
     })
+    // this.couponCode();
+
   }
   checkCheckoutData(){
     if(this.cartData?.length){
@@ -85,6 +93,7 @@ export class CartPageComponent implements OnInit {
     return this.resToForm.controls;
   }
   couponCode(){
+
 const coupon={
   coupon:this.resToForm.value.coupon
 }
@@ -94,18 +103,30 @@ this.apiService.getrequest('coupon').subscribe((res:any)=>{
   if(res){
     if(localStorage.getItem('userid')){
  // console.log("Response=>",res)
- const couponCode = res.some((c: any) => c.code === coupon.coupon );
- this.couponData=res[0].coupon_discount;
+
  console.log("coupooon Data=>",this.couponData)
+ const couponCode = res.some((c: any) => c.code === coupon.coupon );
  // const couponCode =  this.apiService.getPersons().find(x => x.id == this.personId);
  console.log("coupen code=>",couponCode)
+ this.discountCode=res[0].code;
+ console.log("discount code=>",this.discountCode)
 
  if(!couponCode){
+this.toast.errorCoupon();
    console.log("code not exists")
  }
  else{
+  this.couponData=res[0].coupon_discount;
+  this.apiService.postRequest('usedCoupon',this.resToForm.value).subscribe((response:any)=>{
+    if(response){
+      console.log("discount code=>",response)
+    }
+  })
    console.log("code exists");
+
+   this.toast.CouponApplyToast();
  }
+ this.loadDetails();
     }
 
   }
@@ -119,5 +140,47 @@ this.apiService.getrequest('coupon').subscribe((res:any)=>{
 // }
 //       }
 //     })
+  }
+  removeCode(){
+    this.product.currentCart().subscribe((res) => {
+      if(!res){
+        return;
+      }
+
+      // delete res.discount;
+      this.cartRemoveData = res;
+      console.log("remove code=>",this.cartRemoveData)
+      let price = 0
+      res.forEach((item) => {
+        if (item.quantity) {
+          price = price + (+item.price * +item.quantity)
+
+        }
+      })
+      this.apiService.getrequest('coupon').subscribe((result:any)=>{
+        if(result){
+
+          console.log("coupon result=>",result)
+          this.priceSummary.price = price;
+          delete result.discount
+          this.priceSummary.discount =  0;
+          this.priceSummary.tax = price / 10;
+          this.priceSummary.delivery = 100;
+          this.priceSummary.total = price + (price / 10) + 100 - this.priceSummary.discount;
+          console.log('price summary=>', this.priceSummary)
+          console.log("total price=>")
+          console.log('price=>', price)
+          this.singleUserCartData = res;
+          console.log("discount value=>",this.priceSummary.discount);
+          // console.log("single user cart data=>", this.singleUserCartData);
+          this.resToForm.reset();
+        }
+
+      })
+      // this.singleProductPrice=this.singleUserCartData?.quantity * this.singleUserCartData
+
+
+    })
+    this.loadDetails();
   }
 }

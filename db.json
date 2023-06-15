@@ -466,19 +466,18 @@
       "id": 1
     },
     {
-      "name": "Guyer Chair",
+      "name": "boy Chair",
       "price": 45,
       "old_price": 150,
-      "reviews": 130,
-      "image": "assets/images/products/product5.jpg",
+      "reviews": 150,
+      "image": "assets/images/products/product1.jpg",
       "brand": "Apex",
-      "category": "Bedroom",
-      "catId": "1",
-      "Availability": "In stock",
+      "SKU": "BE45VGRT",
+      "category": "Office",
+      "catId": 3,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "quantity": 3,
-      "productId": 5,
+      "quantity": 1,
+      "productId": 1,
       "userId": 16,
       "id": 2
     }
@@ -563,6 +562,14 @@
       "totalPrice": 415,
       "userId": 10,
       "id": 2
+    },
+    {
+      "address": "hafeez center",
+      "phone": "03056545654",
+      "email": "example123@gmail.com",
+      "totalPrice": 595,
+      "userId": 16,
+      "id": 3
     }
   ],
   "about": {
@@ -575,19 +582,32 @@
       "email": "junaid@gmail.com",
       "message": "kjsjhjd jsjjksd",
       "id": 1
+    },
+    {
+      "fname": "example",
+      "email": "example@gmail.com",
+      "message": "jeijjekn fjndjfj",
+      "id": 2
     }
   ],
-  "coupon":[
+  "coupon": [
     {
-    "code":"50% off",
-    "start_date":"Jun 6 2023",
-    "end_date":"Jun 6 2023",
-    "userId": "",
-"productId":"",
-"coupon_discount":20
-  }
-
+      "code": "20% off",
+      "start_date": "Jun 6 2023",
+      "end_date": "Jun 6 2023",
+      "userId": "",
+      "productId": "",
+      "coupon_discount": 20
+    }
   ],
-
+  "usedCoupon": [
+    {
+      "id": 1
+    },
+    {
+      "coupon": "20% off",
+      "id": 2
+    }
+  ],
   "profileData": []
 }

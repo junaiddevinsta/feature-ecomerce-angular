@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from '../services/api.service';
+import { ToastrNotificationService } from '../services/toastr-notification.service';
 
 @Component({
   selector: 'app-contact',
@@ -13,7 +14,7 @@ export class ContactComponent implements OnInit {
     email: new FormControl('', [Validators.required,Validators.email]),
     message:new FormControl('', [Validators.required])
   });
-  constructor(private apiService:ApiService) { }
+  constructor(private apiService:ApiService, private toast:ToastrNotificationService ) { }
 
   ngOnInit(): void {
   }
@@ -26,6 +27,7 @@ export class ContactComponent implements OnInit {
     console.log('Data =>', data);
     this.apiService.postRequest('contact',data).subscribe((res)=>{
       if(res){
+        this.toast.messageSentToast();
         console.log("message send successfully",res)
       }
     })

@@ -70,6 +70,18 @@ export interface product{
     total:number
     quantity:number,
 
+
+  }
+
+  export interface priceSummaryRemoveCoupon{
+    priceCoupon:number,
+    discountCoupon:number,
+    taxCoupon:number,
+    deliveryCoupon:number,
+    totalCoupon:number
+    quantityCoupon:number,
+
+
   }
   export interface order {
     email:string,
