@@ -466,18 +466,19 @@
       "id": 1
     },
     {
-      "name": "boy Chair",
-      "price": 45,
-      "old_price": 150,
-      "reviews": 150,
-      "image": "assets/images/products/product1.jpg",
+      "name": "devinsta Chair",
+      "price": 455,
+      "old_price": 7,
+      "reviews": 1,
+      "image": "assets/images/products/product2.jpg",
       "brand": "Apex",
       "SKU": "BE45VGRT",
       "category": "Office",
-      "catId": 3,
+      "catId": 6,
+      "Availability": "In stock",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
       "quantity": 1,
-      "productId": 1,
+      "productId": 2,
       "userId": 16,
       "id": 2
     }
@@ -570,6 +571,158 @@
       "totalPrice": 595,
       "userId": 16,
       "id": 3
+    },
+    {
+      "address": "919 Stimple Ct",
+      "phone": "9074572631",
+      "email": "mumtaz@devinsta.com",
+      "totalPrice": 149.5,
+      "userId": 16,
+      "id": 4
+    },
+    {
+      "address": "919 Stimple Ct",
+      "phone": "9074572631",
+      "email": "mumtaz@devinsta.com",
+      "totalPrice": 298,
+      "userId": 16,
+      "id": 5
+    },
+    {
+      "address": "919 Stimple Ct",
+      "phone": "9074572631",
+      "email": "mumtaz@devinsta.com",
+      "totalPrice": 100,
+      "userId": 16,
+      "id": 6
+    },
+    {
+      "address": "919 Stimple Ct",
+      "phone": "9074572631",
+      "email": "mumtaz@devinsta.com",
+      "totalPrice": 100,
+      "userId": 16,
+      "id": 7
+    },
+    {
+      "address": "919 Stimple Ct",
+      "phone": "9074572631",
+      "email": "mumtaz@devinsta.com",
+      "totalPrice": 100,
+      "userId": 16,
+      "id": 8
+    },
+    {
+      "address": "919 Stimple Ct",
+      "phone": "9074572631",
+      "email": "mumtaz@devinsta.com",
+      "totalPrice": 100,
+      "userId": 16,
+      "id": 9
+    },
+    {
+      "address": "919 Stimple Ct",
+      "phone": "9074572631",
+      "email": "mumtaz@devinsta.com",
+      "totalPrice": 147.25,
+      "userId": 16,
+      "id": 10
+    },
+    {
+      "address": "919 Stimple Ct",
+      "phone": "9074572631",
+      "email": "mumtaz@devinsta.com",
+      "totalPrice": 577.75,
+      "userId": 16,
+      "id": 11
+    },
+    {
+      "address": "919 Stimple Ct",
+      "phone": "9074572631",
+      "email": "mumtaz@devinsta.com",
+      "totalPrice": 100,
+      "userId": 16,
+      "id": 12
+    },
+    {
+      "address": "919 Stimple Ct",
+      "phone": "9074572631",
+      "email": "mumtaz@devinsta.com",
+      "totalPrice": 149.5,
+      "userId": 16,
+      "id": 13
+    },
+    {
+      "address": "919 Stimple Ct",
+      "phone": "9074572631",
+      "email": "mumtaz@devinsta.com",
+      "totalPrice": 600.5,
+      "userId": 16,
+      "id": 14
+    },
+    {
+      "address": "919 Stimple Ct",
+      "phone": "9074572631",
+      "email": "mumtaz@devinsta.com",
+      "totalPrice": 100,
+      "userId": 16,
+      "id": 15
+    },
+    {
+      "address": "919 Stimple Ct",
+      "phone": "9074572631",
+      "email": "mumtaz@devinsta.com",
+      "totalPrice": 600.5,
+      "userId": 16,
+      "id": 16
+    },
+    {
+      "address": "919 Stimple Ct",
+      "phone": "9074572631",
+      "email": "mumtaz@devinsta.com",
+      "totalPrice": 100,
+      "userId": 16,
+      "id": 17
+    },
+    {
+      "address": "919 Stimple Ct",
+      "phone": "9074572631",
+      "email": "mumtaz@devinsta.com",
+      "totalPrice": 100,
+      "userId": 16,
+      "id": 18
+    },
+    {
+      "address": "hafeez center",
+      "phone": "03076565434",
+      "email": "testing@gmail.com",
+      "totalPrice": 600.5,
+      "userId": 16,
+      "id": 19
+    },
+    {
+      "address": "hafeez center",
+      "phone": "03056545654",
+      "email": "example123@gmail.com",
+      "totalPrice": 100,
+      "userId": 16,
+      "id": 20
+    },
+    {
+      "address": "919 Stimple Ct",
+      "phone": "9074572631",
+      "email": "mumtaz@devinsta.com",
+      "totalPrice": 100,
+      "userId": 16,
+      "id": 21
+    },
+    {
+      "address": "919 Stimple Ct",
+      "phone": "9074572631",
+      "email": "mumtaz@devinsta.com",
+      "totalPrice": 100,
+      "userId": 16,
+      "id": 22
     }
   ],
   "about": {
@@ -592,7 +745,7 @@
   ],
   "coupon": [
     {
-      "code": "20% off",
+      "code": "20%off",
       "start_date": "Jun 6 2023",
       "end_date": "Jun 6 2023",
       "userId": "",
@@ -607,6 +760,112 @@
     {
       "coupon": "20% off",
       "id": 2
+    },
+    {
+      "coupon": "20% off",
+      "id": 3
+    },
+    {
+      "coupon": "20% off",
+      "id": 4
+    },
+    {
+      "coupon": "20% off",
+      "id": 5
+    },
+    {
+      "coupon": "20% off",
+      "id": 6
+    },
+    {
+      "coupon": "20% off",
+      "id": 7
+    },
+    {
+      "coupon": "20% off",
+      "id": 8
+    },
+    {
+      "coupon": "20% off",
+      "id": 9
+    },
+    {
+      "coupon": "20%off",
+      "id": 10
+    },
+    {
+      "coupon": "20%off",
+      "id": 11
+    },
+    {
+      "coupon": "20%off",
+      "id": 12
+    },
+    {
+      "coupon": "20%off",
+      "id": 13
+    },
+    {
+      "coupon": "20%off",
+      "id": 14
+    },
+    {
+      "coupon": "20%off",
+      "id": 15
+    },
+    {
+      "coupon": "20%off",
+      "id": 16
+    },
+    {
+      "coupon": "20%off",
+      "id": 17
+    },
+    {
+      "couponCodeValue": "20%off",
+      "userId": 16,
+      "id": 18
+    },
+    {
+      "couponCodeValue": "20%off",
+      "userId": 16,
+      "id": 19
+    },
+    {
+      "coupon": "20%off",
+      "id": 20
+    },
+    {
+      "couponCodeValue": "20%off",
+      "userId": 16,
+      "id": 21
+    },
+    {
+      "coupon": "20%off",
+      "id": 22
+    },
+    {
+      "couponCodeValue": "20%off",
+      "userId": 16,
+      "id": 23
+    },
+    {
+      "couponCodeValue": "20%off",
+      "userId": 16,
+      "id": 24
+    },
+    {
+      "couponCodeValue": "20%off",
+      "userId": 16,
+      "id": 25
+    },
+    {
+      "coupon": "20%off",
+      "id": 26
+    },
+    {
+      "coupon": "20%off",
+      "id": 27
     }
   ],
   "profileData": []

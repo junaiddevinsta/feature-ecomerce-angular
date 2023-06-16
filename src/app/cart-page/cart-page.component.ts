@@ -18,6 +18,8 @@ export class CartPageComponent implements OnInit {
   discountCode:any;
   cartRemoveData: cart[] | undefined;
   check=true;
+  codeCoupon=false;
+  usedCoupon:any;
   // coupon:any;
   singleProductPrice: any;
   priceSummary: priceSummary = {
@@ -115,6 +117,8 @@ this.apiService.getrequest('coupon').subscribe((res:any)=>{
 this.toast.errorCoupon();
    console.log("code not exists")
  }
+
+
  else{
   this.couponData=res[0].coupon_discount;
   this.apiService.postRequest('usedCoupon',this.resToForm.value).subscribe((response:any)=>{
@@ -123,13 +127,23 @@ this.toast.errorCoupon();
     }
   })
    console.log("code exists");
-
+this.codeCoupon=true
    this.toast.CouponApplyToast();
  }
  this.loadDetails();
     }
 
   }
+})
+this.apiService.getrequest('usedCoupon').subscribe((usedCouponResponse)=>{
+  if(usedCouponResponse){
+    this.usedCoupon=usedCouponResponse;
+    console.log("used Coupon Response=>",this.usedCoupon)
+
+    const couponCode = this.usedCoupon.some((c: any) => c.code === coupon.coupon );
+    console.log("usedCouponCode=>",couponCode)
+  }
+
 })
 //     this.apiService.getrequest('coupon').subscribe((res)=>{
 //       if(res){
@@ -174,6 +188,7 @@ this.toast.errorCoupon();
           console.log("discount value=>",this.priceSummary.discount);
           // console.log("single user cart data=>", this.singleUserCartData);
           this.resToForm.reset();
+          this.codeCoupon=false;
         }
 
       })

@@ -89,6 +89,7 @@ export interface product{
     contact:string,
     totalPrice:number,
     userId:string,
+    coupon:string
     id:number|undefined
   }
   export interface coupon{

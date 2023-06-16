@@ -15,9 +15,11 @@ import { ApiService } from '../services/api.service';
 })
 export class CheckoutComponent implements OnInit {
   totalPrice: number | undefined;
+  coupon: any;
   cartData: cart[] | undefined;
   orderMsg: string | undefined;
   couponData=0;
+  couponCodeValue:any;
   resToForm = new FormGroup({
     address: new FormControl('', [Validators.required]),
     phone: new FormControl('', [Validators.required, Validators.pattern('^((\\+92-?)|0)?[0-9]{10}$')]),
@@ -54,6 +56,7 @@ singleUserCartData: any;
       let orderData:order = {
         ...data,
         totalPrice: this.totalPrice,
+        coupon:this.coupon,
         userId,
   id: undefined
       }
@@ -65,6 +68,15 @@ singleUserCartData: any;
       this.checkout.orderNow(orderData).subscribe((res)=>{
         console.log("order response=>",res)
         if(res){
+          console.log("coupon Response Data=>",this.couponData)
+          const couponResponseData={
+            couponCodeValue:this.couponCodeValue,
+            userId
+          }
+          console.log("coupon Response Data=>",couponResponseData)
+          this.apiService.postRequest('usedCoupon',couponResponseData).subscribe((couponCodeRes)=>{
+console.log("value added in used coupon success=>",couponCodeRes)
+          })
           this.toastr.successToastOrderPlaced('Order Placed Successfull')
           // this.alert.orderPlaced();
 
@@ -92,6 +104,7 @@ singleUserCartData: any;
 
         }
       })
+
       this.totalPrice = price + (price / 10) + 100 - this.priceSummary.discount;
       // this.singleProductPrice=this.singleUserCartData?.quantity * this.singleUserCartData
       this.priceSummary.price = price;
@@ -122,6 +135,8 @@ singleUserCartData: any;
      // console.log("Response=>",res)
     //  const couponCode = res.some((c: any) => c.code === coupon.coupon );
      this.couponData=res[0].coupon_discount;
+     this.couponCodeValue=res[0].code;
+     console.log("coupon code value=>",this.couponCodeValue)
      console.log("coupooon Data=>",this.couponData)
      console.log("coupon coupon=>",res)
      // const couponCode =  this.apiService.getPersons().find(x => x.id == this.personId);
