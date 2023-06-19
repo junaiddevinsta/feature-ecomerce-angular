@@ -116,6 +116,7 @@ console.log("value added in used coupon success=>",couponCodeRes)
       console.log('price=>', price)
       this.singleUserCheckoutData = res;
       console.log("single user cart data=>", this.singleUserCheckoutData);
+
     })
   }
 

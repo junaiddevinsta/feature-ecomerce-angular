@@ -20,6 +20,8 @@ export class CartPageComponent implements OnInit {
   check=true;
   codeCoupon=false;
   usedCoupon:any;
+  couponApi:any;
+  couponCodecode:any
   // coupon:any;
   singleProductPrice: any;
   priceSummary: priceSummary = {
@@ -80,6 +82,12 @@ export class CartPageComponent implements OnInit {
       this.singleUserCartData = res;
       console.log("discount value=>",this.priceSummary.discount);
       console.log("single user cart data=>", this.singleUserCartData);
+
+    })
+    this.apiService.getrequest('coupon').subscribe((couponApiResponse:any)=>{
+console.log("coupon Api response=>",couponApiResponse);
+this.couponApi=couponApiResponse[0].code
+// console.log("coupon api=>",this.couponApi)
     })
     // this.couponCode();
 
@@ -96,6 +104,7 @@ export class CartPageComponent implements OnInit {
     return this.resToForm.controls;
   }
   couponCode() {
+
     // Get the user ID from local storage.
     let user = localStorage.getItem('userid');
     let userId = user && JSON.parse(user);
@@ -104,16 +113,17 @@ export class CartPageComponent implements OnInit {
     if (userId) {
     this.apiService.getrequest('coupon').subscribe((result: any) => {
     // Create a new object with the coupon code and user ID.
+    console.log("coupon response data=>",result)
     const usedcoupon = {
     coupon: this.resToForm.value.coupon,
     userId
     };
 
       // Check if the coupon code exists in the database.
-      const couponCode = result.some((c: any) => c.code === usedcoupon.coupon);
+      this.couponCodecode = result.some((c: any) => c.code === usedcoupon.coupon);
 
       // If the coupon code exists, check if it has been used by the current user.
-      if (couponCode) {
+      if (this.couponCodecode) {
         this.apiService.getrequest('usedCoupon').subscribe((response: any) => {
           // Get the used coupon code from the response.
           const usedCouponCode = response.some((c: any) => c.couponCodeValue === this.resToForm.value.coupon && c.userId === userId);
@@ -132,6 +142,7 @@ export class CartPageComponent implements OnInit {
 this.apiService.postRequest('orders',discountData).subscribe((resultDiscount:any)=>{
 console.log("Result Discount=>",resultDiscount)
 })
+
   this.loadDetails();
 
             this.toast.CouponApplyToast();
@@ -145,6 +156,10 @@ console.log("Result Discount=>",resultDiscount)
     });
 
   }
+  const discountValue={
+    discount:this.priceSummary.discount
+  }
+  console.log("discounted Value=>",discountValue)
   }
 //   couponCode(){
 //     let user = localStorage.getItem('userid');
