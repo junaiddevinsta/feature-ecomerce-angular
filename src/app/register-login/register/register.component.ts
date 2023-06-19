@@ -48,9 +48,17 @@ export class RegisterComponent implements OnInit {
           const userExists = response.some((user: any) => user.email === email );
           if (!userExists) {
             this.apiService.postRequest('register', data).subscribe((res:any)=>{
-              console.log('Register successful');
-              this.toastr.successToastRegister('Registered', res.message),
+              console.log('Register successful',res);
+              this.toastr.successToastRegister('Registered', res.message)
+              const apiToken = this.authService.generateApiToken();
+              localStorage.getItem('res.id');
+              localStorage.getItem('res.fname');
+              localStorage.setItem('apiToken', apiToken);
+              localStorage.setItem('userid', res.id);
+        localStorage.getItem('apiToken');
+        //       console.log('response register',res);
 
+        //               localStorage.setItem('apiToken', apiToken);
                       // alert('SIGNUP SUCCESSFUL');
                       this.route.navigate([''])
                       console.log("sucess")

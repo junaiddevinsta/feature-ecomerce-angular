@@ -95,71 +95,82 @@ export class CartPageComponent implements OnInit {
   get inputControls() {
     return this.resToForm.controls;
   }
-  couponCode(){
+  couponCode() {
+    // Get the user ID from local storage.
     let user = localStorage.getItem('userid');
-    let userId= user && JSON.parse(user);
-const coupon={
-  coupon:this.resToForm.value.coupon,
-  userId
-}
+    let userId = user && JSON.parse(user);
 
-console.log("coupon=>",coupon)
-this.apiService.getrequest('coupon').subscribe((res:any)=>{
-  if(res){
-    if(localStorage.getItem('userid')){
- // console.log("Response=>",res)
- this.apiService.getrequest('usedCoupon').subscribe((usedCouponResponse)=>{
-  if(usedCouponResponse){
-    this.usedCoupon=usedCouponResponse;
-    console.log("used Coupon Response=>",this.usedCoupon)
-    const usedcoupon={
-      coupon:this.resToForm.value.coupon,
-      userId
-    }
-    const usedCouponCode = this.usedCoupon.some((c: any) => c.coupon === usedcoupon.coupon && c.userId===usedcoupon.userId );
-    console.log("usedCouponCode=>",usedCouponCode)
-    if(!usedCouponCode){
-        this.couponData=res[0].coupon_discount;
-   console.log("code exists");
-this.codeCoupon=true;
-this.apiService.postRequest('usedCoupon',coupon).subscribe((usedCouponResponse:any)=>{
-  if(usedCouponResponse){
-    console.log("discount code=>",usedCouponResponse)
-    // const usedCouponCode = usedCouponResponse.some((c: any) => c.code === coupon.coupon && c.userId===coupon.userId );
-    // console.log("used coupon code=>",usedCouponCode)
+    // If there is a user ID, make a request to the coupon endpoint.
+    if (userId) {
+    this.apiService.getrequest('coupon').subscribe((result: any) => {
+    // Create a new object with the coupon code and user ID.
+    const usedcoupon = {
+    coupon: this.resToForm.value.coupon,
+    userId
+    };
 
+      // Check if the coupon code exists in the database.
+      const couponCode = result.some((c: any) => c.code === usedcoupon.coupon);
+
+      // If the coupon code exists, check if it has been used by the current user.
+      if (couponCode) {
+        this.apiService.getrequest('usedCoupon').subscribe((response: any) => {
+          // Get the used coupon code from the response.
+          const usedCouponCode = response.some((c: any) => c.couponCodeValue === this.resToForm.value.coupon && c.userId === userId);
+          console.log("used coupn coupon code=>",usedCouponCode)
+          this.codeCoupon = true;
+          // If the coupon code has not been used, apply the discount.
+          if (!usedCouponCode) {
+            this.discountCode=result[0].code;
+            console.log("coupon data code=>",this.discountCode)
+  this.couponData=result[0].coupon_discount;
+  console.log("console.log=>",this.couponData)
+  const discountData={
+    discount:this.priceSummary.discount
   }
+  console.log("discount data=>",this.priceSummary.discount )
+this.apiService.postRequest('orders',discountData).subscribe((resultDiscount:any)=>{
+console.log("Result Discount=>",resultDiscount)
 })
-   this.toast.CouponApplyToast();
-      console.log("coupon don't valid")
-    }
-    else{
-      this.toast.errorCoupon();
-      console.log("coupon Not valid")
-    }
-  }
-  if(!usedCouponResponse){
+  this.loadDetails();
+
+            this.toast.CouponApplyToast();
+          } else {
+            this.toast.errorCoupon();
+          }
+        });
+      } else {
+        this.toast.errorCoupon();
+      }
+    });
 
   }
+  }
+//   couponCode(){
+//     let user = localStorage.getItem('userid');
+//     let userId= user && JSON.parse(user);
+// const coupon={
+//   coupon:this.resToForm.value.coupon,
+//   userId
+// }
 
-})
-
- console.log("coupooon Data=>",this.couponData)
- const couponCode = res.some((c: any) => c.code === coupon.coupon );
-
- // const couponCode =  this.apiService.getPersons().find(x => x.id == this.personId);
- console.log("coupen code=>",couponCode)
- this.discountCode=res[0].code;
- console.log("discount code=>",this.discountCode)
-
- if(!couponCode){
-this.toast.errorCoupon();
-   console.log("code not exists")
- }
-
-
-//  else{
-//   this.couponData=res[0].coupon_discount;
+// console.log("coupon=>",coupon)
+// this.apiService.getrequest('coupon').subscribe((res:any)=>{
+//   if(res){
+//     if(localStorage.getItem('userid')){
+//  // console.log("Response=>",res)
+//  this.apiService.getrequest('usedCoupon').subscribe((usedCouponResponse)=>{
+//   if(usedCouponResponse){
+//     this.usedCoupon=usedCouponResponse;
+//     console.log("used Coupon Response=>",this.usedCoupon)
+//     const usedcoupon={
+//       coupon:this.resToForm.value.coupon,
+//       userId
+//     }
+//     const usedCouponCode = this.usedCoupon.some((c: any) => c.coupon === usedcoupon.coupon && c.userId===usedcoupon.userId );
+//     console.log("usedCouponCode=>",usedCouponCode)
+//     if(!usedCouponCode){
+//         this.couponData=res[0].coupon_discount;
 //    console.log("code exists");
 // this.codeCoupon=true;
 // this.apiService.postRequest('usedCoupon',coupon).subscribe((usedCouponResponse:any)=>{
@@ -171,35 +182,75 @@ this.toast.errorCoupon();
 //   }
 // })
 //    this.toast.CouponApplyToast();
-//  }
- this.loadDetails();
-    }
-
-  }
-})
-// this.apiService.postRequest('usedCoupon',coupon).subscribe((response:any)=>{
-//   if(response){
-//     console.log("discount code=>",response)
-//   }
-// })
-// this.apiService.getrequest('usedCoupon').subscribe((usedCouponResponse)=>{
-//   if(usedCouponResponse){
-//     this.usedCoupon=usedCouponResponse;
-//     console.log("used Coupon Response=>",this.usedCoupon)
-
-//     const couponCode = this.usedCoupon.some((c: any) => c.code === coupon.coupon && c.userId===coupon.userId );
-//     console.log("usedCouponCode=>",couponCode)
-//     if(!couponCode){
-//       console.log("coupon not exist")
+//       console.log("coupon don't valid")
 //     }
 //     else{
-//       console.log("coupon exist")
+//       this.toast.errorCoupon();
+//       console.log("coupon Not valid")
 //     }
+//   }
+//   if(!usedCouponResponse){
+
 //   }
 
 // })
 
-  }
+//  console.log("coupooon Data=>",this.couponData)
+//  const couponCode = res.some((c: any) => c.code === coupon.coupon );
+
+//  // const couponCode =  this.apiService.getPersons().find(x => x.id == this.personId);
+//  console.log("coupen code=>",couponCode)
+//  this.discountCode=res[0].code;
+//  console.log("discount code=>",this.discountCode)
+
+//  if(!couponCode){
+// this.toast.errorCoupon();
+//    console.log("code not exists")
+//  }
+
+
+// //  else{
+// //   this.couponData=res[0].coupon_discount;
+// //    console.log("code exists");
+// // this.codeCoupon=true;
+// // this.apiService.postRequest('usedCoupon',coupon).subscribe((usedCouponResponse:any)=>{
+// //   if(usedCouponResponse){
+// //     console.log("discount code=>",usedCouponResponse)
+// //     // const usedCouponCode = usedCouponResponse.some((c: any) => c.code === coupon.coupon && c.userId===coupon.userId );
+// //     // console.log("used coupon code=>",usedCouponCode)
+
+// //   }
+// // })
+// //    this.toast.CouponApplyToast();
+// //  }
+//  this.loadDetails();
+//     }
+
+//   }
+// })
+// // this.apiService.postRequest('usedCoupon',coupon).subscribe((response:any)=>{
+// //   if(response){
+// //     console.log("discount code=>",response)
+// //   }
+// // })
+// // this.apiService.getrequest('usedCoupon').subscribe((usedCouponResponse)=>{
+// //   if(usedCouponResponse){
+// //     this.usedCoupon=usedCouponResponse;
+// //     console.log("used Coupon Response=>",this.usedCoupon)
+
+// //     const couponCode = this.usedCoupon.some((c: any) => c.code === coupon.coupon && c.userId===coupon.userId );
+// //     console.log("usedCouponCode=>",couponCode)
+// //     if(!couponCode){
+// //       console.log("coupon not exist")
+// //     }
+// //     else{
+// //       console.log("coupon exist")
+// //     }
+// //   }
+
+// // })
+
+//   }
   removeCode(){
     this.product.currentCart().subscribe((res) => {
       if(!res){
@@ -222,7 +273,8 @@ this.toast.errorCoupon();
           console.log("coupon result=>",result)
           this.priceSummary.price = price;
           delete result.discount
-          this.priceSummary.discount =  0;
+          // this.priceSummary.discount =  0;
+          this.priceSummary.discount=this.couponData ? price / this.couponData : 0;
           this.priceSummary.tax = price / 10;
           this.priceSummary.delivery = 100;
           this.priceSummary.total = price + (price / 10) + 100 - this.priceSummary.discount;
