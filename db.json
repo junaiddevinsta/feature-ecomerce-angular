@@ -619,6 +619,22 @@
       "productId": 1,
       "userId": 9,
       "id": 7
+    },
+    {
+      "name": "Sofa",
+      "price": 450,
+      "old_price": 120,
+      "reviews": 100,
+      "image": "assets/images/products/product6.jpg",
+      "brand": "Apex",
+      "category": "Sofa",
+      "catId": "2",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "quantity": 1,
+      "productId": 6,
+      "userId": 9,
+      "id": 8
     }
   ],
   "wishlist": [
