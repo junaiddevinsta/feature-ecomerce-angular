@@ -31,11 +31,19 @@
               </div>
               <!-- cart content end -->
               <!-- cart quantity -->
-              <div class="flex border border-gray-300 text-gray-600 divide-x divide-gray-300">
-                  <!-- <div class="h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none">-</div> -->
+              <div class="flex border border-gray-300 text-gray-600 divide-x divide-gray-300 w-max">
+                <button (click)="incQty(cartData?.productId,cartData?.quantity)" class="h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none">+</button>
+                <!-- <div class="h-8 w-10 flex items-center justify-center"> -->
+                  <div type="text"  value="">{{cartData?.quantity}}
+                  </div>
+              <!-- </div> -->
+                <div (click)="decQty(cartData?.productId,cartData?.quantity)" class="h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none">-</div>
+            </div>
+              <!-- <div class="flex border border-gray-300 text-gray-600 divide-x divide-gray-300">
+                  <div class="h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none">-</div>
                   <div class="h-8 w-10 flex items-center justify-center">{{cartData?.quantity}}</div>
-                  <!-- <div class="h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none">+</div> -->
-              </div>
+                  <div class="h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none">+</div>
+              </div> -->
               <!-- cart quantity end -->
               <div class="ml-auto md:ml-0">
                   <p class="text-primary text-lg font-semibold">${{cartData?.price*cartData?.quantity}}</p>

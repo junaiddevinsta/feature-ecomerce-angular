@@ -52,7 +52,12 @@
       "email": "jun123@gmail.com",
       "password": "123",
       "confirmPassword": "123",
-      "id": 9
+      "id": 9,
+      "phone": "03054345432",
+      "shippingAddress": "hafeez center",
+      "shippingphoneNo": "03056543454",
+      "billingAddress": "hafeez center",
+      "billingphoneNo": "03054343212"
     },
     {
       "fname": "asdd",
@@ -367,7 +372,8 @@
       "fname": "test",
       "email": "test6@gmail.com",
       "password": "123",
-      "id": 63
+      "id": 63,
+      "phone": "03043234543"
     }
   ],
   "products": [
@@ -580,6 +586,56 @@
       "productId": 1,
       "userId": 63,
       "id": 4
+    },
+    {
+      "name": "Guyer Chair",
+      "price": 45,
+      "old_price": 150,
+      "reviews": 130,
+      "image": "assets/images/products/product5.jpg",
+      "brand": "Apex",
+      "category": "Bedroom",
+      "catId": "1",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "quantity": 2,
+      "productId": 5,
+      "userId": 9,
+      "id": 6
+    },
+    {
+      "name": "boy Chair",
+      "price": 45,
+      "old_price": 150,
+      "reviews": 150,
+      "image": "assets/images/products/product1.jpg",
+      "brand": "Apex",
+      "SKU": "BE45VGRT",
+      "category": "Office",
+      "catId": 3,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "quantity": 4,
+      "productId": 1,
+      "userId": 9,
+      "id": 8
+    },
+    {
+      "name": "devinsta Chair",
+      "price": 455,
+      "old_price": 7,
+      "reviews": 1,
+      "image": "assets/images/products/product2.jpg",
+      "brand": "Apex",
+      "SKU": "BE45VGRT",
+      "category": "Office",
+      "catId": 6,
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "quantity": 1,
+      "productId": 2,
+      "userId": 9,
+      "id": 9
     }
   ],
   "wishlist": [
@@ -1042,6 +1098,119 @@
     {
       "discount": 0,
       "id": 60
+    },
+    {
+      "discount": 0,
+      "id": 61
+    },
+    {
+      "discount": 0,
+      "id": 62
+    },
+    {
+      "discount": 0,
+      "id": 63
+    },
+    {
+      "discount": 0,
+      "id": 64
+    },
+    {
+      "discount": 0,
+      "id": 65
+    },
+    {
+      "address": "hafeez center",
+      "phone": "03056545654",
+      "email": "example123@gmail.com",
+      "terms": true,
+      "totalPrice": 147.25,
+      "userId": 9,
+      "id": 66
+    },
+    {
+      "discount": 0,
+      "id": 67
+    },
+    {
+      "discount": 22.5,
+      "id": 68
+    },
+    {
+      "discount": 22.5,
+      "id": 69
+    },
+    {
+      "discount": 0,
+      "id": 70
+    },
+    {
+      "discount": 0,
+      "id": 71
+    },
+    {
+      "discount": 0,
+      "id": 72
+    },
+    {
+      "discount": 0,
+      "id": 73
+    },
+    {
+      "discount": 0,
+      "id": 74
+    },
+    {
+      "discount": 0,
+      "id": 75
+    },
+    {
+      "discount": 0,
+      "id": 76
+    },
+    {
+      "discount": 0,
+      "id": 77
+    },
+    {
+      "discount": 0,
+      "id": 78
+    },
+    {
+      "discount": 0,
+      "id": 79
+    },
+    {
+      "discount": 0,
+      "id": 80
+    },
+    {
+      "discount": 0,
+      "id": 81
+    },
+    {
+      "discount": 22.5,
+      "id": 82
+    },
+    {
+      "discount": 0,
+      "id": 83
+    },
+    {
+      "discount": 0,
+      "id": 84
+    },
+    {
+      "discount": 0,
+      "id": 85
+    },
+    {
+      "discount": 0,
+      "id": 86
+    },
+    {
+      "discount": 0,
+      "id": 87
     }
   ],
   "about": {
@@ -1066,6 +1235,12 @@
       "email": "testing@gmail.com",
       "message": "dasas",
       "id": 3
+    },
+    {
+      "fname": "sadas",
+      "email": "example123@gmail.com",
+      "message": "sdss",
+      "id": 4
     }
   ],
   "coupon": [

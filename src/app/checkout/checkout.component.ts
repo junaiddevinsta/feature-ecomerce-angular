@@ -24,6 +24,7 @@ export class CheckoutComponent implements OnInit {
     address: new FormControl('', [Validators.required]),
     phone: new FormControl('', [Validators.required, Validators.pattern('^((\\+92-?)|0)?[0-9]{10}$')]),
     email: new FormControl('', [Validators.required,Validators.email,]),
+    terms: new FormControl('', [Validators.required]),
      });
   constructor(private product:ProductService,private checkout:CheckoutService, private alert:AlertService, private route:Router, private toastr:ToastrNotificationService, private apiService:ApiService) { }
 
@@ -165,8 +166,10 @@ console.log("value added in used coupon success=>",couponCodeRes)
     //     })
       }
 
+
 alertOrderPlaced(){
   this.alert.orderPlaced();
 }
+
 
 }

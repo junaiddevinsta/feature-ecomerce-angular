@@ -131,11 +131,11 @@
 
       <!-- agreeement  -->
       <div class="flex items-center mb-4 mt-2">
-          <input type="checkbox" id="agreement"
+          <input type="checkbox" id="agreement" formControlName="terms"
               class="text-primary focus:ring-0 rounded-sm cursor-pointer w-3 h-3">
           <label for="agreement" class="text-gray-600 ml-3 cursor-pointer text-sm">
               Agree to our
-              <a routerLink="#" class="text-primary">terms & conditions</a>
+              <a  class="text-primary">terms & conditions</a>
           </label>
       </div>
       <button type="submit" [disabled]="resToForm.invalid"

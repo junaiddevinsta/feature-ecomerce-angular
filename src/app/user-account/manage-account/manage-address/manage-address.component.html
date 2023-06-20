@@ -8,7 +8,7 @@
       <h4 class="text-gray-700 font-medium">{{shippingData?.fname}}</h4>
       <p class="text-gray-800">{{shippingData?.shippingAddress}}</p>
 
-      <p class="text-gray-800">{{shippingData?.ShippingphoneNo}}</p>
+      <p class="text-gray-800">{{shippingData?.shippingphoneNo}}</p>
   </div>
 </div>
 <!-- single card end -->
@@ -53,9 +53,9 @@
                   </div>
                   <div  class="gap-4">
                     <div ><label  class="text-gray-600 mb-2 flex"> Phone Number
-                         </label><input  type="text" formControlName="ShippingphoneNo"
+                         </label><input  type="text" formControlName="shippingphoneNo"
                         class="input-box">
-                        <div style="color: red;" *ngIf="inputControls.ShippingphoneNo.touched && inputControls.ShippingphoneNo.invalid">Enter Your Name
+                        <div style="color: red;" *ngIf="inputControls.shippingphoneNo.touched && inputControls.shippingphoneNo.invalid">Enter Your phone
                         </div></div>
                   </div>
                 </div>

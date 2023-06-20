@@ -13,6 +13,7 @@ import { ToastrNotificationService } from '../services/toastr-notification.servi
   styleUrls: ['./cart-page.component.scss']
 })
 export class CartPageComponent implements OnInit {
+  productQuantity:number=1;
   cartData: cart[] | undefined;
   couponData=0;
   discountCode:any;
@@ -44,6 +45,15 @@ export class CartPageComponent implements OnInit {
     this.loadDetails();
     // this.couponCode();
   }
+  // handleQuantity(val:string){
+  //   if(this.productQuantity<20 && val==='plus'){
+  //     this.productQuantity+=1;
+  //     console.log("value add")
+  //   }else if(this.productQuantity>1 && val==='min'){
+  //     this.productQuantity-=1;
+  //     console.log("value subtract")
+  //   }
+  // }
 
 
   removeToCart(cartId: number | undefined) {
@@ -94,11 +104,13 @@ this.couponApi=couponApiResponse[0].code
   }
   checkCheckoutData(){
     if(this.cartData?.length){
-      this.route.navigate(['/checkout'])
+      console.log('price summary=>', this.priceSummary)
+      // this.route.navigate(['/checkout'])
     }
     else{
       this.alert.cartEmpty()
     }
+
   }
   get inputControls() {
     return this.resToForm.controls;
@@ -141,6 +153,7 @@ this.couponApi=couponApiResponse[0].code
   console.log("discount data=>",this.priceSummary.discount )
 this.apiService.postRequest('orders',discountData).subscribe((resultDiscount:any)=>{
 console.log("Result Discount=>",resultDiscount)
+
 })
 
   this.loadDetails();
@@ -301,6 +314,13 @@ console.log("Result Discount=>",resultDiscount)
           // console.log("single user cart data=>", this.singleUserCartData);
           this.resToForm.reset();
           this.codeCoupon=false;
+          if(this.codeCoupon==false){
+            this.priceSummary.discount=0
+            // this.loadDetails();
+            this.priceSummary.total = price + (price / 10) + 100 - this.priceSummary.discount;
+
+          }
+          console.log('price summary=>', this.priceSummary)
         }
 
       })
@@ -309,5 +329,36 @@ console.log("Result Discount=>",resultDiscount)
 
     })
     this.loadDetails();
+  }
+  incQty(productId:any,quantity:any){
+    // console.log("increment product id",productId);
+    // console.log("increment product quantity",quantity)
+    // console.log("single user cart check again",this.singleUserCartData)
+    for(let i=0; i<this.singleUserCartData.length;i++){
+      if(this.singleUserCartData[i].productId===productId){
+        if(quantity !=20){
+          this.singleUserCartData[i].quantity=parseInt(quantity)+1
+        }
+
+        console.log("singleUserCartData[i].quantity",this.singleUserCartData[i].quantity)
+      }
+    }
+console.log("single user cart check again",this.singleUserCartData)
+  }
+
+  decQty(productId:any,quantity:any){
+    // console.log("increment product id",productId);
+    // console.log("increment product quantity",quantity)
+    // console.log("single user cart check again",this.singleUserCartData)
+    for(let i=0; i<this.singleUserCartData.length;i++){
+      if(this.singleUserCartData[i].productId===productId){
+        if(quantity !=1){
+          this.singleUserCartData[i].quantity=parseInt(quantity)-1
+        }
+
+        console.log("singleUserCartData[i].quantity",this.singleUserCartData[i].quantity)
+      }
+    }
+console.log("single user cart check again",this.singleUserCartData)
   }
 }

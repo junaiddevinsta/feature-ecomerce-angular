@@ -15,7 +15,7 @@ billingData:any;
   shippingForm = new FormGroup({
     id:new FormControl(localStorage.getItem('userid')),
     shippingAddress: new FormControl('', [Validators.required]),
-    ShippingphoneNo: new FormControl('', [Validators.required, Validators.pattern('^((\\+92-?)|0)?[0-9]{10}$')]),
+    shippingphoneNo: new FormControl('', [Validators.required, Validators.pattern('^((\\+92-?)|0)?[0-9]{10}$')]),
 
   })
   billingForm = new FormGroup({
@@ -37,10 +37,12 @@ getShippingData(){
       // console.log("Shipping address=>",this.shippingData)
       this.shippingForm.patchValue({
         shippingAddress:this.shippingData.shippingAddress,
-        ShippingphoneNo:this.shippingData.ShippingphoneNo,
+        shippingphoneNo:this.shippingData.shippingphoneNo,
             })
       this.shippingData=result;
       console.log("Shipping address=>",this.shippingData)
+      console.log("Shipping phone=>",this.shippingData?.shippingphoneNo)
+
     }
   })
 }
@@ -67,7 +69,7 @@ getBillingData(){
       // phone:this.resToForm.controls['phone'].value,
       // image:this.resToForm.controls['image'].value
       shippingAddress: this.shippingForm.value.shippingAddress,
-        shippingphoneNo: this.shippingForm.value.ShippingphoneNo,
+        shippingphoneNo: this.shippingForm.value.shippingphoneNo,
 
 
       };
@@ -94,6 +96,7 @@ getBillingData(){
         // this.toast.UpdateProfileToast();
         this.getBillingData();
         console.log("Billing Data update successful",res);
+        console.log("Billing Data update successful billing phone",res);
       }
     })
   }
