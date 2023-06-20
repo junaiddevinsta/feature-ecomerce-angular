@@ -137,8 +137,10 @@
               Agree to our
               <a  class="text-primary">terms & conditions</a>
           </label>
+          <div style="color: red;" *ngIf="inputControls.terms.touched && inputControls.terms.invalid">Please Accept Terms and conditions
+          </div>
       </div>
-      <button type="submit" [disabled]="resToForm.invalid"
+      <button type="submit"
        class="cursor-pointer bg-primary border border-primary text-white px-4 py-3 font-medium rounded-md uppercase hover:bg-transparent
    hover:text-primary transition text-sm w-full block text-center">
           Place order

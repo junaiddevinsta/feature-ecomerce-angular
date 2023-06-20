@@ -615,27 +615,10 @@
       "category": "Office",
       "catId": 3,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "quantity": 4,
+      "quantity": 1,
       "productId": 1,
       "userId": 9,
-      "id": 8
-    },
-    {
-      "name": "devinsta Chair",
-      "price": 455,
-      "old_price": 7,
-      "reviews": 1,
-      "image": "assets/images/products/product2.jpg",
-      "brand": "Apex",
-      "SKU": "BE45VGRT",
-      "category": "Office",
-      "catId": 6,
-      "Availability": "In stock",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "quantity": 1,
-      "productId": 2,
-      "userId": 9,
-      "id": 9
+      "id": 7
     }
   ],
   "wishlist": [
@@ -1211,6 +1194,15 @@
     {
       "discount": 0,
       "id": 87
+    },
+    {
+      "address": "hafeez center",
+      "phone": "03076565434",
+      "email": "testing@gmail.com",
+      "terms": true,
+      "totalPrice": 897.5,
+      "userId": 9,
+      "id": 88
     }
   ],
   "about": {
@@ -1241,6 +1233,24 @@
       "email": "example123@gmail.com",
       "message": "sdss",
       "id": 4
+    },
+    {
+      "fname": "sadas",
+      "email": "example123@gmail.com",
+      "message": "dasdsa",
+      "id": 5
+    },
+    {
+      "fname": "jksjhJ",
+      "email": "jsuhj@gmail.com",
+      "message": "kxjkhjxdhkj",
+      "id": 6
+    },
+    {
+      "fname": "sadas",
+      "email": "example123@gmail.com",
+      "message": "sbnsdbns",
+      "id": 7
     }
   ],
   "coupon": [
@@ -1278,6 +1288,11 @@
       "coupon": "as",
       "userId": 16,
       "id": 6
+    },
+    {
+      "couponCodeValue": "20%off",
+      "userId": 9,
+      "id": 7
     }
   ],
   "profileData": []

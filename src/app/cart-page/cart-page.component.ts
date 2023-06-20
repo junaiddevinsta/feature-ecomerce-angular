@@ -105,7 +105,7 @@ this.couponApi=couponApiResponse[0].code
   checkCheckoutData(){
     if(this.cartData?.length){
       console.log('price summary=>', this.priceSummary)
-      // this.route.navigate(['/checkout'])
+      this.route.navigate(['/checkout'])
     }
     else{
       this.alert.cartEmpty()
@@ -330,6 +330,23 @@ console.log("Result Discount=>",resultDiscount)
     })
     this.loadDetails();
   }
+  calculatePriceSummary() {
+    let price = 0;
+
+    this.singleUserCartData.forEach((item:any) => {
+      if (item.quantity) {
+        price = price + item.price * item.quantity;
+      }
+    });
+
+    this.priceSummary.price = price;
+    this.priceSummary.discount = this.couponData ? price / this.couponData : 0;
+    this.priceSummary.tax = price / 10;
+    this.priceSummary.delivery = 100;
+    this.priceSummary.total =
+      price + price / 10 + 100 - this.priceSummary.discount;
+  }
+
   incQty(productId:any,quantity:any){
     // console.log("increment product id",productId);
     // console.log("increment product quantity",quantity)
@@ -338,9 +355,14 @@ console.log("Result Discount=>",resultDiscount)
       if(this.singleUserCartData[i].productId===productId){
         if(quantity !=20){
           this.singleUserCartData[i].quantity=parseInt(quantity)+1
+
         }
 
+        this.calculatePriceSummary();
+
+
         console.log("singleUserCartData[i].quantity",this.singleUserCartData[i].quantity)
+        break;
       }
     }
 console.log("single user cart check again",this.singleUserCartData)
@@ -353,10 +375,15 @@ console.log("single user cart check again",this.singleUserCartData)
     for(let i=0; i<this.singleUserCartData.length;i++){
       if(this.singleUserCartData[i].productId===productId){
         if(quantity !=1){
-          this.singleUserCartData[i].quantity=parseInt(quantity)-1
-        }
+          this.singleUserCartData[i].quantity=parseInt(quantity)-1;
 
-        console.log("singleUserCartData[i].quantity",this.singleUserCartData[i].quantity)
+        }
+        this.calculatePriceSummary();
+
+
+        console.log("singleUserCartData[i].quantity",this.singleUserCartData[i].quantity);
+        break;
+
       }
     }
 console.log("single user cart check again",this.singleUserCartData)

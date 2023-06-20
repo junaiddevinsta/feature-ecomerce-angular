@@ -45,6 +45,10 @@ singleUserCartData: any;
     this.couponCode();
   }
   orderNow(data: { email: string, address: string, contact: string }){
+    if (this.resToForm.invalid) {
+      this.resToForm.markAllAsTouched();
+      return;
+    }
     let user = localStorage.getItem('userid');
         let userId= user && JSON.parse(user);
         console.log("total price=>",this.totalPrice)

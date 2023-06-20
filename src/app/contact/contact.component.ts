@@ -19,6 +19,10 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
   contactUs(){
+    if (this.resToForm.invalid) {
+      this.resToForm.markAllAsTouched();
+      return;
+    }
     const data = {
       fname: this.resToForm.value.fname,
       email: this.resToForm.value.email,
@@ -29,6 +33,10 @@ export class ContactComponent implements OnInit {
       if(res){
         this.toast.messageSentToast();
         console.log("message send successfully",res)
+        this.resToForm.reset();
+      }
+      else{
+
       }
     })
 
