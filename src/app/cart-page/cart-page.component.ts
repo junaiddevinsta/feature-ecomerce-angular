@@ -13,6 +13,7 @@ import { ToastrNotificationService } from '../services/toastr-notification.servi
   styleUrls: ['./cart-page.component.scss']
 })
 export class CartPageComponent implements OnInit {
+  priceSummaryDiscount:any
   productQuantity:number=1;
   cartData: cart[] | undefined;
   couponData=0;
@@ -22,7 +23,9 @@ export class CartPageComponent implements OnInit {
   codeCoupon=false;
   usedCoupon:any;
   couponApi:any;
-  couponCodecode:any
+  couponCodecode:any;
+  cartId:any
+  cartQuantity:any;
   // coupon:any;
   singleProductPrice: any;
   priceSummary: priceSummary = {
@@ -83,6 +86,7 @@ export class CartPageComponent implements OnInit {
       this.priceSummary.price = price;
 
       this.priceSummary.discount = this.couponData ? price / this.couponData : 0;
+      // this.priceSummary.discount =  0;
       this.priceSummary.tax = price / 10;
       this.priceSummary.delivery = 100;
       this.priceSummary.total = price + (price / 10) + 100 - this.priceSummary.discount;
@@ -92,6 +96,8 @@ export class CartPageComponent implements OnInit {
       this.singleUserCartData = res;
       console.log("discount value=>",this.priceSummary.discount);
       console.log("single user cart data=>", this.singleUserCartData);
+
+
 
     })
     this.apiService.getrequest('coupon').subscribe((couponApiResponse:any)=>{
@@ -103,9 +109,23 @@ this.couponApi=couponApiResponse[0].code
 
   }
   checkCheckoutData(){
+    let user = localStorage.getItem('userid');
+    let userId= user && JSON.parse(user);
+    let userData = user && JSON.parse(user);
     if(this.cartData?.length){
       console.log('price summary=>', this.priceSummary)
       this.route.navigate(['/checkout'])
+      this.priceSummaryDiscount=this.priceSummary.discount;
+      console.log("price summary discount=>",this.priceSummaryDiscount)
+      this.priceSummaryDiscount=this.priceSummary.discount;
+      console.log("price summary discount=>",this.priceSummaryDiscount)
+      const discountData={
+        priceSummaryDiscount:this.priceSummaryDiscount
+      }
+      console.log("discountData",discountData)
+//       this.apiService.patchRequest('cart?userId='+ userData,discountData).subscribe((descountResponse:any)=>{
+// console.log("descountResponse",descountResponse)
+//       })
     }
     else{
       this.alert.cartEmpty()
@@ -348,6 +368,7 @@ console.log("Result Discount=>",resultDiscount)
   }
 
   incQty(productId:any,quantity:any){
+
     // console.log("increment product id",productId);
     // console.log("increment product quantity",quantity)
     // console.log("single user cart check again",this.singleUserCartData)
@@ -355,9 +376,22 @@ console.log("Result Discount=>",resultDiscount)
       if(this.singleUserCartData[i].productId===productId){
         if(quantity !=20){
           this.singleUserCartData[i].quantity=parseInt(quantity)+1
+          console.log("cartid",this.singleUserCartData[i].id)
+          console.log("cart quantity",this.singleUserCartData[i].quantity)
+          this.cartId=this.singleUserCartData[i].id;
+          this.cartQuantity=this.singleUserCartData[i].quantity
+          const incCartRes={
+            quantity:this.cartQuantity
+          }
 
+          this.apiService.patchRequest('cart/'+this.cartId ,incCartRes).subscribe((incCartRes:any)=>{
+            console.log("incCartRes",incCartRes)
+          })
         }
-
+        console.log("quantity increase=>",this.singleUserCartData[i].quantity)
+// this.apiService.patchRequest('cart',this.singleUserCartData[i].quantity).subscribe((incCartRes:any)=>{
+//             console.log("incCartRes",incCartRes)
+//           })
         this.calculatePriceSummary();
 
 
@@ -369,6 +403,7 @@ console.log("single user cart check again",this.singleUserCartData)
   }
 
   decQty(productId:any,quantity:any){
+
     // console.log("increment product id",productId);
     // console.log("increment product quantity",quantity)
     // console.log("single user cart check again",this.singleUserCartData)
@@ -376,6 +411,17 @@ console.log("single user cart check again",this.singleUserCartData)
       if(this.singleUserCartData[i].productId===productId){
         if(quantity !=1){
           this.singleUserCartData[i].quantity=parseInt(quantity)-1;
+          console.log("cartid",this.singleUserCartData[i].id)
+          console.log("cart quantity",this.singleUserCartData[i].quantity)
+          this.cartId=this.singleUserCartData[i].id;
+          this.cartQuantity=this.singleUserCartData[i].quantity
+          const incCartRes={
+            quantity:this.cartQuantity
+          }
+
+          this.apiService.patchRequest('cart/'+this.cartId ,incCartRes).subscribe((incCartRes:any)=>{
+            console.log("incCartRes",incCartRes)
+          })
 
         }
         this.calculatePriceSummary();

@@ -65,6 +65,9 @@ export class ProductService {
   addToCart(cartData: cart) {
     return this.http.post(`${this.baseUrl}/cart`, cartData);
   }
+  addToCartPatch(cartData: cart) {
+    return this.http.patch(`${this.baseUrl}/cart`, cartData);
+  }
 
   getCartList(userId: any) {
     return this.http

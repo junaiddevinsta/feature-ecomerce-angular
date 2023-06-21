@@ -30,6 +30,7 @@ export class CheckoutComponent implements OnInit {
 
 checkoutData: checkout[] | undefined;
 singleUserCheckoutData: any;
+priceSummaryDiscount:any;
 priceSummary: priceSummary = {
   price: 0,
   discount: 0,
@@ -119,8 +120,14 @@ console.log("value added in used coupon success=>",couponCodeRes)
       this.priceSummary.total = price + (price / 10) + 100 - this.priceSummary.discount;
       console.log('price summary=>', this.priceSummary)
       console.log('price=>', price)
+      this.priceSummaryDiscount=this.priceSummary.discount;
+      console.log("price summary discount=>",this.priceSummaryDiscount);
       this.singleUserCheckoutData = res;
       console.log("single user cart data=>", this.singleUserCheckoutData);
+      // const discountData={
+      //   priceSummaryDiscount:this.priceSummaryDiscount
+      // }
+      // this.apiService.postRequest('cart')
 
     })
   }
