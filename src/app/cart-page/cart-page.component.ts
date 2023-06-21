@@ -161,6 +161,7 @@ this.couponApi=couponApiResponse[0].code
           const usedCouponCode = response.some((c: any) => c.couponCodeValue === this.resToForm.value.coupon && c.userId === userId);
           console.log("used coupn coupon code=>",usedCouponCode)
           this.codeCoupon = true;
+
           // If the coupon code has not been used, apply the discount.
           if (!usedCouponCode) {
             this.discountCode=result[0].code;
@@ -174,6 +175,12 @@ this.couponApi=couponApiResponse[0].code
 this.apiService.postRequest('orders',discountData).subscribe((resultDiscount:any)=>{
 console.log("Result Discount=>",resultDiscount)
 
+})
+const discountedValue={
+  couponDisount:this.resToForm.value.coupon
+}
+this.apiService.patchRequest('cart/'+userId,discountedValue).subscribe((discountData:any)=>{
+console.log("discounted Data=>",discountData)
 })
 
   this.loadDetails();

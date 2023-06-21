@@ -29,6 +29,7 @@ export class CheckoutComponent implements OnInit {
   constructor(private product:ProductService,private checkout:CheckoutService, private alert:AlertService, private route:Router, private toastr:ToastrNotificationService, private apiService:ApiService) { }
 
 checkoutData: checkout[] | undefined;
+checkoutDiscountData:any;
 singleUserCheckoutData: any;
 priceSummaryDiscount:any;
 priceSummary: priceSummary = {
@@ -101,6 +102,7 @@ console.log("value added in used coupon success=>",couponCodeRes)
   loadDetails() {
     this.product.currentCart().subscribe((res) => {
       this.checkoutData = res;
+      this.checkoutDiscountData=res;
       console.log("checkout data=>",this.checkoutData)
       let price = 0
       this.cartData=res;
@@ -110,7 +112,7 @@ console.log("value added in used coupon success=>",couponCodeRes)
 
         }
       })
-
+console.log("checkout discount=>",this.checkoutDiscountData)
       this.totalPrice = price + (price / 10) + 100 - this.priceSummary.discount;
       // this.singleProductPrice=this.singleUserCartData?.quantity * this.singleUserCartData
       this.priceSummary.price = price;

@@ -18,6 +18,7 @@ sub:any;
 productData:any;
 removeCart=false;
 removeWishlist=false;
+couponDisount:any
 cartData:product|undefined;
 wishlistData:product|undefined
   constructor(private route:ActivatedRoute, private alert:AlertService  ,private apiService:ApiService, private product:ProductService) { }
@@ -87,7 +88,8 @@ addToCart(){
         let cartData:cart={
           ...this.productData,
           productId:this.productData.id,
-          userId
+          userId,
+          couponDisount:this.couponDisount
         }
         delete cartData.id;
         console.log('cart Data',cartData);

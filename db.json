@@ -607,10 +607,44 @@
       "Availability": "In stock",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
       "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "quantity": 4,
+      "quantity": 2,
       "productId": 5,
       "userId": 9,
       "id": 8
+    },
+    {
+      "name": "devinsta Chair",
+      "price": 455,
+      "old_price": 7,
+      "reviews": 1,
+      "image": "assets/images/products/product2.jpg",
+      "brand": "Apex",
+      "SKU": "BE45VGRT",
+      "category": "Office",
+      "catId": 6,
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "quantity": 1,
+      "productId": 2,
+      "userId": 9,
+      "id": 9,
+      "couponDisount": "20%off"
+    },
+    {
+      "name": "Sofa",
+      "price": 450,
+      "old_price": 120,
+      "reviews": 100,
+      "image": "assets/images/products/product6.jpg",
+      "brand": "Apex",
+      "category": "Sofa",
+      "catId": "2",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "quantity": 1,
+      "productId": 6,
+      "userId": 9,
+      "id": 10
     }
   ],
   "wishlist": [
@@ -1228,6 +1262,22 @@
     {
       "discount": 0,
       "id": 95
+    },
+    {
+      "discount": 0,
+      "id": 96
+    },
+    {
+      "discount": 0,
+      "id": 97
+    },
+    {
+      "discount": 0,
+      "id": 98
+    },
+    {
+      "discount": 49.75,
+      "id": 99
     }
   ],
   "about": {
