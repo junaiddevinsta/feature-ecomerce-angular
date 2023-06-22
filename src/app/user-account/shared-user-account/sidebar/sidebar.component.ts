@@ -31,8 +31,8 @@ export class SidebarComponent implements OnInit {
     } else if (currentUrl.includes('change-password')) {
       this.btnValue = 'changePassword';
     }
-    else if (currentUrl.includes('orders')) {
-      this.btnValue = 'orders';
+    else if (currentUrl.includes('user-orders')) {
+      this.btnValue = 'user-orders';
     }
   }
   buttonClick(){

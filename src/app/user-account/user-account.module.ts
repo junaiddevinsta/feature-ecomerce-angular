@@ -8,9 +8,11 @@ import { OrderHistoryModule } from './order-history/order-history.module';
 import { ManageAccountModule } from "./manage-account/manage-account.module";
 
 
+
 @NgModule({
     declarations: [
-        RenderUserAccountComponent
+        RenderUserAccountComponent,
+
     ],
     imports: [
         CommonModule,

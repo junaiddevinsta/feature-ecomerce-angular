@@ -1,0 +1,67 @@
+<div *ngIf="orderData?.length">
+  <!-- cart title -->
+  <div class="bg-gray-200 py-2 pl-12 pr-20 xl:pr-28 mb-4 hidden md:flex">
+    <!-- <p class="text-gray-600 text-center">Product</p> -->
+    <p class="text-gray-600 text-center ">OrderId</p>
+    <p class="text-gray-600 text-center ml-auto mr-8 xl:mr-10">Price</p>
+    <!-- <p class="text-gray-600 text-center ml-auto mr-8 xl:mr-10">Quantity</p> -->
+    <p class="text-gray-600 text-center ml-auto mr-8 xl:mr-10">Status</p>
+    <p class="text-gray-600 text-center ml-auto mr-8 xl:mr-10">Action</p>
+  </div>
+  <!-- cart title end -->
+  <!-- shipping carts -->
+
+  <div class="space-y-4">
+    <!-- single cart -->
+    <div
+        class="flex items-center  gap-4 md:gap-20 p-4 border border-gray-200 rounded flex-wrap md:flex-nowrap" *ngFor="let order of orderData">
+        <!-- cart image -->
+        <!-- <div class="list-none" *ngFor="let checkout of singleUserCheckoutData">
+          <div class="w-32 " >
+            <img [src]="checkout?.image" class="w-full">
+            <div class=" w-full">
+
+
+              <p class="text-gray-500 text-sm">{{checkout?.name}} x {{checkout?.quantity}} </p>
+          </div>
+        </div>
+        </div> -->
+
+        <!-- cart image end -->
+        <!-- cart content -->
+        <div class="md:w-32 w-full">
+
+            <p class="text-gray-500 ml-8">#{{order?.id}}</p>
+        </div>
+        <!-- cart content end -->
+        <!-- cart quantity -->
+        <div class="md:w-32 w-full">
+         <p class="text-primary font-semibold">${{order?.totalPrice}}</p>
+              </div>
+  <!-- cart quantity end -->
+        <div class="md:w-32 w-full">
+          <p  class="text-gray-500">In Processing</p>
+          <!-- <p *ngIf="statusChangedButton" class="text-gray-500"> In Processing</p>
+        <p *ngIf="!statusChangedButton" class="text-gray-500">{{orderStatusMsg}}</p> -->
+      </div>
+      <!-- cancelOrder(order?.id) -->
+        <div class="text-gray-600 hover:text-primary cursor-pointer">
+          <a  (click)="cancelOrder(order?.id)"  class="cursor-pointer ml-auto md:ml-0 block px-6 py-2 text-center text-sm text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition uppercase font-roboto font-medium">Cancel Order</a>
+          <!-- <a *ngIf="statusButton"
+          class=" cursor-pointer ml-auto md:ml-0 block px-6 py-2 text-center text-sm text-white bg-primary border border-primary rounded
+          uppercase font-roboto font-medium cursor-not-allowed bg-opacity-80">
+          Cancel Order
+      </a> -->
+          <!-- <i class="fas fa-trash"></i> -->
+        </div>
+    </div>
+    <!-- single cart end -->
+
+  </div>
+  <!-- shipping carts end -->
+
+  </div>
+  <div class="text-center" *ngIf="!orderData?.length">
+  <h2>No data found</h2>
+  </div>
+

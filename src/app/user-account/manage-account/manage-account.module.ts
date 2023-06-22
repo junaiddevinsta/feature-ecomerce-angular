@@ -6,6 +6,7 @@ import { ProfileInfoComponent } from './profile-info/profile-info.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ManageAddressComponent } from './manage-address/manage-address.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { UserOrdersComponent } from './user-orders/user-orders.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     ProfileInfoComponent,
     ManageAddressComponent,
     ChangePasswordComponent,
+    UserOrdersComponent,
 
   ],
   imports: [
@@ -24,7 +26,8 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
   exports:[
     ProfileInfoComponent,
     ManageAddressComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    UserOrdersComponent
   ]
 })
 export class ManageAccountModule { }
