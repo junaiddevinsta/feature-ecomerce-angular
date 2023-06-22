@@ -109,10 +109,10 @@ console.log("value added in used coupon success=>",couponCodeRes)
       res.forEach((item) => {
         if (item.quantity) {
           price = price + (+item.price * +item.quantity)
-
+          console.log("checkout discount=>",this.checkoutDiscountData.couponDisount)
         }
       })
-console.log("checkout discount=>",this.checkoutDiscountData)
+// console.log("checkout discount=>",this.checkoutDiscountData)
       this.totalPrice = price + (price / 10) + 100 - this.priceSummary.discount;
       // this.singleProductPrice=this.singleUserCartData?.quantity * this.singleUserCartData
       this.priceSummary.price = price;

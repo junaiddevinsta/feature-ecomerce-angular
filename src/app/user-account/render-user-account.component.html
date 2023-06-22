@@ -9,17 +9,18 @@
 <!-- <app-sidebar></app-sidebar> -->
 <!-- breadcrum end -->
 <!-- account wrapper -->
-<div class="container lg:grid grid-cols-12 items-start gap-6 pt-4 pb-16">
+<div class="container col-span-12 lg:grid grid-cols-12 items-start gap-6 pt-4 pb-16">
   <div class="col-span-3">
       <app-sidebar></app-sidebar>
   </div>
 
 <div class="col-span-9 grid md:grid-cols-3 gap-4 mt-6 lg:mt-0">
   <div class="xl:col-span-9 lg:col-span-8">
-    <app-profile-info class="contents" *ngIf="isActiveComponent('profileInfo')" ></app-profile-info>
-    <app-orders *ngIf="isActiveComponent('orders')"></app-orders>
-    <app-manage-address *ngIf="isActiveComponent('manageAddress')"></app-manage-address>
-    <app-change-password class="contents" *ngIf="isActiveComponent('changePassword')" ></app-change-password>
+    <app-profile-info class="contents" *ngIf="currentUrl.includes('profileInfo')"></app-profile-info>
+<app-orders *ngIf="currentUrl.includes('orders')"></app-orders>
+<app-manage-address *ngIf="currentUrl.includes('manageAddress')"></app-manage-address>
+<app-change-password class="contents" *ngIf="currentUrl.includes('changePassword')"></app-change-password>
+
   </div>
 
 
@@ -38,3 +39,4 @@
 
 </div> -->
 <!-- <router-outlet></router-outlet> -->
+<router-outlet></router-outlet>

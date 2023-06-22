@@ -1,7 +1,7 @@
 
 
 <!-- sidebar -->
-<div class="col-span-3">
+<div class="">
   <!-- account profile -->
   <div class="px-4 py-3 shadow flex items-center gap-4">
       <div class="flex-shrink-0">
@@ -25,9 +25,12 @@
                   <i class="far fa-address-card"></i>
               </span>
           </a>
-          <a routerLink="/user-account/manage-account/profile-info" [ngClass]="btnValue === 'profile-info' ? 'text-primary' : ''"  (click)="showComponent('profileInfo')" class="hover:text-primary transition capitalize block" (click)="selectBtn('profile-info')">Profile information</a>
-          <a routerLink="/user-account/manage-account/manage-address" [ngClass]="btnValue === 'manageAddress' ? 'text-primary' : ''" (click)="showComponent('manageAddress')" class="hover:text-primary transition capitalize block" (click)="selectBtn('manageAddress')">Manage address</a>
-          <a routerLink="/user-account/manage-account/change-password" [ngClass]="btnValue === 'changePassword' ? 'text-primary' : ''" (click)="showComponent('changePassword')" class="hover:text-primary transition capitalize block" (click)="selectBtn('changePassword')">change password</a>
+          <a routerLink="/user-account/manage-account/profile-info" routerLinkActive="active" [ngClass]="btnValue === 'profile-info' ? 'text-primary active' : ''" (click)="showComponent('profileInfo')" class="hover:text-primary transition capitalize block" (click)="selectBtn('profile-info')">Profile information</a>
+<a routerLink="/user-account/manage-account/manage-address" routerLinkActive="active" [ngClass]="btnValue === 'manageAddress' ? 'text-primary active' : ''" (click)="showComponent('manageAddress')" class="hover:text-primary transition capitalize block" (click)="selectBtn('manageAddress')">Manage address</a>
+<a routerLink="/user-account/manage-account/change-password" routerLinkActive="active" [ngClass]="btnValue === 'changePassword' ? 'text-primary active' : ''" (click)="showComponent('changePassword')" class="hover:text-primary transition capitalize block" (click)="selectBtn('changePassword')">Change password</a>
+          <!-- <a routerLink="/user-account/manage-account/profile-info" routerLinkActive="active" [ngClass]="btnValue === 'profile-info' ? 'text-primary' : ''"  (click)="showComponent('profileInfo')" class="hover:text-primary transition capitalize block" (click)="selectBtn('profile-info')">Profile information</a>
+          <a routerLink="/user-account/manage-account/manage-address" routerLinkActive="active" [ngClass]="btnValue === 'manageAddress' ? 'text-primary' : ''" (click)="showComponent('manageAddress')" class="hover:text-primary transition capitalize block" (click)="selectBtn('manageAddress')">Manage address</a>
+          <a routerLink="/user-account/manage-account/change-password" routerLinkActive="active" [ngClass]="btnValue === 'changePassword' ? 'text-primary' : ''" (click)="showComponent('changePassword')" class="hover:text-primary transition capitalize block" (click)="selectBtn('changePassword')">change password</a> -->
       </div>
       <!-- single link end -->
       <!-- single link -->
@@ -39,13 +42,13 @@
                   <i class="fas fa-gift"></i>
               </span>
           </a>
-          <a routerLink="/user-account/manage-account/orders" [ngClass]="btnValue === 'orders' ? 'text-primary' : ''"  (click)="showComponent('orders')" class="hover:text-primary transition capitalize block" (click)="selectBtn('orders')">Orders</a>
+          <a routerLink="/user-account/order-history/orders" routerLinkActive="active" [ngClass]="btnValue === 'orders' ? 'text-primary active' : ''"  (click)="showComponent('orders')" class="hover:text-primary transition capitalize block" (click)="selectBtn('orders')">Orders</a>
           <!-- <a routerLink="#" class="hover:text-primary transition block capitalize">my cancellations</a> -->
 
       </div>
       <!-- single link end -->
       <!-- single link -->
-      <div class="space-y-1 pl-8 pt-4">
+      <!-- <div class="space-y-1 pl-8 pt-4">
           <a
               class="relative medium capitalize text-gray-800 font-medium hover:text-primary transition block">
               Payment methods
@@ -54,7 +57,7 @@
               </span>
           </a>
           <a  class="cursor-pointer hover:text-primary transition block capitalize">Voucher</a>
-      </div>
+      </div> -->
       <!-- single link end -->
       <!-- single link -->
       <!-- <div class="pl-8 pt-4">

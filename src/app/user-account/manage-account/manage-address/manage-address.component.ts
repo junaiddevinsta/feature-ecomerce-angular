@@ -27,6 +27,7 @@ billingData:any;
   constructor(private apiService:ApiService) { }
 
   ngOnInit(): void {
+
     this.getShippingData();
     this.getBillingData();
   }
@@ -34,6 +35,11 @@ getShippingData(){
   this.apiService.getrequest('register/'+ localStorage.getItem('userid')).subscribe((result)=>{
     if(result){
       this.shippingData=result;
+      this.shippingForm = new FormGroup({
+        id:new FormControl(localStorage.getItem('userid')),
+        shippingAddress: new FormControl('', [Validators.required]),
+        shippingphoneNo: new FormControl('', [Validators.required, Validators.pattern('^((\\+92-?)|0)?[0-9]{10}$')]),
+      });
       // console.log("Shipping address=>",this.shippingData)
       this.shippingForm.patchValue({
         shippingAddress:this.shippingData.shippingAddress,
@@ -73,6 +79,12 @@ getBillingData(){
 
 
       };
+      if (this.shippingForm.invalid) {
+        this.shippingForm.markAllAsTouched();
+        // Show an error message
+        console.log("inputs are not valid")
+        return;
+      }
     this.apiService.patchRequest('register/'+ localStorage.getItem('userid'),patchData).subscribe(async(res:any)=>{
       if(res){
         this.closeModalShipping()
@@ -83,6 +95,7 @@ getBillingData(){
     })
   }
   billingDataUpdate(){
+
     console.log('Profile data =>', this.billingForm.value);
     const patchData = {
       billingAddress: this.billingForm.value.billingAddress,
@@ -90,6 +103,12 @@ getBillingData(){
 
 
       };
+      if (this.billingForm.invalid) {
+        this.billingForm.markAllAsTouched();
+        // Show an error message
+        console.log("inputs are not valid")
+        return;
+      }
     this.apiService.patchRequest('register/'+ localStorage.getItem('userid'),patchData).subscribe(async(res:any)=>{
       if(res){
         this.closeModalBilling()

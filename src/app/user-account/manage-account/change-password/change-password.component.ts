@@ -21,6 +21,10 @@ export class ChangePasswordComponent implements OnInit {
   ngOnInit(): void {
   }
   getPasswordUpdateData(){
+    if (this.resToForm.invalid) {
+      this.resToForm.markAllAsTouched();
+      return;
+    }
     console.log('password =>', this.resToForm.value);
     const patchData = {
 
@@ -53,10 +57,13 @@ export class ChangePasswordComponent implements OnInit {
   // }
 
   matchPassword() {
-    if (this.confirmPassword.value == this.password.value) {
-      this.confirmPassword.setErrors(null);
-      // this.route.navigate(['/login'])
-    } else {
+    if(this.confirmPassword.value===''){
+      if (this.confirmPassword.value === this.password.value) {
+        this.confirmPassword.setErrors(null);
+        // this.route.navigate(['/login'])
+      }
+    }
+     else {
       this.confirmPassword.setErrors({ mismatch: true });
     }
   }

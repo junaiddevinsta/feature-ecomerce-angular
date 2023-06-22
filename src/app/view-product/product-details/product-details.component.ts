@@ -20,7 +20,8 @@ removeCart=false;
 removeWishlist=false;
 couponDisount:any
 cartData:product|undefined;
-wishlistData:product|undefined
+wishlistData:product|undefined;
+currentCartResponse:any;
   constructor(private route:ActivatedRoute, private alert:AlertService  ,private apiService:ApiService, private product:ProductService) { }
 
   ngOnInit(): void {
@@ -99,6 +100,10 @@ addToCart(){
             this.removeCart=true;
             this.alert.addedCartAlert();
             // alert('data added successfully')
+            this.product.currentCart().subscribe((respone:any)=>{
+              this.currentCartResponse=respone
+              console.log("current cart response=>",this.currentCartResponse)
+            })
           }
         })
     }

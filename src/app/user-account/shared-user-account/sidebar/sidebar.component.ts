@@ -16,14 +16,29 @@ export class SidebarComponent implements OnInit {
     this.userAccount.showComponent(componentName);
   }
   @Input() page = '';
+  btnValue = ''
   ngOnInit(): void {
     console.log('page =>',this.page);
     console.log('page =>',this.page);
+    this.setInitialBtnValue();
+  }
+  setInitialBtnValue() {
+    const currentUrl = this.route.url;
+    if (currentUrl.includes('profile-info')) {
+      this.btnValue = 'profile-info';
+    } else if (currentUrl.includes('manage-address')) {
+      this.btnValue = 'manageAddress';
+    } else if (currentUrl.includes('change-password')) {
+      this.btnValue = 'changePassword';
+    }
+    else if (currentUrl.includes('orders')) {
+      this.btnValue = 'orders';
+    }
   }
   buttonClick(){
     this.userAccount.onButtonClick()
   }
-  btnValue = 'profile-info';
+  // btnValue = 'profile-info';
 
 
 selectBtn(val: string){

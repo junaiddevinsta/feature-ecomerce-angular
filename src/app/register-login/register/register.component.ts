@@ -80,11 +80,22 @@ this.toastr.errorToast('Error')
       );
     }
   }
+  // matchPassword() {
+  //   if (this.confirmPassword.value == this.password.value) {
+  //     this.confirmPassword.setErrors(null);
+  //     // this.route.navigate(['/login'])
+  //   } else {
+  //     this.confirmPassword.setErrors({ mismatch: true });
+  //   }
+  // }
   matchPassword() {
-    if (this.confirmPassword.value == this.password.value) {
-      this.confirmPassword.setErrors(null);
-      // this.route.navigate(['/login'])
-    } else {
+    if(this.confirmPassword.value===''){
+      if (this.confirmPassword.value === this.password.value) {
+        this.confirmPassword.setErrors(null);
+        // this.route.navigate(['/login'])
+      }
+    }
+     else {
       this.confirmPassword.setErrors({ mismatch: true });
     }
   }

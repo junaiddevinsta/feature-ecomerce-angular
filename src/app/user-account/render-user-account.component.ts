@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserAccountService } from '../services/user-account.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-render-user-account',
@@ -7,14 +8,20 @@ import { UserAccountService } from '../services/user-account.service';
   styleUrls: ['./render-user-account.component.scss']
 })
 export class RenderUserAccountComponent implements OnInit {
+  // currentUrl:any;
+  currentUrl: string = '';
   isButtonClicked = false;
-  constructor(private userAccount:UserAccountService) {
+  constructor(private userAccount:UserAccountService,private router: Router) {
 
    }
    isActiveComponent(componentName: string) {
-    return this.userAccount.activeComponentValue === componentName;
+    // return this.userAccount.activeComponentValue === componentName;
+    const currentUrl = this.router.url;
+  return currentUrl.includes(componentName);
    }
   ngOnInit(): void {
+    this.currentUrl = this.router.url;
+
   }
   onButtonClick() {
     this.isButtonClicked = true;
