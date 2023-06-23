@@ -7,7 +7,7 @@
     <p class="text-gray-600 mb-6 text-sm">
       Register here if you don't have account
     </p>
-    <form [formGroup]="resToForm" (ngSubmit)="registerUser()">
+    <form [formGroup]="resToForm" (ngSubmit)="isSubmitted = true; registerUser()">
       <div class="space-y-4">
         <div>
           <label class="text-gray-600 mb-2 block">
@@ -42,7 +42,7 @@
           <input type="password" class="input-box" placeholder="confirm your password" formControlName="confirmPassword"
             (change)="matchPassword()">
           <!-- <div style="color: red;" *ngIf="inputControls.confirmPassword.touched && inputControls.confirmPassword.invalid">Field Not valid</div> -->
-          <div style="color: red;"><span *ngIf="confirmPassword.hasError('mismatch')">Password do not match</span></div>
+          <div style="color: red;"><span *ngIf="confirmPassword.touched && confirmPassword.hasError('mismatch')">Password do not match</span></div>
 
         </div>
       </div>
@@ -54,7 +54,7 @@
         </label>
       </div> -->
       <div class="mt-4">
-        <button type="submit" [disabled]="resToForm.invalid"
+        <button type="submit"
           class="block w-full py-2 text-center text-white bg-primary border border-primary rounded ">
           create account
         </button>

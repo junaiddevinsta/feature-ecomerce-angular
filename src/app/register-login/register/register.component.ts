@@ -12,6 +12,7 @@ import { ToastrNotificationService } from 'src/app/services/toastr-notification.
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
+  isSubmitted = false;
   users: any = [];
   resToForm = new FormGroup({
     fname: new FormControl('', [Validators.required]),
@@ -31,6 +32,10 @@ export class RegisterComponent implements OnInit {
     console.log('data=>', this.resToForm.value);
   }
   registerUser() {
+    if (this.resToForm.invalid) {
+      this.resToForm.markAllAsTouched();
+      return;
+    }
     console.log('register form data =>', this.resToForm.value);
     const data = {
       fname: this.resToForm.value.fname,
@@ -81,14 +86,14 @@ this.toastr.errorToast('Error')
     }
   }
   matchPassword() {
-    if(this.confirmPassword.value===!''){
-      if (this.confirmPassword.value == this.password.value) {
+
+      if (this.confirmPassword.value === this.password.value) {
         this.confirmPassword.setErrors(null);
         // this.route.navigate(['/login'])
       } else {
         this.confirmPassword.setErrors({ mismatch: true });
       }
-    }
+
 
   }
   // matchPassword() {

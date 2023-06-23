@@ -392,6 +392,50 @@
       "email": "jhdhh@gmail.com",
       "password": "123",
       "id": 66,
+      "confirmPassword": "123",
+      "shippingAddress": "hafeez center",
+      "shippingphoneNo": "03056545654",
+      "billingAddress": "hafeez center",
+      "billingphoneNo": "03056545654"
+    },
+    {
+      "fname": "ssdsa",
+      "email": "jashjhas@gmail.com",
+      "password": "123",
+      "id": 67,
+      "confirmPassword": "4566777"
+    },
+    {
+      "fname": "jkajdjs",
+      "email": "junaid678@gmail.com",
+      "password": "123",
+      "id": 68
+    },
+    {
+      "fname": "again",
+      "email": "again@gmail.com",
+      "password": "123",
+      "id": 69,
+      "confirmPassword": "11234"
+    },
+    {
+      "fname": "jjasjj",
+      "email": "kjdjhjh@gmail.com",
+      "password": "123",
+      "id": 70
+    },
+    {
+      "fname": "jkajskjsa",
+      "email": "jhshjh@gmail.com",
+      "password": "123",
+      "id": 71,
+      "confirmPassword": "123"
+    },
+    {
+      "fname": "qwwjhjwqjk",
+      "email": "hhhqw@gmail.com",
+      "password": "123",
+      "id": 72,
       "confirmPassword": "123"
     }
   ],
@@ -663,6 +707,22 @@
       "productId": 2,
       "userId": 9,
       "id": 11
+    },
+    {
+      "name": "boy Chair",
+      "price": 45,
+      "old_price": 150,
+      "reviews": 150,
+      "image": "assets/images/products/product1.jpg",
+      "brand": "Apex",
+      "SKU": "BE45VGRT",
+      "category": "Office",
+      "catId": 3,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "quantity": 1,
+      "productId": 1,
+      "userId": 69,
+      "id": 12
     }
   ],
   "wishlist": [
