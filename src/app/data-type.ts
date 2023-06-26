@@ -100,3 +100,9 @@ export interface product{
 "productId":number,
 "coupon_discount":number
   }
+  export interface variation{
+    "size":string,
+    "price":number,
+    "quantity":number,
+    "color":string
+      }

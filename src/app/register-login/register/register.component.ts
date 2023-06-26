@@ -57,7 +57,8 @@ export class RegisterComponent implements OnInit {
               this.toastr.successToastRegister('Registered', res.message)
               const apiToken = this.authService.generateApiToken();
               localStorage.getItem('res.id');
-              localStorage.getItem('res.fname');
+              localStorage.getItem('response[0].fname');
+localStorage.setItem('username',response[0].fname)
               localStorage.setItem('apiToken', apiToken);
               localStorage.setItem('userid', res.id);
         localStorage.getItem('apiToken');

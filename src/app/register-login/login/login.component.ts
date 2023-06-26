@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit {
                   const apiToken = this.authService.generateApiToken();
 localStorage.getItem('response[0].id');
 localStorage.getItem('response[0].fname');
+localStorage.setItem('username',response[0].fname)
 console.log('response',response);
 
         localStorage.setItem('apiToken', apiToken);

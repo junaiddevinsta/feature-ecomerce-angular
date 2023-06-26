@@ -451,12 +451,69 @@
       "SKU": "BE45VGRT",
       "category": "Office",
       "catId": 3,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "variations": [
+        {
+          "id": 1,
+          "size": "XS",
+          "quantity": 20,
+          "price": 10,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 2,
+          "size": "S",
+          "quantity": 20,
+          "price": 15,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 3,
+          "size": "M",
+          "quantity": 20,
+          "price": 20,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 4,
+          "size": "L",
+          "quantity": 20,
+          "price": 30,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 5,
+          "size": "XL",
+          "quantity": 20,
+          "price": 40,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        }
+      ]
     },
     {
       "id": 5,
       "name": "Guyer Chair",
-      "price": 45,
+      "price": 10,
       "old_price": 150,
       "reviews": 130,
       "image": "assets/images/products/product5.jpg",
@@ -465,7 +522,64 @@
       "catId": "1",
       "Availability": "In stock",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "variations": [
+        {
+          "id": 1,
+          "size": "XS",
+          "quantity": 20,
+          "price": 10,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 2,
+          "size": "S",
+          "quantity": 60,
+          "price": 15,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 3,
+          "size": "M",
+          "quantity": 70,
+          "price": 20,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 4,
+          "size": "L",
+          "quantity": 80,
+          "price": 30,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 5,
+          "size": "XL",
+          "quantity": 90,
+          "price": 40,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        }
+      ]
     },
     {
       "id": 2,
@@ -479,7 +593,64 @@
       "category": "Office",
       "catId": 6,
       "Availability": "In stock",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "variations": [
+        {
+          "id": 1,
+          "size": "XS",
+          "quantity": 20,
+          "price": 20,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 2,
+          "size": "S",
+          "quantity": 20,
+          "price": 15,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 3,
+          "size": "M",
+          "quantity": 20,
+          "price": 30,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 4,
+          "size": "L",
+          "quantity": 20,
+          "price": 40,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 5,
+          "size": "XL",
+          "quantity": 20,
+          "price": 10,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        }
+      ]
     },
     {
       "id": 3,
@@ -494,7 +665,64 @@
       "catId": 4,
       "Availability": "In stock",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "variations": [
+        {
+          "id": 1,
+          "size": "XS",
+          "quantity": 20,
+          "price": 10,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 2,
+          "size": "S",
+          "quantity": 20,
+          "price": 25,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 3,
+          "size": "M",
+          "quantity": 20,
+          "price": 35,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 4,
+          "size": "L",
+          "quantity": 20,
+          "price": 45,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 5,
+          "size": "XL",
+          "quantity": 55,
+          "price": 10,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        }
+      ]
     },
     {
       "id": 4,
@@ -509,12 +737,69 @@
       "catId": 5,
       "Availability": "In stock",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "variations": [
+        {
+          "id": 1,
+          "size": "XS",
+          "quantity": 20,
+          "price": 10,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 2,
+          "size": "S",
+          "quantity": 20,
+          "price": 12,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 3,
+          "size": "M",
+          "quantity": 20,
+          "price": 22,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 4,
+          "size": "L",
+          "quantity": 20,
+          "price": 32,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 5,
+          "size": "XL",
+          "quantity": 20,
+          "price": 42,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        }
+      ]
     },
     {
       "id": 6,
       "name": "Sofa",
-      "price": 450,
+      "price": 30,
       "old_price": 120,
       "reviews": 100,
       "image": "assets/images/products/product6.jpg",
@@ -522,12 +807,69 @@
       "category": "Sofa",
       "catId": "2",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "variations": [
+        {
+          "id": 1,
+          "size": "XS",
+          "quantity": 20,
+          "price": 30,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 2,
+          "size": "S",
+          "quantity": 20,
+          "price": 45,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 3,
+          "size": "M",
+          "quantity": 20,
+          "price": 50,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 4,
+          "size": "L",
+          "quantity": 20,
+          "price": 60,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 5,
+          "size": "XL",
+          "quantity": 20,
+          "price": 70,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        }
+      ]
     },
     {
       "id": 7,
       "name": "devinsta Chair",
-      "price": 455,
+      "price": 34,
       "old_price": 7,
       "reviews": 1,
       "image": "assets/images/products/product2.jpg",
@@ -536,7 +878,64 @@
       "category": "Office",
       "catId": 6,
       "Availability": "In stock",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis"
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "variations": [
+        {
+          "id": 1,
+          "size": "XS",
+          "quantity": 20,
+          "price": 34,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 2,
+          "size": "S",
+          "quantity": 20,
+          "price": 44,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 3,
+          "size": "M",
+          "quantity": 20,
+          "price": 55,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 4,
+          "size": "L",
+          "quantity": 20,
+          "price": 65,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 5,
+          "size": "XL",
+          "quantity": 20,
+          "price": 75,
+          "color": [
+            "red",
+            "white",
+            "black"
+          ]
+        }
+      ]
     }
   ],
   "categories": [
@@ -601,23 +1000,6 @@
       "id": 1
     },
     {
-      "name": "devinsta Chair",
-      "price": 455,
-      "old_price": 7,
-      "reviews": 1,
-      "image": "assets/images/products/product2.jpg",
-      "brand": "Apex",
-      "SKU": "BE45VGRT",
-      "category": "Office",
-      "catId": 6,
-      "Availability": "In stock",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "quantity": 1,
-      "productId": 2,
-      "userId": 16,
-      "id": 2
-    },
-    {
       "name": "Guyer Chair",
       "price": 45,
       "old_price": 150,
@@ -676,22 +1058,6 @@
       "id": 9
     },
     {
-      "name": "boy Chair",
-      "price": 45,
-      "old_price": 150,
-      "reviews": 150,
-      "image": "assets/images/products/product1.jpg",
-      "brand": "Apex",
-      "SKU": "BE45VGRT",
-      "category": "Office",
-      "catId": 3,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "quantity": 1,
-      "productId": 1,
-      "userId": 16,
-      "id": 10
-    },
-    {
       "name": "devinsta Chair",
       "price": 455,
       "old_price": 7,
@@ -723,6 +1089,912 @@
       "productId": 1,
       "userId": 69,
       "id": 12
+    },
+    {
+      "name": "Guyer Chair",
+      "price": 45,
+      "old_price": 150,
+      "reviews": 130,
+      "image": "assets/images/products/product5.jpg",
+      "brand": "Apex",
+      "category": "Bedroom",
+      "catId": "1",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "variations": [
+        {
+          "id": 1,
+          "size": "XS",
+          "quantity": 20,
+          "price": 10
+        },
+        {
+          "id": 2,
+          "size": "S",
+          "quantity": 60,
+          "price": 15
+        },
+        {
+          "id": 3,
+          "size": "M",
+          "quantity": 70,
+          "price": 10
+        },
+        {
+          "id": 4,
+          "size": "L",
+          "quantity": 80,
+          "price": 10
+        },
+        {
+          "id": 5,
+          "size": "XL",
+          "quantity": 90,
+          "price": 10
+        }
+      ],
+      "quantity": 1,
+      "productId": 5,
+      "userId": 16,
+      "variation": {
+        "id": 5,
+        "size": "XL",
+        "quantity": 90,
+        "price": 10
+      },
+      "id": 20
+    },
+    {
+      "name": "Guyer Chair",
+      "price": 45,
+      "old_price": 150,
+      "reviews": 130,
+      "image": "assets/images/products/product5.jpg",
+      "brand": "Apex",
+      "category": "Bedroom",
+      "catId": "1",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "variations": [
+        {
+          "id": 1,
+          "size": "XS",
+          "quantity": 20,
+          "price": 10
+        },
+        {
+          "id": 2,
+          "size": "S",
+          "quantity": 60,
+          "price": 15
+        },
+        {
+          "id": 3,
+          "size": "M",
+          "quantity": 70,
+          "price": 10
+        },
+        {
+          "id": 4,
+          "size": "L",
+          "quantity": 80,
+          "price": 10
+        },
+        {
+          "id": 5,
+          "size": "XL",
+          "quantity": 90,
+          "price": 10
+        }
+      ],
+      "quantity": 1,
+      "productId": 5,
+      "userId": 16,
+      "variation": {
+        "id": 5,
+        "size": "XL",
+        "quantity": 90,
+        "price": 10
+      },
+      "id": 21
+    },
+    {
+      "name": "Guyer Chair",
+      "price": 10,
+      "old_price": 150,
+      "reviews": 130,
+      "image": "assets/images/products/product5.jpg",
+      "brand": "Apex",
+      "category": "Bedroom",
+      "catId": "1",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "variations": [
+        {
+          "id": 1,
+          "size": "XS",
+          "quantity": 20,
+          "price": 10
+        },
+        {
+          "id": 2,
+          "size": "S",
+          "quantity": 60,
+          "price": 15
+        },
+        {
+          "id": 3,
+          "size": "M",
+          "quantity": 70,
+          "price": 20
+        },
+        {
+          "id": 4,
+          "size": "L",
+          "quantity": 80,
+          "price": 30
+        },
+        {
+          "id": 5,
+          "size": "XL",
+          "quantity": 90,
+          "price": 40
+        }
+      ],
+      "quantity": 1,
+      "productId": 5,
+      "userId": 16,
+      "variation": {
+        "id": 5,
+        "size": "XL",
+        "quantity": 90,
+        "price": 40
+      },
+      "id": 22
+    },
+    {
+      "name": "Guyer Chair",
+      "price": 10,
+      "old_price": 150,
+      "reviews": 130,
+      "image": "assets/images/products/product5.jpg",
+      "brand": "Apex",
+      "category": "Bedroom",
+      "catId": "1",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "variations": [
+        {
+          "id": 1,
+          "size": "XS",
+          "quantity": 20,
+          "price": 10
+        },
+        {
+          "id": 2,
+          "size": "S",
+          "quantity": 60,
+          "price": 15
+        },
+        {
+          "id": 3,
+          "size": "M",
+          "quantity": 70,
+          "price": 20
+        },
+        {
+          "id": 4,
+          "size": "L",
+          "quantity": 80,
+          "price": 30
+        },
+        {
+          "id": 5,
+          "size": "XL",
+          "quantity": 90,
+          "price": 40
+        }
+      ],
+      "quantity": 1,
+      "productId": 5,
+      "userId": 16,
+      "variation": {
+        "id": 5,
+        "size": "XL",
+        "quantity": 90,
+        "price": 40
+      },
+      "id": 23
+    },
+    {
+      "name": "Guyer Chair",
+      "price": 10,
+      "old_price": 150,
+      "reviews": 130,
+      "image": "assets/images/products/product5.jpg",
+      "brand": "Apex",
+      "category": "Bedroom",
+      "catId": "1",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "variations": [
+        {
+          "id": 1,
+          "size": "XS",
+          "quantity": 20,
+          "price": 10,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 2,
+          "size": "S",
+          "quantity": 60,
+          "price": 15,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 3,
+          "size": "M",
+          "quantity": 70,
+          "price": 20,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 4,
+          "size": "L",
+          "quantity": 80,
+          "price": 30,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 5,
+          "size": "XL",
+          "quantity": 90,
+          "price": 40,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        }
+      ],
+      "quantity": 1,
+      "productId": 5,
+      "userId": 16,
+      "variation": {
+        "id": 1,
+        "size": "XS",
+        "quantity": 20,
+        "price": 10,
+        "colors": [
+          "red",
+          "white",
+          "black"
+        ]
+      },
+      "id": 24
+    },
+    {
+      "name": "Guyer Chair",
+      "price": 10,
+      "old_price": 150,
+      "reviews": 130,
+      "image": "assets/images/products/product5.jpg",
+      "brand": "Apex",
+      "category": "Bedroom",
+      "catId": "1",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "variations": [
+        {
+          "id": 1,
+          "size": "XS",
+          "quantity": 20,
+          "price": 10,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 2,
+          "size": "S",
+          "quantity": 60,
+          "price": 15,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 3,
+          "size": "M",
+          "quantity": 70,
+          "price": 20,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 4,
+          "size": "L",
+          "quantity": 80,
+          "price": 30,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 5,
+          "size": "XL",
+          "quantity": 90,
+          "price": 40,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        }
+      ],
+      "quantity": 1,
+      "productId": 5,
+      "userId": 16,
+      "variation": {
+        "id": 1,
+        "size": "XS",
+        "quantity": 20,
+        "price": 10,
+        "colors": [
+          "red",
+          "white",
+          "black"
+        ]
+      },
+      "id": 25
+    },
+    {
+      "name": "Guyer Chair",
+      "price": 10,
+      "old_price": 150,
+      "reviews": 130,
+      "image": "assets/images/products/product5.jpg",
+      "brand": "Apex",
+      "category": "Bedroom",
+      "catId": "1",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "variations": [
+        {
+          "id": 1,
+          "size": "XS",
+          "quantity": 20,
+          "price": 10,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 2,
+          "size": "S",
+          "quantity": 60,
+          "price": 15,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 3,
+          "size": "M",
+          "quantity": 70,
+          "price": 20,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 4,
+          "size": "L",
+          "quantity": 80,
+          "price": 30,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 5,
+          "size": "XL",
+          "quantity": 90,
+          "price": 40,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        }
+      ],
+      "quantity": 1,
+      "productId": 5,
+      "color": "red",
+      "userId": 16,
+      "variation": {
+        "id": 1,
+        "size": "XS",
+        "quantity": 20,
+        "price": 10,
+        "colors": [
+          "red",
+          "white",
+          "black"
+        ]
+      },
+      "id": 26
+    },
+    {
+      "name": "Guyer Chair",
+      "price": 10,
+      "old_price": 150,
+      "reviews": 130,
+      "image": "assets/images/products/product5.jpg",
+      "brand": "Apex",
+      "category": "Bedroom",
+      "catId": "1",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "variations": [
+        {
+          "id": 1,
+          "size": "XS",
+          "quantity": 20,
+          "price": 10,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 2,
+          "size": "S",
+          "quantity": 60,
+          "price": 15,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 3,
+          "size": "M",
+          "quantity": 70,
+          "price": 20,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 4,
+          "size": "L",
+          "quantity": 80,
+          "price": 30,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 5,
+          "size": "XL",
+          "quantity": 90,
+          "price": 40,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        }
+      ],
+      "quantity": 1,
+      "productId": 5,
+      "color": "red",
+      "userId": 16,
+      "variation": {
+        "id": 1,
+        "size": "XS",
+        "quantity": 20,
+        "price": 10,
+        "colors": [
+          "red",
+          "white",
+          "black"
+        ]
+      },
+      "id": 27
+    },
+    {
+      "name": "Guyer Chair",
+      "price": 10,
+      "old_price": 150,
+      "reviews": 130,
+      "image": "assets/images/products/product5.jpg",
+      "brand": "Apex",
+      "category": "Bedroom",
+      "catId": "1",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "variations": [
+        {
+          "id": 1,
+          "size": "XS",
+          "quantity": 20,
+          "price": 10,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 2,
+          "size": "S",
+          "quantity": 60,
+          "price": 15,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 3,
+          "size": "M",
+          "quantity": 70,
+          "price": 20,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 4,
+          "size": "L",
+          "quantity": 80,
+          "price": 30,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 5,
+          "size": "XL",
+          "quantity": 90,
+          "price": 40,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        }
+      ],
+      "quantity": 1,
+      "productId": 5,
+      "color": "red",
+      "userId": 16,
+      "variation": {
+        "id": 1,
+        "size": "XS",
+        "quantity": 20,
+        "price": 10,
+        "colors": [
+          "red",
+          "white",
+          "black"
+        ]
+      },
+      "id": 28
+    },
+    {
+      "name": "Guyer Chair",
+      "price": 10,
+      "old_price": 150,
+      "reviews": 130,
+      "image": "assets/images/products/product5.jpg",
+      "brand": "Apex",
+      "category": "Bedroom",
+      "catId": "1",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "variations": [
+        {
+          "id": 1,
+          "size": "XS",
+          "quantity": 20,
+          "price": 10,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 2,
+          "size": "S",
+          "quantity": 60,
+          "price": 15,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 3,
+          "size": "M",
+          "quantity": 70,
+          "price": 20,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 4,
+          "size": "L",
+          "quantity": 80,
+          "price": 30,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 5,
+          "size": "XL",
+          "quantity": 90,
+          "price": 40,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        }
+      ],
+      "quantity": 1,
+      "productId": 5,
+      "color": "red",
+      "userId": 16,
+      "variation": {
+        "id": 1,
+        "size": "XS",
+        "quantity": 20,
+        "price": 10,
+        "colors": [
+          "red",
+          "white",
+          "black"
+        ]
+      },
+      "id": 29
+    },
+    {
+      "name": "Guyer Chair",
+      "price": 10,
+      "old_price": 150,
+      "reviews": 130,
+      "image": "assets/images/products/product5.jpg",
+      "brand": "Apex",
+      "category": "Bedroom",
+      "catId": "1",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "variations": [
+        {
+          "id": 1,
+          "size": "XS",
+          "quantity": 20,
+          "price": 10,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 2,
+          "size": "S",
+          "quantity": 60,
+          "price": 15,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 3,
+          "size": "M",
+          "quantity": 70,
+          "price": 20,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 4,
+          "size": "L",
+          "quantity": 80,
+          "price": 30,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 5,
+          "size": "XL",
+          "quantity": 90,
+          "price": 40,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        }
+      ],
+      "quantity": 1,
+      "productId": 5,
+      "color": "red",
+      "userId": 16,
+      "variation": {
+        "id": 1,
+        "size": "XS",
+        "quantity": 20,
+        "price": 10,
+        "colors": [
+          "red",
+          "white",
+          "black"
+        ]
+      },
+      "id": 30
+    },
+    {
+      "name": "Guyer Chair",
+      "price": 10,
+      "old_price": 150,
+      "reviews": 130,
+      "image": "assets/images/products/product5.jpg",
+      "brand": "Apex",
+      "category": "Bedroom",
+      "catId": "1",
+      "Availability": "In stock",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "long_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "variations": [
+        {
+          "id": 1,
+          "size": "XS",
+          "quantity": 20,
+          "price": 10,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 2,
+          "size": "S",
+          "quantity": 60,
+          "price": 15,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 3,
+          "size": "M",
+          "quantity": 70,
+          "price": 20,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 4,
+          "size": "L",
+          "quantity": 80,
+          "price": 30,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 5,
+          "size": "XL",
+          "quantity": 90,
+          "price": 40,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        }
+      ],
+      "quantity": 1,
+      "productId": 5,
+      "color": "red",
+      "userId": 16,
+      "variation": {
+        "id": 1,
+        "size": "XS",
+        "quantity": 20,
+        "price": 10,
+        "colors": [
+          "red",
+          "white",
+          "black"
+        ]
+      },
+      "id": 31
     }
   ],
   "wishlist": [
@@ -829,230 +2101,6 @@
       "totalPrice": 595,
       "userId": 16,
       "id": 3
-    },
-    {
-      "address": "919 Stimple Ct",
-      "phone": "9074572631",
-      "email": "mumtaz@devinsta.com",
-      "totalPrice": 149.5,
-      "userId": 16,
-      "id": 4
-    },
-    {
-      "address": "919 Stimple Ct",
-      "phone": "9074572631",
-      "email": "mumtaz@devinsta.com",
-      "totalPrice": 298,
-      "userId": 16,
-      "id": 5
-    },
-    {
-      "address": "919 Stimple Ct",
-      "phone": "9074572631",
-      "email": "mumtaz@devinsta.com",
-      "totalPrice": 100,
-      "userId": 16,
-      "id": 6
-    },
-    {
-      "address": "919 Stimple Ct",
-      "phone": "9074572631",
-      "email": "mumtaz@devinsta.com",
-      "totalPrice": 100,
-      "userId": 16,
-      "id": 7
-    },
-    {
-      "address": "919 Stimple Ct",
-      "phone": "9074572631",
-      "email": "mumtaz@devinsta.com",
-      "totalPrice": 100,
-      "userId": 16,
-      "id": 8
-    },
-    {
-      "address": "919 Stimple Ct",
-      "phone": "9074572631",
-      "email": "mumtaz@devinsta.com",
-      "totalPrice": 100,
-      "userId": 16,
-      "id": 9
-    },
-    {
-      "address": "919 Stimple Ct",
-      "phone": "9074572631",
-      "email": "mumtaz@devinsta.com",
-      "totalPrice": 147.25,
-      "userId": 16,
-      "id": 10
-    },
-    {
-      "address": "919 Stimple Ct",
-      "phone": "9074572631",
-      "email": "mumtaz@devinsta.com",
-      "totalPrice": 577.75,
-      "userId": 16,
-      "id": 11
-    },
-    {
-      "address": "919 Stimple Ct",
-      "phone": "9074572631",
-      "email": "mumtaz@devinsta.com",
-      "totalPrice": 100,
-      "userId": 16,
-      "id": 12
-    },
-    {
-      "address": "919 Stimple Ct",
-      "phone": "9074572631",
-      "email": "mumtaz@devinsta.com",
-      "totalPrice": 149.5,
-      "userId": 16,
-      "id": 13
-    },
-    {
-      "address": "919 Stimple Ct",
-      "phone": "9074572631",
-      "email": "mumtaz@devinsta.com",
-      "totalPrice": 600.5,
-      "userId": 16,
-      "id": 14
-    },
-    {
-      "address": "919 Stimple Ct",
-      "phone": "9074572631",
-      "email": "mumtaz@devinsta.com",
-      "totalPrice": 100,
-      "userId": 16,
-      "id": 15
-    },
-    {
-      "address": "919 Stimple Ct",
-      "phone": "9074572631",
-      "email": "mumtaz@devinsta.com",
-      "totalPrice": 600.5,
-      "userId": 16,
-      "id": 16
-    },
-    {
-      "address": "919 Stimple Ct",
-      "phone": "9074572631",
-      "email": "mumtaz@devinsta.com",
-      "totalPrice": 100,
-      "userId": 16,
-      "id": 17
-    },
-    {
-      "address": "919 Stimple Ct",
-      "phone": "9074572631",
-      "email": "mumtaz@devinsta.com",
-      "totalPrice": 100,
-      "userId": 16,
-      "id": 18
-    },
-    {
-      "address": "hafeez center",
-      "phone": "03076565434",
-      "email": "testing@gmail.com",
-      "totalPrice": 600.5,
-      "userId": 16,
-      "id": 19
-    },
-    {
-      "address": "hafeez center",
-      "phone": "03056545654",
-      "email": "example123@gmail.com",
-      "totalPrice": 100,
-      "userId": 16,
-      "id": 20
-    },
-    {
-      "address": "919 Stimple Ct",
-      "phone": "9074572631",
-      "email": "mumtaz@devinsta.com",
-      "totalPrice": 100,
-      "userId": 16,
-      "id": 21
-    },
-    {
-      "address": "919 Stimple Ct",
-      "phone": "9074572631",
-      "email": "mumtaz@devinsta.com",
-      "totalPrice": 100,
-      "userId": 16,
-      "id": 22
-    },
-    {
-      "address": "hafeez center",
-      "phone": "03056545654",
-      "email": "example123@gmail.com",
-      "totalPrice": 600.5,
-      "userId": 16,
-      "id": 23
-    },
-    {
-      "address": "hafeez center",
-      "phone": "03056545654",
-      "email": "example123@gmail.com",
-      "totalPrice": 600.5,
-      "userId": 16,
-      "id": 24
-    },
-    {
-      "address": "hafeez center",
-      "phone": "03056545654",
-      "email": "example123@gmail.com",
-      "totalPrice": 149.5,
-      "userId": 16,
-      "id": 25
-    },
-    {
-      "address": "hafeez center",
-      "phone": "03056545654",
-      "email": "example123@gmail.com",
-      "totalPrice": 149.5,
-      "userId": 16,
-      "id": 26
-    },
-    {
-      "address": "hafeez center",
-      "phone": "03056545654",
-      "email": "example123@gmail.com",
-      "totalPrice": 149.5,
-      "userId": 16,
-      "id": 27
-    },
-    {
-      "address": "hafeez center",
-      "phone": "03056545654",
-      "email": "example123@gmail.com",
-      "totalPrice": 600.5,
-      "userId": 16,
-      "id": 28
-    },
-    {
-      "address": "hafeez center",
-      "phone": "03056545654",
-      "email": "example123@gmail.com",
-      "totalPrice": 600.5,
-      "userId": 16,
-      "id": 29
-    },
-    {
-      "address": "hafeez center",
-      "phone": "03056545654",
-      "email": "example123@gmail.com",
-      "totalPrice": 149.5,
-      "userId": 16,
-      "id": 30
-    },
-    {
-      "address": "hafeez center",
-      "phone": "03056545654",
-      "email": "example123@gmail.com",
-      "totalPrice": 149.5,
-      "userId": 16,
-      "id": 31
     },
     {
       "discount": 0,
@@ -1364,6 +2412,10 @@
     {
       "discount": 0,
       "id": 101
+    },
+    {
+      "discount": 0,
+      "id": 102
     }
   ],
   "about": {

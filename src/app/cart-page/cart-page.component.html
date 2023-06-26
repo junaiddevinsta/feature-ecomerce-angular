@@ -26,8 +26,9 @@
                   <h2 class="text-gray-800 mb-3 xl:text-xl textl-lg font-medium uppercase">
                       {{cartData?.name}}
                   </h2>
-                  <p class="text-primary font-semibold">${{cartData?.price}}</p>
+                  <p class="text-primary font-semibold">${{cartData?.variation?.price}}</p>
                   <p class="text-gray-500">{{cartData?.description}}</p>
+                  <h1>Size: {{cartData?.variation?.size}}</h1>
               </div>
               <!-- cart content end -->
               <!-- cart quantity -->
@@ -46,7 +47,7 @@
               </div> -->
               <!-- cart quantity end -->
               <div class="ml-auto md:ml-0">
-                  <p class="text-primary text-lg font-semibold">${{cartData?.price*cartData?.quantity}}</p>
+                  <p class="text-primary text-lg font-semibold">${{cartData?.variation?.price*cartData?.quantity}}</p>
               </div>
               <a (click)="removeToCart(cartData.id)"
               class=" cursor-pointer ml-auto md:ml-0 block px-6 py-2 text-center text-sm text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition uppercase font-roboto font-medium">

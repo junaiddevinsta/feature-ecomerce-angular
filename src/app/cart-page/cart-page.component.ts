@@ -362,7 +362,8 @@ console.log("discounted Data=>",discountData)
 
     this.singleUserCartData.forEach((item:any) => {
       if (item.quantity) {
-        price = price + item.price * item.quantity;
+        price = price + item.variation.price * item.quantity;
+        console.log("item=>",item)
       }
     });
 

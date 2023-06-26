@@ -10,17 +10,21 @@ import { UserAccountService } from 'src/app/services/user-account.service';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-
+  username = localStorage.getItem('username');
   constructor(private userAccount:UserAccountService, private authService:AuthService,private route:Router,private product:ProductService) { }
   showComponent(componentName: string) {
     this.userAccount.showComponent(componentName);
   }
   @Input() page = '';
   btnValue = ''
+
   ngOnInit(): void {
+
+    // let userName= username && JSON.parse(username);
     console.log('page =>',this.page);
     console.log('page =>',this.page);
     this.setInitialBtnValue();
+    console.log("userName=>",this.username)
   }
   setInitialBtnValue() {
     const currentUrl = this.route.url;

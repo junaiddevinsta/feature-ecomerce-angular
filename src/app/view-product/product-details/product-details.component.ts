@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { cart, product, wishlist } from 'src/app/data-type';
+import { cart, product, wishlist,variation} from 'src/app/data-type';
 import { AlertService } from 'src/app/services/alert.service';
 import { ApiService } from 'src/app/services/api.service';
 import { ProductService } from 'src/app/services/product.service';
 import { ProductsService } from 'src/app/services/products.service';
+
 
 @Component({
   selector: 'app-product-details',
@@ -12,7 +13,9 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent implements OnInit {
-
+  currentPrice: number | undefined;
+  selectedSize='M';
+  selectedColor = 'red';
   productQuantity:number=1;
 sub:any;
 productData:any;
@@ -22,9 +25,16 @@ couponDisount:any
 cartData:product|undefined;
 wishlistData:product|undefined;
 currentCartResponse:any;
+btnValue = 'medium';
+
+
   constructor(private route:ActivatedRoute, private alert:AlertService  ,private apiService:ApiService, private product:ProductService) { }
 
+
   ngOnInit(): void {
+    if (this.productData?.variations?.length > 0) {
+      this.selectedSize = this.productData.variations[0].size;
+    }
     this.sub = this.route.params.subscribe(params => {
       const productId = +params['id'];
      console.log('product id=>', productId);
@@ -58,6 +68,9 @@ currentCartResponse:any;
 
 
 
+
+
+
     });
   }
   getProductData(id:any){
@@ -65,8 +78,13 @@ currentCartResponse:any;
       this.productData=res;
       console.log("Product Data=>",this.productData)
       console.log("res=>",res)
+      if (this.productData?.variations?.length > 0) {
+        this.selectedSize = this.productData.variations[0].size;
+      }
+
     })
   }
+
 
   handleQuantity(val:string){
     if(this.productQuantity<20 && val==='plus'){
@@ -76,11 +94,19 @@ currentCartResponse:any;
     }
   }
 addToCart(){
-  if(this.productData){
+  if(this.productData && this.selectedSize){
     this.productData.quantity=this.productQuantity;
+    // const selectedVariation = this.productData.variations.find(variation => variation.size === this.selectedSize);
+    const selectedVariation: variation | undefined = this.productData.variations.find((variation: variation) => variation.size === this.selectedSize);
+    console.log("selected variation,",selectedVariation)
+    if (!selectedVariation) {
+      return;
+    }
+
+
     if(!localStorage.getItem('userid')){
       this.product.localAddToCart(this.productData);
-      this.removeCart=true
+      // this.removeCart=true
     }
     else{
       let user = localStorage.getItem('userid');
@@ -89,15 +115,17 @@ addToCart(){
         let cartData:cart={
           ...this.productData,
           productId:this.productData.id,
+          color: this.productData.variations[0].colors[0],
           userId,
-          couponDisount:this.couponDisount
+          couponDisount:this.couponDisount,
+          variation: selectedVariation
         }
         delete cartData.id;
         console.log('cart Data',cartData);
         this.product.addToCart(cartData).subscribe((res)=>{
           if(res){
             this.product.getCartList(userId);
-            this.removeCart=true;
+            // this.removeCart=true;
             this.alert.addedCartAlert();
             // alert('data added successfully')
             this.product.currentCart().subscribe((respone:any)=>{
@@ -109,24 +137,29 @@ addToCart(){
     }
   }
 }
-removeToCart(productId:number){
-  if(!localStorage.getItem('userid')){
-    this.product.removeItemFromCart(productId);
 
-  }
-  else{
-    let user = localStorage.getItem('userid');
-        let userId= user && JSON.parse(user);
-    console.log("remove cart data=>",this.cartData)
-    this.cartData && this.product.removeToCart(this.cartData.id).subscribe((res)=>{
-      if(res){
-        this.product.getCartList(userId);
-        this.alert.removeCartAlert();
-      }
-    })
-  }
-  this.removeCart=false;
-}
+
+
+
+// removeToCart(productId:number){
+//   if(!localStorage.getItem('userid')){
+//     this.product.removeItemFromCart(productId);
+
+
+//   }
+//   else{
+//     let user = localStorage.getItem('userid');
+//         let userId= user && JSON.parse(user);
+//     console.log("remove cart data=>",this.cartData)
+//     this.cartData && this.product.removeToCart(this.cartData.id).subscribe((res)=>{
+//       if(res){
+//         this.product.getCartList(userId);
+//         this.alert.removeCartAlert();
+//       }
+//     })
+//   }
+//   this.removeCart=false;
+// }
 addToWishlist(){
   if(this.productData){
     // this.productData.quantity=this.productQuantity;
@@ -170,11 +203,19 @@ removeToWishlist(poductId:number){
             this.product.getWishlistList(userId);
             this.alert.removeWishlistAlert();
 
+
           }
         })
   }
   this.removeWishlist=false;
 }
+selectSize(variation: variation) {
+  this.selectedSize = variation.size;
+  this.currentPrice = variation.price;
+
+}
+
+
 //     addToWishlist(){
 //     if(localStorage.getItem('apiToken')){
 // console.log('user Login',this.productData);
@@ -184,5 +225,6 @@ removeToWishlist(poductId:number){
 //       console.log('user not login')
 //     }
 //   }
+
 
 }
