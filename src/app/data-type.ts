@@ -1,4 +1,5 @@
 export interface product{
+    variations: any
     sku:string,
     brand:string
     name:string,
@@ -11,7 +12,8 @@ export interface product{
     description:string,
     id:number,
     quantity:undefined | number,
-    productId:undefined|number
+    productId:undefined|number,
+    // variations?: variation[];
   }
   export interface category{
     id:number,
