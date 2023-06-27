@@ -380,20 +380,21 @@ console.log("discounted Data=>",discountData)
     for(let i=0; i<this.singleUserCartData.length;i++){
       if(this.singleUserCartData[i].productId===productId){
         if(quantity !=20){
-          this.singleUserCartData[i].quantity=parseInt(quantity)+1
+          this.singleUserCartData[i].variation.quantity=parseInt(quantity)+1
+          console.log("single user cart i=>",this.singleUserCartData[i])
           // console.log("single user cart data variation=>", this.singleUserCartData[i].variations.quantity)
           console.log("cartid",this.singleUserCartData[i].id)
-          console.log("cart quantity",this.singleUserCartData[i].quantity)
+          console.log("cart quantity",this.singleUserCartData[i].variation.quantity)
           this.cartId=this.singleUserCartData[i].id;
-          this.cartQuantity=this.singleUserCartData[i].variation.quantity;
-          console.log("cartQuantity",this.cartQuantity)
-          const incCartRes={
-            quantity:this.cartQuantity
-          }
+          // this.cartQuantity=this.singleUserCartData[i].variation.quantity;
+          // console.log("cartQuantity",this.cartQuantity)
+          // const incCartRes={
+          //   quantity:this.cartQuantity
+          // }
 
-          this.apiService.patchRequest('cart/'+this.cartId ,incCartRes).subscribe((incCartRes:any)=>{
-            console.log("incCartRes",incCartRes)
-          })
+          // this.apiService.patchRequest('cart/'+this.cartId ,incCartRes).subscribe((incCartRes:any)=>{
+          //   console.log("incCartRes",incCartRes)
+          // })
         }
         console.log("quantity increase=>",this.singleUserCartData[i].quantity)
 // this.apiService.patchRequest('cart',this.singleUserCartData[i].quantity).subscribe((incCartRes:any)=>{
