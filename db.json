@@ -1227,13 +1227,19 @@
           ]
         }
       ],
-      "quantity": 12,
+      "quantity": 1,
       "productId": 1,
       "userId": 16,
       "variation": {
-        "quantity": 10,
+        "id": 1,
         "size": "XS",
-        "price": 10
+        "quantity": 1,
+        "price": 10,
+        "colors": [
+          "red",
+          "white",
+          "black"
+        ]
       },
       "id": 13
     },
@@ -1320,90 +1326,6 @@
         ]
       },
       "id": 14
-    },
-    {
-      "name": "boy Chair",
-      "price": 45,
-      "old_price": 150,
-      "reviews": 150,
-      "image": "assets/images/products/product1.jpg",
-      "brand": "Apex",
-      "SKU": "BE45VGRT",
-      "category": "Office",
-      "catId": 3,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "variations": [
-        {
-          "id": 1,
-          "size": "XS",
-          "quantity": 1,
-          "price": 10,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 2,
-          "size": "S",
-          "quantity": 1,
-          "price": 15,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 3,
-          "size": "M",
-          "quantity": 1,
-          "price": 20,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 4,
-          "size": "L",
-          "quantity": 1,
-          "price": 30,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 5,
-          "size": "XL",
-          "quantity": 1,
-          "price": 40,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        }
-      ],
-      "quantity": 1,
-      "productId": 1,
-      "userId": 16,
-      "variation": {
-        "id": 5,
-        "size": "XL",
-        "quantity": 1,
-        "price": 40,
-        "colors": [
-          "red",
-          "white",
-          "black"
-        ]
-      },
-      "id": 15
     }
   ],
   "wishlist": [
@@ -1825,6 +1747,10 @@
     {
       "discount": 0,
       "id": 102
+    },
+    {
+      "discount": 0,
+      "id": 103
     }
   ],
   "about": {
