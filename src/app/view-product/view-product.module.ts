@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ViewProductRoutingModule } from './view-product-routing.module';
 import { RenderViewComponent } from './render-view/render-view.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
   ],
   imports: [
     CommonModule,
-    ViewProductRoutingModule
+    ViewProductRoutingModule,
+    FormsModule,
   ],
   exports:[
 ProductDetailsComponent

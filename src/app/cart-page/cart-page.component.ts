@@ -96,9 +96,6 @@ export class CartPageComponent implements OnInit {
       this.singleUserCartData = res;
       console.log("discount value=>",this.priceSummary.discount);
       console.log("single user cart data=>", this.singleUserCartData);
-
-
-
     })
     this.apiService.getrequest('coupon').subscribe((couponApiResponse:any)=>{
 console.log("coupon Api response=>",couponApiResponse);
@@ -361,8 +358,8 @@ console.log("discounted Data=>",discountData)
     let price = 0;
 
     this.singleUserCartData.forEach((item:any) => {
-      if (item.quantity) {
-        price = price + item.variation.price * item.quantity;
+      if (item.variation.quantity) {
+        price = price + item.variation.price * item.variation.quantity;
         console.log("item=>",item)
       }
     });
@@ -384,10 +381,12 @@ console.log("discounted Data=>",discountData)
       if(this.singleUserCartData[i].productId===productId){
         if(quantity !=20){
           this.singleUserCartData[i].quantity=parseInt(quantity)+1
+          // console.log("single user cart data variation=>", this.singleUserCartData[i].variations.quantity)
           console.log("cartid",this.singleUserCartData[i].id)
           console.log("cart quantity",this.singleUserCartData[i].quantity)
           this.cartId=this.singleUserCartData[i].id;
-          this.cartQuantity=this.singleUserCartData[i].quantity
+          this.cartQuantity=this.singleUserCartData[i].variation.quantity;
+          console.log("cartQuantity",this.cartQuantity)
           const incCartRes={
             quantity:this.cartQuantity
           }

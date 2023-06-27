@@ -56,7 +56,7 @@
           </p>
       </div>
       <div class="mt-4 flex items-baseline gap-3">
-          <span class="text-primary font-semibold text-xl">${{currentPrice || productData?.price }}</span>
+          <span class="text-primary font-semibold text-xl">${{currentPrice || this.productData.variations[0].price }}</span>
           <span class="text-gray-500 text-base line-through">{{productData?.old_price}}</span>
       </div>
       <p class="mt-4 text-gray-600">

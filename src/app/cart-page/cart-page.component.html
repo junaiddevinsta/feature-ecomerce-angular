@@ -47,7 +47,7 @@
               </div> -->
               <!-- cart quantity end -->
               <div class="ml-auto md:ml-0">
-                  <p class="text-primary text-lg font-semibold">${{cartData?.variation?.price*cartData?.quantity}}</p>
+                  <p class="text-primary text-lg font-semibold">${{cartData?.variation?.price*cartData?.variation.quantity}}</p>
               </div>
               <a (click)="removeToCart(cartData.id)"
               class=" cursor-pointer ml-auto md:ml-0 block px-6 py-2 text-center text-sm text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition uppercase font-roboto font-medium">

@@ -14,7 +14,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ProductDetailsComponent implements OnInit {
   currentPrice: number | undefined;
-  selectedSize='M';
+  selectedSize='';
   selectedColor = 'red';
   productQuantity:number=1;
   // cartData:any;
@@ -27,8 +27,9 @@ cartData:any;
 wishlistData:product|undefined;
 currentCartResponse:any;
 btnValue = 'medium';
+quantityVariation:any;
 
-
+cartId:any;
   constructor(private route:ActivatedRoute, private alert:AlertService  ,private apiService:ApiService, private product:ProductService) { }
 
 
@@ -67,12 +68,12 @@ btnValue = 'medium';
         })
       }
 
-
-
-
-
-
     });
+    // Set default size
+  if (this.productData?.variations?.length > 0) {
+    this.selectedSize = this.productData.variations[0].size;
+    this.currentPrice = this.productData.variations[0].price;
+  }
   }
   getProductData(id:any){
     this.apiService.getrequest('products/'+id).subscribe((res:any)=>{
@@ -81,6 +82,7 @@ btnValue = 'medium';
       console.log("res=>",res)
       if (this.productData?.variations?.length > 0) {
         this.selectedSize = this.productData.variations[0].size;
+        // this.selectedSize = this.productData.variations[0].price;
       }
 
     })
@@ -148,47 +150,155 @@ btnValue = 'medium';
   // }
 
 addToCart(){
+  this.productData.quantity=this.productQuantity;
   let user = localStorage.getItem('userid');
         let userId= user && JSON.parse(user);
-  if(this.productData && this.selectedSize){
+  if(this.selectedSize){
     this.productData.quantity=this.productQuantity;
     console.log("product data.quantity",this.productData.quantity)
+
     // const selectedVariation = this.productData.variations.find(variation => variation.size === this.selectedSize);
     const selectedVariation: variation | undefined = this.productData.variations.find((variation: variation) => variation.size === this.selectedSize);
     console.log("selected variation",selectedVariation)
-
-
+    this.product.currentCart().subscribe((respone:any)=>{
+      this.currentCartResponse=respone
+      console.log("current cart response=>",this.currentCartResponse)
+    })
+console.log("productData again=>",this.productData)
     if (!selectedVariation) {
       return;
     }
+console.log("product id again=>",this.productData.id)
     let productInCart = false;
-    if (this.cartData) {
-      this.alert.addedCartAlert();
-      const cartVariations = this.cartData.variations;
-      for (const cartVariation of cartVariations) {
-        if (this.cartData?.variation.size === selectedVariation.size) {
-          this.cartData.quantity = this.cartData.quantity+this.productQuantity;
-          // cartVariation.quantity += this.productData.quantity;
+    this.product.currentCart().subscribe((respone:any)=>{
+      this.currentCartResponse=respone;
+      const productid=this.currentCartResponse.some((product:any)=> product.productId===this.productData.id)
+      if(productid){
 
-          console.log("cartvariation.quantity=>",cartVariation.quantity)
-          productInCart = true;
-          break;
+        const variations = this.currentCartResponse.some((varient: any) => varient.variation.size === selectedVariation.size);
+        if(variations){
+          this.cartId=this.currentCartResponse[0].id;
+          this.currentCartResponse[0].variation.quantity=this.currentCartResponse[0].variation.quantity+this.productData.quantity;
+          console.log("cartId=>",this.cartId)
+          // this.currentCartResponse.variation.quantity = this.currentCartResponse.variation.quantity+this.productData.quantity;
+          // console.log("current cart response quantity=>",this.currentCartResponse.quantity),
+          // console.log("product input quantity=>",this.currentCartResponse.variation.quantity)
+          this.quantityVariation=this.currentCartResponse[0].variation.quantity
+          console.log("current cart response once again=>",this.currentCartResponse[0].variation.quantity);
+          console.log("current cart response once again=>",this.currentCartResponse[0].variation.size);
+          console.log("current cart response once again=>",this.currentCartResponse[0].variation.price);
+          console.log("size exists in cart");
+          console.log("product data quantity=>",this.productData.quantity)
+          const cartUpdateData={
+            variation:{
+              quantity:this.currentCartResponse[0].variation.quantity,
+              size:this.currentCartResponse[0].variation.size,
+              price:this.currentCartResponse[0].variation.price,
+
+            }
+// variation:this.currentCartResponse[0].variation.quantity
+          }
+          this.apiService.patchRequest('cart/'+this.cartId ,cartUpdateData).subscribe((incCartRes:any)=>{
+            console.log("incCartRes",incCartRes)
+          })
+
+        }
+        else{
+          let user = localStorage.getItem('userid');
+            let userId= user && JSON.parse(user);
+            console.log('userId786',userId);
+            let cartData:cart={
+              ...this.productData,
+              productId:this.productData.id,
+              // color: this.productData.variations[0].colors[0],
+              userId,
+              couponDisount:this.couponDisount,
+              variation: selectedVariation
+            }
+            delete cartData.id;
+            console.log('cart Data',cartData);
+
+            this.product.addToCart(cartData).subscribe((res)=>{
+              if(res){
+                // if(productInCart){
+        //   this.productData.quantity += 1;
+        // }
+                this.product.getCartList(userId);
+                // this.removeCart=true;
+                this.alert.addedCartAlert();
+                // alert('data added successfully')
+                this.product.currentCart().subscribe((respone:any)=>{
+                  this.currentCartResponse=respone
+                  console.log("current cart response=>",this.currentCartResponse)
+                })
+              }
+            })
         }
 
-
-
+        // if(!variations){
+        //   console.log("varient not exists")
+        // }
+        console.log("product exists")
       }
-      // this.product.getCartList(userId);
-      // this.product.currentCart().subscribe((respone:any)=>{
-      //   this.currentCartResponse=respone
-      //   console.log("current cart response quantity=>",this.currentCartResponse)
-      // })
-      // console.log("cartVariations",cartVariations)
-      // console.log("cartData=>",this.cartData)
-      // console.log("product data=>",this.productData.quantity)
-      // console.log("selected variation size=>",selectedVariation.size)
+      else{
+        let user = localStorage.getItem('userid');
+          let userId= user && JSON.parse(user);
+          console.log('userId786',userId);
+          let cartData:cart={
+            ...this.productData,
+            productId:this.productData.id,
+            // color: this.productData.variations[0].colors[0],
+            userId,
+            couponDisount:this.couponDisount,
+            variation: selectedVariation
+          }
+          delete cartData.id;
+          console.log('cart Data',cartData);
 
-    }
+          this.product.addToCart(cartData).subscribe((res)=>{
+            if(res){
+              // if(productInCart){
+      //   this.productData.quantity += 1;
+      // }
+              this.product.getCartList(userId);
+              // this.removeCart=true;
+              this.alert.addedCartAlert();
+              // alert('data added successfully')
+              this.product.currentCart().subscribe((respone:any)=>{
+                this.currentCartResponse=respone
+                console.log("current cart response=>",this.currentCartResponse)
+              })
+            }
+          })
+      }
+      // if(!productid){
+      //   console.log("product not exists")
+      // }
+
+      console.log("selected variations again=>",selectedVariation)
+      console.log("current cart  response again=>",this.currentCartResponse)
+    })
+//     if (this.currentCartResponse) {
+//       this.alert.addedCartAlert();
+//       const cartVariations = this.currentCartResponse.variations;
+// //       for (const cartVariation of cartVariations) {
+// //         if (this.currentCartResponse?.variation.size === selectedVariation.size)
+// //          {
+// //           this.currentCartResponse.quantity = this.currentCartResponse.quantity+this.productQuantity;
+// //           console.log("product quantity increased=>",this.cartData.quantity)
+// //           // cartVariation.quantity += this.productData.quantity;
+// // console.log("currentCartResponse.quantity",this.currentCartResponse.quantity)
+// //           console.log("cartvariation.quantity=>",cartVariation.quantity)
+// //           productInCart = true;
+// //           break;
+// //         }
+
+
+
+// //       }
+
+
+//     }
     // if (productInCart) {
     //   this.cartData.quantity += this.productQuantity;
     //   this.product.addToCart(this.productData).subscribe((res:any) => {
@@ -213,50 +323,9 @@ addToCart(){
     // if(productInCart){
     //   this.productData.quantity += 1;
     // }
-    else{
-      let user = localStorage.getItem('userid');
-        let userId= user && JSON.parse(user);
-        console.log('userId786',userId);
-        let cartData:cart={
-          ...this.productData,
-          productId:this.productData.id,
-          // color: this.productData.variations[0].colors[0],
-          userId,
-          couponDisount:this.couponDisount,
-          variation: selectedVariation
-        }
-        delete cartData.id;
-        console.log('cart Data',cartData);
 
-        this.product.addToCart(cartData).subscribe((res)=>{
-          if(res){
-            // if(productInCart){
-    //   this.productData.quantity += 1;
-    // }
-            this.product.getCartList(userId);
-            // this.removeCart=true;
-            this.alert.addedCartAlert();
-            // alert('data added successfully')
-            this.product.currentCart().subscribe((respone:any)=>{
-              this.currentCartResponse=respone
-              console.log("current cart response=>",this.currentCartResponse)
-            })
-          }
-        })
-    }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 removeToCart(productId:number){
   if(!localStorage.getItem('userid')){
@@ -329,6 +398,7 @@ removeToWishlist(poductId:number){
 selectSize(variation: variation) {
   this.selectedSize = variation.size;
   this.currentPrice = variation.price;
+  console.log("current price",this.currentPrice)
 
 }
 

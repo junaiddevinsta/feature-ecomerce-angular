@@ -456,7 +456,7 @@
         {
           "id": 1,
           "size": "XS",
-          "quantity": 20,
+          "quantity": 1,
           "price": 10,
           "colors": [
             "red",
@@ -467,7 +467,7 @@
         {
           "id": 2,
           "size": "S",
-          "quantity": 20,
+          "quantity": 1,
           "price": 15,
           "colors": [
             "red",
@@ -478,7 +478,7 @@
         {
           "id": 3,
           "size": "M",
-          "quantity": 20,
+          "quantity": 1,
           "price": 20,
           "colors": [
             "red",
@@ -489,7 +489,7 @@
         {
           "id": 4,
           "size": "L",
-          "quantity": 20,
+          "quantity": 1,
           "price": 30,
           "colors": [
             "red",
@@ -500,7 +500,7 @@
         {
           "id": 5,
           "size": "XL",
-          "quantity": 20,
+          "quantity": 1,
           "price": 40,
           "colors": [
             "red",
@@ -527,7 +527,7 @@
         {
           "id": 1,
           "size": "XS",
-          "quantity": 20,
+          "quantity": 1,
           "price": 10,
           "colors": [
             "red",
@@ -598,7 +598,7 @@
         {
           "id": 1,
           "size": "XS",
-          "quantity": 20,
+          "quantity": 1,
           "price": 20,
           "colors": [
             "red",
@@ -609,7 +609,7 @@
         {
           "id": 2,
           "size": "S",
-          "quantity": 20,
+          "quantity": 1,
           "price": 15,
           "color": [
             "red",
@@ -620,7 +620,7 @@
         {
           "id": 3,
           "size": "M",
-          "quantity": 20,
+          "quantity": 1,
           "price": 30,
           "color": [
             "red",
@@ -631,7 +631,7 @@
         {
           "id": 4,
           "size": "L",
-          "quantity": 20,
+          "quantity": 1,
           "price": 40,
           "color": [
             "red",
@@ -642,7 +642,7 @@
         {
           "id": 5,
           "size": "XL",
-          "quantity": 20,
+          "quantity": 1,
           "price": 10,
           "color": [
             "red",
@@ -670,7 +670,7 @@
         {
           "id": 1,
           "size": "XS",
-          "quantity": 20,
+          "quantity": 1,
           "price": 10,
           "color": [
             "red",
@@ -681,7 +681,7 @@
         {
           "id": 2,
           "size": "S",
-          "quantity": 20,
+          "quantity": 1,
           "price": 25,
           "color": [
             "red",
@@ -692,7 +692,7 @@
         {
           "id": 3,
           "size": "M",
-          "quantity": 20,
+          "quantity": 1,
           "price": 35,
           "color": [
             "red",
@@ -703,7 +703,7 @@
         {
           "id": 4,
           "size": "L",
-          "quantity": 20,
+          "quantity": 1,
           "price": 45,
           "color": [
             "red",
@@ -742,7 +742,7 @@
         {
           "id": 1,
           "size": "XS",
-          "quantity": 20,
+          "quantity": 1,
           "price": 10,
           "color": [
             "red",
@@ -753,7 +753,7 @@
         {
           "id": 2,
           "size": "S",
-          "quantity": 20,
+          "quantity": 1,
           "price": 12,
           "color": [
             "red",
@@ -764,7 +764,7 @@
         {
           "id": 3,
           "size": "M",
-          "quantity": 20,
+          "quantity": 1,
           "price": 22,
           "color": [
             "red",
@@ -775,7 +775,7 @@
         {
           "id": 4,
           "size": "L",
-          "quantity": 20,
+          "quantity": 1,
           "price": 32,
           "color": [
             "red",
@@ -786,7 +786,7 @@
         {
           "id": 5,
           "size": "XL",
-          "quantity": 20,
+          "quantity": 1,
           "price": 42,
           "color": [
             "red",
@@ -812,7 +812,7 @@
         {
           "id": 1,
           "size": "XS",
-          "quantity": 20,
+          "quantity": 1,
           "price": 30,
           "color": [
             "red",
@@ -823,7 +823,7 @@
         {
           "id": 2,
           "size": "S",
-          "quantity": 20,
+          "quantity": 1,
           "price": 45,
           "color": [
             "red",
@@ -834,7 +834,7 @@
         {
           "id": 3,
           "size": "M",
-          "quantity": 20,
+          "quantity": 1,
           "price": 50,
           "color": [
             "red",
@@ -845,7 +845,7 @@
         {
           "id": 4,
           "size": "L",
-          "quantity": 20,
+          "quantity": 1,
           "price": 60,
           "color": [
             "red",
@@ -856,7 +856,7 @@
         {
           "id": 5,
           "size": "XL",
-          "quantity": 20,
+          "quantity": 1,
           "price": 70,
           "color": [
             "red",
@@ -883,7 +883,7 @@
         {
           "id": 1,
           "size": "XS",
-          "quantity": 20,
+          "quantity": 1,
           "price": 34,
           "color": [
             "red",
@@ -894,7 +894,7 @@
         {
           "id": 2,
           "size": "S",
-          "quantity": 20,
+          "quantity": 1,
           "price": 44,
           "color": [
             "red",
@@ -905,7 +905,7 @@
         {
           "id": 3,
           "size": "M",
-          "quantity": 20,
+          "quantity": 1,
           "price": 55,
           "color": [
             "red",
@@ -916,7 +916,7 @@
         {
           "id": 4,
           "size": "L",
-          "quantity": 20,
+          "quantity": 1,
           "price": 65,
           "color": [
             "red",
@@ -927,7 +927,7 @@
         {
           "id": 5,
           "size": "XL",
-          "quantity": 20,
+          "quantity": 1,
           "price": 75,
           "color": [
             "red",
@@ -1091,23 +1091,22 @@
       "id": 12
     },
     {
-      "name": "devinsta Chair",
-      "price": 455,
-      "old_price": 7,
-      "reviews": 1,
-      "image": "assets/images/products/product2.jpg",
+      "name": "boy Chair",
+      "price": 45,
+      "old_price": 150,
+      "reviews": 150,
+      "image": "assets/images/products/product1.jpg",
       "brand": "Apex",
       "SKU": "BE45VGRT",
       "category": "Office",
-      "catId": 6,
-      "Availability": "In stock",
+      "catId": 3,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
       "variations": [
         {
           "id": 1,
           "size": "XS",
-          "quantity": 20,
-          "price": 20,
+          "quantity": 1,
+          "price": 10,
           "colors": [
             "red",
             "white",
@@ -1117,9 +1116,9 @@
         {
           "id": 2,
           "size": "S",
-          "quantity": 20,
+          "quantity": 1,
           "price": 15,
-          "color": [
+          "colors": [
             "red",
             "white",
             "black"
@@ -1128,9 +1127,9 @@
         {
           "id": 3,
           "size": "M",
-          "quantity": 20,
-          "price": 30,
-          "color": [
+          "quantity": 1,
+          "price": 20,
+          "colors": [
             "red",
             "white",
             "black"
@@ -1139,9 +1138,9 @@
         {
           "id": 4,
           "size": "L",
-          "quantity": 20,
-          "price": 40,
-          "color": [
+          "quantity": 1,
+          "price": 30,
+          "colors": [
             "red",
             "white",
             "black"
@@ -1150,28 +1149,91 @@
         {
           "id": 5,
           "size": "XL",
-          "quantity": 20,
+          "quantity": 1,
+          "price": 40,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "boy Chair",
+      "price": 45,
+      "old_price": 150,
+      "reviews": 150,
+      "image": "assets/images/products/product1.jpg",
+      "brand": "Apex",
+      "SKU": "BE45VGRT",
+      "category": "Office",
+      "catId": 3,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
+      "variations": [
+        {
+          "id": 1,
+          "size": "XS",
+          "quantity": 1,
           "price": 10,
-          "color": [
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 2,
+          "size": "S",
+          "quantity": 1,
+          "price": 15,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 3,
+          "size": "M",
+          "quantity": 1,
+          "price": 20,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 4,
+          "size": "L",
+          "quantity": 1,
+          "price": 30,
+          "colors": [
+            "red",
+            "white",
+            "black"
+          ]
+        },
+        {
+          "id": 5,
+          "size": "XL",
+          "quantity": 1,
+          "price": 40,
+          "colors": [
             "red",
             "white",
             "black"
           ]
         }
       ],
-      "quantity": 5,
-      "productId": 2,
+      "quantity": 9,
+      "productId": 1,
       "userId": 16,
       "variation": {
-        "id": 3,
-        "size": "M",
-        "quantity": 20,
-        "price": 30,
-        "color": [
-          "red",
-          "white",
-          "black"
-        ]
+        "quantity": 9,
+        "size": "XS",
+        "price": 10
       },
       "id": 13
     },
@@ -1190,7 +1252,7 @@
         {
           "id": 1,
           "size": "XS",
-          "quantity": 20,
+          "quantity": 1,
           "price": 10,
           "colors": [
             "red",
@@ -1201,7 +1263,7 @@
         {
           "id": 2,
           "size": "S",
-          "quantity": 20,
+          "quantity": 1,
           "price": 15,
           "colors": [
             "red",
@@ -1212,7 +1274,7 @@
         {
           "id": 3,
           "size": "M",
-          "quantity": 20,
+          "quantity": 1,
           "price": 20,
           "colors": [
             "red",
@@ -1223,7 +1285,7 @@
         {
           "id": 4,
           "size": "L",
-          "quantity": 20,
+          "quantity": 1,
           "price": 30,
           "colors": [
             "red",
@@ -1234,7 +1296,7 @@
         {
           "id": 5,
           "size": "XL",
-          "quantity": 20,
+          "quantity": 1,
           "price": 40,
           "colors": [
             "red",
@@ -1243,13 +1305,13 @@
           ]
         }
       ],
-      "quantity": 2,
+      "quantity": 1,
       "productId": 1,
       "userId": 16,
       "variation": {
         "id": 2,
         "size": "S",
-        "quantity": 20,
+        "quantity": 1,
         "price": 15,
         "colors": [
           "red",
@@ -1258,510 +1320,6 @@
         ]
       },
       "id": 14
-    },
-    {
-      "name": "boy Chair",
-      "price": 45,
-      "old_price": 150,
-      "reviews": 150,
-      "image": "assets/images/products/product1.jpg",
-      "brand": "Apex",
-      "SKU": "BE45VGRT",
-      "category": "Office",
-      "catId": 3,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "variations": [
-        {
-          "id": 1,
-          "size": "XS",
-          "quantity": 20,
-          "price": 10,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 2,
-          "size": "S",
-          "quantity": 20,
-          "price": 15,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 3,
-          "size": "M",
-          "quantity": 20,
-          "price": 20,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 4,
-          "size": "L",
-          "quantity": 20,
-          "price": 30,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 5,
-          "size": "XL",
-          "quantity": 20,
-          "price": 40,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        }
-      ],
-      "quantity": 1,
-      "productId": 1,
-      "userId": 16,
-      "variation": {
-        "id": 1,
-        "size": "XS",
-        "quantity": 20,
-        "price": 10,
-        "colors": [
-          "red",
-          "white",
-          "black"
-        ]
-      },
-      "id": 15
-    },
-    {
-      "name": "boy Chair",
-      "price": 45,
-      "old_price": 150,
-      "reviews": 150,
-      "image": "assets/images/products/product1.jpg",
-      "brand": "Apex",
-      "SKU": "BE45VGRT",
-      "category": "Office",
-      "catId": 3,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "variations": [
-        {
-          "id": 1,
-          "size": "XS",
-          "quantity": 20,
-          "price": 10,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 2,
-          "size": "S",
-          "quantity": 20,
-          "price": 15,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 3,
-          "size": "M",
-          "quantity": 20,
-          "price": 20,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 4,
-          "size": "L",
-          "quantity": 20,
-          "price": 30,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 5,
-          "size": "XL",
-          "quantity": 20,
-          "price": 40,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        }
-      ],
-      "quantity": 1,
-      "productId": 1,
-      "userId": 16,
-      "variation": {
-        "id": 1,
-        "size": "XS",
-        "quantity": 20,
-        "price": 10,
-        "colors": [
-          "red",
-          "white",
-          "black"
-        ]
-      },
-      "id": 16
-    },
-    {
-      "name": "boy Chair",
-      "price": 45,
-      "old_price": 150,
-      "reviews": 150,
-      "image": "assets/images/products/product1.jpg",
-      "brand": "Apex",
-      "SKU": "BE45VGRT",
-      "category": "Office",
-      "catId": 3,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "variations": [
-        {
-          "id": 1,
-          "size": "XS",
-          "quantity": 20,
-          "price": 10,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 2,
-          "size": "S",
-          "quantity": 20,
-          "price": 15,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 3,
-          "size": "M",
-          "quantity": 20,
-          "price": 20,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 4,
-          "size": "L",
-          "quantity": 20,
-          "price": 30,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 5,
-          "size": "XL",
-          "quantity": 20,
-          "price": 40,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        }
-      ],
-      "quantity": 1,
-      "productId": 1,
-      "userId": 16,
-      "variation": {
-        "id": 1,
-        "size": "XS",
-        "quantity": 20,
-        "price": 10,
-        "colors": [
-          "red",
-          "white",
-          "black"
-        ]
-      },
-      "id": 17
-    },
-    {
-      "name": "boy Chair",
-      "price": 45,
-      "old_price": 150,
-      "reviews": 150,
-      "image": "assets/images/products/product1.jpg",
-      "brand": "Apex",
-      "SKU": "BE45VGRT",
-      "category": "Office",
-      "catId": 3,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "variations": [
-        {
-          "id": 1,
-          "size": "XS",
-          "quantity": 20,
-          "price": 10,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 2,
-          "size": "S",
-          "quantity": 20,
-          "price": 15,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 3,
-          "size": "M",
-          "quantity": 20,
-          "price": 20,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 4,
-          "size": "L",
-          "quantity": 20,
-          "price": 30,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 5,
-          "size": "XL",
-          "quantity": 20,
-          "price": 40,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        }
-      ],
-      "quantity": 1,
-      "productId": 1,
-      "userId": 16,
-      "variation": {
-        "id": 1,
-        "size": "XS",
-        "quantity": 20,
-        "price": 10,
-        "colors": [
-          "red",
-          "white",
-          "black"
-        ]
-      },
-      "id": 18
-    },
-    {
-      "name": "boy Chair",
-      "price": 45,
-      "old_price": 150,
-      "reviews": 150,
-      "image": "assets/images/products/product1.jpg",
-      "brand": "Apex",
-      "SKU": "BE45VGRT",
-      "category": "Office",
-      "catId": 3,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "variations": [
-        {
-          "id": 1,
-          "size": "XS",
-          "quantity": 20,
-          "price": 10,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 2,
-          "size": "S",
-          "quantity": 20,
-          "price": 15,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 3,
-          "size": "M",
-          "quantity": 20,
-          "price": 20,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 4,
-          "size": "L",
-          "quantity": 20,
-          "price": 30,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 5,
-          "size": "XL",
-          "quantity": 20,
-          "price": 40,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        }
-      ],
-      "quantity": 1,
-      "productId": 1,
-      "userId": 16,
-      "variation": {
-        "id": 1,
-        "size": "XS",
-        "quantity": 20,
-        "price": 10,
-        "colors": [
-          "red",
-          "white",
-          "black"
-        ]
-      },
-      "id": 19
-    },
-    {
-      "name": "boy Chair",
-      "price": 45,
-      "old_price": 150,
-      "reviews": 150,
-      "image": "assets/images/products/product1.jpg",
-      "brand": "Apex",
-      "SKU": "BE45VGRT",
-      "category": "Office",
-      "catId": 3,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis",
-      "variations": [
-        {
-          "id": 1,
-          "size": "XS",
-          "quantity": 20,
-          "price": 10,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 2,
-          "size": "S",
-          "quantity": 20,
-          "price": 15,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 3,
-          "size": "M",
-          "quantity": 20,
-          "price": 20,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 4,
-          "size": "L",
-          "quantity": 20,
-          "price": 30,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        },
-        {
-          "id": 5,
-          "size": "XL",
-          "quantity": 20,
-          "price": 40,
-          "colors": [
-            "red",
-            "white",
-            "black"
-          ]
-        }
-      ],
-      "quantity": 1,
-      "productId": 1,
-      "userId": 16,
-      "variation": {
-        "id": 3,
-        "size": "M",
-        "quantity": 20,
-        "price": 20,
-        "colors": [
-          "red",
-          "white",
-          "black"
-        ]
-      },
-      "id": 20
     }
   ],
   "wishlist": [
